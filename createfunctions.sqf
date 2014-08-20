@@ -132,7 +132,10 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
 
 	};
-	
+	if(_classname == "UH60CG")then{
+		newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
+		processInitCommands; 
+	};
 //IRA BOMB TRUCK 
 if (_classname == "cl_fuel_mackr") then
 	{
