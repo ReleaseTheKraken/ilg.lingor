@@ -1,0 +1,28 @@
+Changelog (Chewz)
+-----------
+Added
+-----------
+- Hunting Rifle Ammo (CZ550) Added to IRA (http://www.islandlifegaming.com/forum/m/23687205/viewthread/13368047-bugs/page/1) works!
+- Added TPtoME to SuperAdmin 6 menu. (Jeff Suggestion)
+- Kriss Ammo to Tier X Shop. (http://www.islandlifegaming.com/forum/m/23687205/viewthread/13411337-no-kriss-magazines-at-tier-x) works!
+- Added Skin Changer For Each Gang Area (http://www.islandlifegaming.com/forum/m/23687205/viewthread/13243322-gang-skins)
+	
+- Gang Area 1: TK_INS_Soldier_Warlord_EP1 (https://community.bistudio.com/wiki/File:Arma2_TK_INS_warlord.jpg)
+	
+- Gang Area 2: TK_INS_Bonesetter_EP1 (https://community.bistudio.com/wiki/File:Arma2_TK_INS_bonesetter.jpg)
+	
+- Gang Area 3: TK_INS_Soldier_MG_EP1 (https://community.bistudio.com/wiki/File:Arma2_TK_INS_mg.jpg)
+	
+- Gang Area 4: TK_INS_Soldier_4_EP1(https://community.bistudio.com/wiki/File:Arma2_TK_INS_fal.jpg)
+
+- Added Multiple Things To removeactions.sqs due to it causing bugs/mass spam with AddAction (ILG Phone Etc)
+-----------
+Changed
+-----------
+- UI Health Status Should Be Fixed. (http://www.islandlifegaming.com/forum/m/23687205/viewthread/13368047-bugs/page/1)
+- Robbery Of Bar Fixed And Improved (now has CCTV System to make stuff more intresting) works!(http://www.islandlifegaming.com/forum/m/23687205/viewthread/13368047-bugs/page/1 && http://www.islandlifegaming.com/forum/m/23687205/viewthread/13385066-robbing-pubs)
+- Gas Station Robbery Has CCTV System works!
+- Fixed PolicePC Login System?
+-----------
+Removed
+-----------

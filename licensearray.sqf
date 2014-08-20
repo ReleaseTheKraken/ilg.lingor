@@ -1,0 +1,50 @@
+INV_Lizenzen = 
+
+[
+["mayorlic",dmv,"Governors license",1000],
+["boat",dmv,localize "STRS_license_boat",1500],
+["fboat",dmv,"Ferry Captain License",2500],
+["esul",atm5,"Fire Rescue Training",100],
+["bus_license",truckshop,"Bus License",1000],
+["truck",truckshop,localize "STRS_license_truck",5000],
+["taxi",taxishop,"Taxi License",5000],
+["car",dmv,localize "STRS_license_car",2500],
+["oilukp",Oil_1,"Processing Training",30000],
+["Baker",Bakery,"Baker's license",10000],
+["mafial",mafs,"Mafia invitation",350000],
+["cocaine ga1",gangarea1,"GA1 cocaine Drug processor's license",35000],
+["lsd ga1",gangarea1,"GA1 LSD Drug processor's license",35000],
+["heroin ga2",gangarea2,"GA2 Heroin Drug processor's license",35000],
+["lsd ga2",gangarea2,"GA2 LSD Drug processor's license",35000],
+["heroin ga3",gangarea3,"GA3 Heroin Drug processor's license",35000],
+["marijuana ga3",gangarea3,"GA3 Marijuana Drug processor's license",35000],
+["heroin ga4",gangarea4,"GA4 Heroin Drug processor's license",35000],
+["marijuana ga4",gangarea4,"GA4 Marijuana Drug processor's license",35000],
+["air",airshop,localize "STRS_license_air",35000],
+["air",airshop4,localize "STRS_license_air",35000],
+["comair",airshop3,"Commerical Air License",10000],
+["IRAlicense",IRAveh,"IRA Training",900000],
+["icartune",tuning1,"Illegal Car Tuning License",50000],
+["Pistollicense",gundealer1,"Pistol license",30000],
+["riflelicense",vending2,"Hunting License",50000],
+["assassinlic",assassinshop,"Illegal Assassin Weapons Fee",50000],
+["terrorvip",vipterrorbox,"Terrorist VIP License",1400000],
+["terror",terrorbox,"Illegal Terrorist License",800000],
+["probator",copbasic3,localize "STRS_license_probator",2000],
+["patrol_training",copbank,localize "STRS_license_coppatrol",5000],
+["sobr_training",copswat,localize "STRS_license_copswat",15000],
+["cg_boat",copbank,"PD Patrol Boat Training",1000],
+["piratelicense",pirategearbox,"Pirate Training",400000],
+["Donator_licence",Donatebuy,"Tier 1 Donator License",300000],
+["Donator_licence",Donatebuy,"Tier 2 Donator License",300000],
+["Donator_licence",Donatebuy,"Tier 3 Donator License",300000],
+["tierx",tierxweapons,"Tier-X License",2000000],
+["air_support_training",copbank,localize "STRS_license_copairsupport",5000],
+["pmclicense",pmcstore,"PMC License",800000],
+["dirtymoneylicense",dirtymoney1,"Dirty Money Processing Training",1],
+["air",ILG_AirplaneShop,localize "STRS_license_air",35000]
+
+
+];
+
+INV_LizenzOwner = [];
