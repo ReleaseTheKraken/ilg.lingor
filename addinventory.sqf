@@ -16,4 +16,4 @@ if(player == %3) then
 if(player == %4)then{[""%1"",-(%2)] call INV_AddInvItem};
 
 ", _this select 0, _num, _this select 2, _this select 3] call broadcast;
-//test KRAKELINO
+//test KRAKELINO 2
