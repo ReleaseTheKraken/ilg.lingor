@@ -1131,27 +1131,22 @@ INV_AlleMagazinObjekte = [
 //3 = Call type, ie, in weapons 1 = pistol, 2 = rifle, 3 = explosives. Not sure about vehicles, looks like 0=other 1=car 2=truck 5=air
 
 INV_AlleVehicleeArray = [
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//New addon vehicles - Added by Linnet 2014-08-20
-
-
-//----Coast Guard Aircraft-------
+// Coast Guard Aircraft
 ["No_1sqn_204",				        ["Vehicle", "Air"],				["No_1sqn_204", "F18 Super Hornet"],							    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["14US_S",				            ["Vehicle", "Air"],				["14US_S", "F-14D Interceptor"],						        	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["14US_SUD3",				        ["Vehicle", "Air"],				["14US_SUD3", "F14D Bombcat (MK84)"],						    	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["3lb_f22",				            ["Vehicle", "Air"],				["3lb_f22", "F22 Raptor"],							                [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["TowingTractor",				    ["Vehicle", "Air"],		        ["TowingTractor", "Towing Tractor"],							    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
-//-------------------------------
 
-//----Coast Guard Helicopters----
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Coast Guard Helicopters
 ["PRACS_AB212_M",				    ["Vehicle", "Air"],		        ["PRACS_AB212_M", "Huey (Door Gunners)"],							[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["PRACS_puma330_Marine_MED",	    ["Vehicle", "Air"],             ["PRACS_puma330_Marine_MED", "SA330 Puma Medevac"],				    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["CH_47F_BAF",				        ["Vehicle", "Air"],		        ["CH_47F_BAF", "Chinook HC4"],						            	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["UH60M_EP1",	                    ["Vehicle", "Air"],             ["UH60M_EP1", "UH60 Blackhawk"],				                    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["UH60CG",	                        ["Vehicle", "Air"],             ["UH60CG", "Rescue Blackhawk"],				                        [150000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
-
-//-------------------------------
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // IslandLifeGaming.com - Custom @ILG Vehicles 
@@ -1159,7 +1154,6 @@ INV_AlleVehicleeArray = [
 ["UH1H_TK_EP1_LIN",				    ["Vehicle", "Air"],				["UH1H_TK_EP1_LIN", "COCK HUEY (Unarmed)"],							[100000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["UH1H_TK_GUE_EP1_LIN",			    ["Vehicle", "Air"],				["UH1H_TK_GUE_EP1_LIN", "Huey (Unarmed)"],							[50000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["PRACS_AB212_cas",				    ["Vehicle", "Air"],				["PRACS_AB212_cas", "UH-1 GUNSHIP (CAS)"],							[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Tahoe Pack 
