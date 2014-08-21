@@ -115,10 +115,10 @@ if (_art == "spielerliste") then
 	_control3 = gangarea3 getvariable "control";
 	_control4 = gangarea4 getvariable "control";
 
-	if(_control1 == _gangname)then{if(_territory == "None")then{_territory = "Emita Castle"}else{_territory = _territory + ", Emita Castle"};};
+	if(_control1 == _gangname)then{if(_territory == "None")then{_territory = "Old Dutch Castle"}else{_territory = _territory + ", Old Dutch Castle"};};
 	if(_control2 == _gangname)then{if(_territory == "None")then{_territory = "South District"}else{_territory = _territory + ", South District"};};
 	if(_control3 == _gangname)then{if(_territory == "None")then{_territory = "Roseyard"}else{_territory = _territory + ", Roseyard"};};	
-	if(_control4 == _gangname)then{if(_territory == "None")then{_territory = "Abandoned Prison"}else{_territory = _territory + ", Old Military Base"};};	
+	if(_control4 == _gangname)then{if(_territory == "None")then{_territory = "Abandoned Prison"}else{_territory = _territory + ", Abandoned Prison"};};	
 	
 	lbAdd [1, format["%1", _gangarray select 0]];
 	lbAdd [1, format["Territory: %1",_territory]];
