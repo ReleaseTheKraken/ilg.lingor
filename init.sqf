@@ -10,7 +10,6 @@ if(isServer) then
 	[] call LinLib_fnc_InitServer;
 	mafiabank = 1;
 	Publicvariable "mafiabank";
-	execVM "serverscripts\tcgIsLove.sqf";
 	mafiamembers = [];
 	mafs setVariable ["mafiamembers", mafiamembers, true];
 };
@@ -18,8 +17,6 @@ if(isServer) then
 [] call compile preprocessFileLineNumbers "addons\proving_Ground\init.sqf";
 
 enableSaving [false, false];
-waitUntil {!(isNil "tcgIsLove")};
-call tcgIsLove;
 version        	= "3";
 debug          	= false;
 dedicatedServer = false;

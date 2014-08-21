@@ -1,4 +1,4 @@
-#include "uid.hpp";
+#include "Configs\uid.hpp";
 waitUntil {!isNull player};
 
 _uid = getPlayerUID player;

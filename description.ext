@@ -23,60 +23,31 @@ valuesParam2[] = {1,202, 404, 606, 808, 1010, 200, 400, 600, 800, 1000, 1002, 10
 defValueParam2 = 2005; 
 textsParam2[]  = {"Realtime","02 | 02", "04 | 04", "06 | 06", "08 | 08", "10 | 10", "02 | 00", "04 | 00", "06 | 00", "08 | 00", "10 | 00", "10 | 02", "10 | 04", "10 | 06", "10 | 08", "20 | 05", "20 | 10", "20 | 20"};
 
-class CfgSounds 
-
-{
-
-sounds[] = {}; 
-
-#include "sounds.hpp"
-
+class CfgSounds {
+	sounds[] = {}; 
+	#include "Configs\sounds.hpp"
 }
 
-
-
-#include "RscDefines.hpp"
-
+#include "Configs\RscDefines.hpp"
+#include "Configs\gfx.hpp"
+#include "Configs\animDlg.hpp"
+#include "Configs\1614524.hpp"
+#include "Configs\INVdialogs.hpp"
+#include "Configs\4782911.hpp"
+#include "Configs\bank.hpp"
+#include "Configs\2085272.hpp"
+#include "Configs\4461230.hpp"
+#include "Configs\maindialogs.hpp"
+#include "Configs\civmenu.hpp"
+#include "Configs\RscTitles.hpp"
+#include "Configs\plantclass.hpp"
+#include "Configs\rules.hpp"
+#include "Configs\adminconsoldesc.hpp"
 #include "TLU\tlu_RscDefines.hpp"
-
 #include "tluphone\tluphone_conf.hpp"
-
 #include "policePC\dialog\homepage.hpp"
-
 #include "policePC\dialog\login.hpp"
-
-#include "gfx.hpp"
-
-#include "animDlg.hpp"
-
-#include "1614524.hpp"
-
-#include "INVdialogs.hpp"
-
-#include "4782911.hpp"
-
-#include "bank.hpp"
-
-#include "2085272.hpp"
-
-#include "4461230.hpp"
-
-#include "maindialogs.hpp"
-
-#include "civmenu.hpp"
-
-#include "RscTitles.hpp"
-
-#include "plantclass.hpp"
-
-#include "rules.hpp"
-
 #include "gcam\gcam_component.hpp"
-
-#include "adminconsoldesc.hpp"
-
 #include "addons\proving_ground\PG_config.hpp"
-
 #include "addons\proving_ground\PG_rsctitles.hpp"
-
 #include "dispatchsys\dispatchdialog.hpp"
