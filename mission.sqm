@@ -4257,8 +4257,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6806.7969,61.203995,4403.707};
-					azimut=-2.59234;
+					position[]={6862.2329,62.242191,4499.23};
+					azimut=-93.071434;
 					id=2138;
 					side="CIV";
 					vehicle="Functionary1_EP1";
@@ -4277,7 +4277,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6804.4888,62.323391,4430.1655};
+					position[]={6836.5112,62.242191,4505.5674};
 					azimut=182.59987;
 					id=2140;
 					side="LOGIC";
@@ -4297,7 +4297,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6810.4736,61.965248,4413.5459};
+					position[]={6852.1211,62.242191,4505.333};
 					azimut=115.581;
 					id=2141;
 					side="CIV";
@@ -4317,7 +4317,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6811.4785,61.974682,4413.2236};
+					position[]={6853.126,62.242191,4505.0107};
 					azimut=-101.226;
 					id=2142;
 					side="CIV";
@@ -4337,7 +4337,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6810.6499,61.925552,4412.5244};
+					position[]={6852.2974,62.242191,4504.3115};
 					azimut=39.4174;
 					id=2143;
 					side="CIV";
@@ -24419,41 +24419,41 @@ class Mission
 		};
 		class Item1931
 		{
-			position[]={6806.6313,60.889011,4399.8613};
-			azimut=-0.478995;
+			position[]={6858.5,62.242191,4486.875};
+			azimut=-179.92999;
 			id=2129;
 			side="EMPTY";
 			vehicle="il_vault";
 			leader=1;
 			skill=0.60000002;
 			text="mafv";
-			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1.1];this allowdamage false;";
+			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1.2];this allowdamage false;";
 		};
 		class Item1932
 		{
-			position[]={6805.9717,61.302753,4404.8369};
-			azimut=0.10876377;
+			position[]={6861.1099,62.242191,4498.396};
+			azimut=-90.370277;
 			id=2130;
 			side="EMPTY";
 			vehicle="il_precious_metal";
 			leader=1;
 			skill=0.60000002;
-			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];";
+			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
 		};
 		class Item1933
 		{
-			position[]={6808.4624,61.318207,4404.8369};
-			azimut=0.10876377;
+			position[]={6861.0874,62.242191,4500.8877};
+			azimut=-90.370277;
 			id=2131;
 			side="EMPTY";
 			vehicle="il_precious_metal";
 			leader=1;
 			skill=0.60000002;
-			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];";
+			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
 		};
 		class Item1934
 		{
-			position[]={6815.7803,60.988575,4399.8027};
+			position[]={6861.5005,62.242191,4504.686};
 			azimut=179.755;
 			id=2132;
 			side="EMPTY";
@@ -24464,7 +24464,7 @@ class Mission
 		};
 		class Item1935
 		{
-			position[]={6815.7578,60.886055,4398.875};
+			position[]={6861.478,62.242191,4503.7583};
 			azimut=179.755;
 			id=2133;
 			side="EMPTY";
@@ -24475,7 +24475,7 @@ class Mission
 		};
 		class Item1936
 		{
-			position[]={6814.9502,60.980183,4399.8926};
+			position[]={6860.6704,62.242191,4504.7759};
 			azimut=179.755;
 			id=2134;
 			side="EMPTY";
@@ -24486,7 +24486,7 @@ class Mission
 		};
 		class Item1937
 		{
-			position[]={6814.9502,60.858398,4398.7852};
+			position[]={6860.6704,62.242191,4503.6685};
 			azimut=179.755;
 			id=2135;
 			side="EMPTY";
@@ -24497,7 +24497,7 @@ class Mission
 		};
 		class Item1938
 		{
-			position[]={6815.8706,61.117912,4401.1494};
+			position[]={6861.5908,62.242191,4506.0327};
 			azimut=179.755;
 			id=2136;
 			side="EMPTY";
@@ -24508,7 +24508,7 @@ class Mission
 		};
 		class Item1939
 		{
-			position[]={6814.9272,61.098587,4401.165};
+			position[]={6860.6475,62.242191,4506.0483};
 			azimut=179.755;
 			id=2137;
 			side="EMPTY";
@@ -24519,20 +24519,20 @@ class Mission
 		};
 		class Item1940
 		{
-			position[]={6807.3228,61.308247,4404.8057};
-			azimut=359.491;
+			position[]={6861.1309,62.242191,4499.7456};
+			azimut=269.01144;
 			id=2139;
 			side="EMPTY";
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
 			text="mafbox";
-			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];clearMagazineCargo this; clearWeaponCargo this;";
+			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];clearMagazineCargo this; clearWeaponCargo this;";
 		};
 		class Item1941
 		{
-			position[]={6799.1372,60.789803,4397.9873};
-			azimut=270;
+			position[]={6866.2671,63.641457,4489.2627};
+			azimut=88.798157;
 			id=2144;
 			side="EMPTY";
 			vehicle="MBG_Safe";
@@ -29936,13 +29936,13 @@ class Mission
 		};
 		class Item295
 		{
-			position[]={6806.8325,61.69875,4409.0869};
+			position[]={6848.48,62.242191,4500.874};
 			name="hostagemaf";
 			type="Empty";
 		};
 		class Item296
 		{
-			position[]={6807.0044,61.192013,4403.5625};
+			position[]={6862.3716,62.242191,4499.4419};
 			name="MafiaShop12";
 			text="Mafia Shop";
 			type="Mafia";
@@ -30917,7 +30917,7 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={6810.8643,61.927574,4412.4561};
+			position[]={6852.5117,62.242191,4504.2432};
 			a=5;
 			b=5;
 			activationBy="CIV";
@@ -30930,9 +30930,9 @@ class Mission
 		};
 		class Item19
 		{
-			position[]={6798.6426,61.379871,4404.1289};
-			a=62.5;
+			position[]={6845.7803,62.242191,4502.2324};
 			b=43;
+			angle=-91.317802;
 			rectangular=1;
 			activationBy="WEST";
 			repeating=1;
