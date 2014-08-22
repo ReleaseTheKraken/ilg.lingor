@@ -2182,12 +2182,20 @@ _pirateweaponshop =
 	
 _ILG_CoastGuardJets =
 	[
-	"medikit"					// Medkit
+	"No_1sqn_204",				// F18 Super Hornet
+	"14US_S",					// F-14D Interceptor 
+	"14US_SUD3",				// F14D Bombcat (MK84)
+	"3lb_f22",					// F22 Raptor
+	"TowingTractor"				// Towing Tractor
 	];
 	
 _ILG_CoastGuardHelicopters =
 	[
-	"medikit"					// Medkit	
+	"UH60CG",					// CoastGuard Rescue Blackhawk	
+	"UH60M_EP1",				// UH-60 Blackhawk 	
+	"CH_47F_BAF",				// Chinook HC4	
+	"PRACS_AB212_M",			// RACS Huey (Door Gunner version)	
+	"PRACS_puma330_Marine_MED"	// RACS SA330 Puma (Medevac)	
 	];
 	
 
