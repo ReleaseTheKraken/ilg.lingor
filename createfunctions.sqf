@@ -129,26 +129,23 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	if(_classname == "UH60CG")then{
 			newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
 			processInitCommands; 
-		};
+	};
 		
 	//IRA BOMB TRUCK 
-	if (_classname == "cl_fuel_mackr") then
-		{
+	if (_classname == "cl_fuel_mackr") then{
 		hint "WARNING: Once you have prepared the explosives to blow up your desired target you must ram it. Do NOT hit anything by mistake after the explosives are prepared/armed!";
 		fuelAction = newvehicle addAction ["Prepare explosion","fuelbomb.sqf",[],1,false,true,"","_this in _target"];
-		};
+	};
 
 	//PRACS CAS HUEY 
-	if (_classname == "PRACS_AB212_cas") then
-		{
+	if (_classname == "PRACS_AB212_cas") then{
 		newvehicle removeWeapon "FFARLauncher_14";
 		newvehicle removeMagazine "14Rnd_FFAR";
-		};
+	};
 
 	// Attack helicopter re-armament
 	// Ka-60
-	if (_classname == "Ka60_GL_PMC") then
-	{
+	if (_classname == "Ka60_GL_PMC") then{
 		hint "Reconfiguring helicopter armament...";
 		newvehicle removeWeapon "57mmLauncher";
 		newvehicle removeMagazine "14Rnd_57mm";
