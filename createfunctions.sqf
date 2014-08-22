@@ -62,50 +62,45 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 
 	if ((_classname in _type1) or (_classname in _type2))  then 
 	{
-
-	
 		if (_classname in _type1) then 
 		{
-		
-		call compile format ['
+			call compile format ['
 
-		newvehicle = _classname createVehicle %4; 
-		newvehicle setpos %4; 
-		newvehicle setdir %5; 
-		newvehicle setVehicleInit "
-		nul = [this] execVM ""heliDoor\heliDoor_init.sqf"";
-		this setVehicleVarName ""vehicle_%1_%2"";
-		vehicle_%1_%2 = this; 
-		clearWeaponCargo this; 
-		clearMagazineCargo this;
-		newvehicle lock true;
-		";
-		processInitCommands;
-		INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
-		"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
-		', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
-
+			newvehicle = _classname createVehicle %4; 
+			newvehicle setpos %4; 
+			newvehicle setdir %5; 
+			newvehicle setVehicleInit "
+			nul = [this] execVM ""heliDoor\heliDoor_init.sqf"";
+			this setVehicleVarName ""vehicle_%1_%2"";
+			vehicle_%1_%2 = this; 
+			clearWeaponCargo this; 
+			clearMagazineCargo this;
+			newvehicle lock true;
+			";
+			processInitCommands;
+			INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
+			"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
+			', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
 		};
 		if (_classname in _type2) then 
 		{
-		
-		call compile format ['
+			call compile format ['
 
-		newvehicle = _classname createVehicle %4; 
-		newvehicle setpos %4; 
-		newvehicle setdir %5; 
-		newvehicle setVehicleInit "
-		nul = [this, 1] execVM ""\norrn_dbo_fastrope\scripts\NORRN_fastRope_init.sqf"";
-		this setVehicleVarName ""vehicle_%1_%2"";
-		vehicle_%1_%2 = this; 
-		clearWeaponCargo this; 
-		clearMagazineCargo this;
-		newvehicle lock true;
-		";
-		processInitCommands;
-		INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
-		"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
-		', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+			newvehicle = _classname createVehicle %4; 
+			newvehicle setpos %4; 
+			newvehicle setdir %5; 
+			newvehicle setVehicleInit "
+			nul = [this, 1] execVM ""\norrn_dbo_fastrope\scripts\NORRN_fastRope_init.sqf"";
+			this setVehicleVarName ""vehicle_%1_%2"";
+			vehicle_%1_%2 = this; 
+			clearWeaponCargo this; 
+			clearMagazineCargo this;
+			newvehicle lock true;
+			";
+			processInitCommands;
+			INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
+			"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
+			', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
 		};
 
 
@@ -113,55 +108,52 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 
 	else 
 	{
-	
-	call compile format ['
+		call compile format ['
 
-	newvehicle = _classname createVehicle %4; 
-	newvehicle setpos %4; 
-	newvehicle setdir %5; 
-	newvehicle setVehicleInit "
-	this setVehicleVarName ""vehicle_%1_%2""; 
-	vehicle_%1_%2 = this; 
-	clearWeaponCargo this; 
-	clearMagazineCargo this;
-	newvehicle lock true;
-	"; 
-	processInitCommands;
-	INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
-	"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
-	', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+		newvehicle = _classname createVehicle %4; 
+		newvehicle setpos %4; 
+		newvehicle setdir %5; 
+		newvehicle setVehicleInit "
+		this setVehicleVarName ""vehicle_%1_%2""; 
+		vehicle_%1_%2 = this; 
+		clearWeaponCargo this; 
+		clearMagazineCargo this;
+		newvehicle lock true;
+		"; 
+		processInitCommands;
+		INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
+		"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
+		', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+	};
+	//Coast Guard Helicopter
+	if(_classname == "UH60CG")then{
+			newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
+			processInitCommands; 
+		};
+		
+	//IRA BOMB TRUCK 
+	if (_classname == "cl_fuel_mackr") then
+		{
+		hint "WARNING: Once you have prepared the explosives to blow up your desired target you must ram it. Do NOT hit anything by mistake after the explosives are prepared/armed!";
+		fuelAction = newvehicle addAction ["Prepare explosion","fuelbomb.sqf",[],1,false,true,"","_this in _target"];
+		};
 
-	};
-	
-//Coast Guard Helicopter
-if(_classname == "UH60CG")then{
-		newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
-		processInitCommands; 
-	};
-	
-//IRA BOMB TRUCK 
-if (_classname == "cl_fuel_mackr") then
+	//PRACS CAS HUEY 
+	if (_classname == "PRACS_AB212_cas") then
+		{
+		newvehicle removeWeapon "FFARLauncher_14";
+		newvehicle removeMagazine "14Rnd_FFAR";
+		};
+
+	// Attack helicopter re-armament
+	// Ka-60
+	if (_classname == "Ka60_GL_PMC") then
 	{
-    hint "WARNING: Once you have prepared the explosives to blow up your desired target you must ram it. Do NOT hit anything by mistake after the explosives are prepared/armed!";
-    fuelAction = newvehicle addAction ["Prepare explosion","fuelbomb.sqf",[],1,false,true,"","_this in _target"];
-	};
-
-//PRACS CAS HUEY 
-if (_classname == "PRACS_AB212_cas") then
-	{
-  	newvehicle removeWeapon "FFARLauncher_14";
-	newvehicle removeMagazine "14Rnd_FFAR";
-	};
-
-// Attack helicopter re-armament
-// Ka-60
-if (_classname == "Ka60_GL_PMC") then
-{
-	hint "Reconfiguring helicopter armament...";
-	newvehicle removeWeapon "57mmLauncher";
-	newvehicle removeMagazine "14Rnd_57mm";
-	newvehicle addweapon "CMFlareLauncher";
-	newvehicle addmagazine "60Rnd_CMFlareMagazine";
+		hint "Reconfiguring helicopter armament...";
+		newvehicle removeWeapon "57mmLauncher";
+		newvehicle removeMagazine "14Rnd_57mm";
+		newvehicle addweapon "CMFlareLauncher";
+		newvehicle addmagazine "60Rnd_CMFlareMagazine";
 
 	};
 
