@@ -1,5 +1,5 @@
 private ["_buildings"];
-_buildings = [266485,267252];
+_buildings = [3021,3101];
 {
 	(getPos(BuildLogic) nearestobject _x) attachTo [BuildSUV, [0,0,0]];
 }forEach _buildings;

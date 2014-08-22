@@ -56,7 +56,7 @@ INV_itemstocks =
 	-1, 	// Wigworths
 	-1, 	// Oil Dealer
 	-1, 	// Exports
-	-1, 	// Sell Whale
+	-1, 	// Sell Whale (Two shops total)
 	-1, 	// Terror Stuff
 	-1, 	// Barely Legal
 	-1, 	// Gang Shop (s)
@@ -160,7 +160,7 @@ INV_itemmaxstocks =
 	-1, 	// Wigworths
 	-1, 	// Oil Dealer
 	-1, 	// Exports
-	-1, 	// Sell Whale
+	-1, 	// Sell Whale (Two shops total)
 	-1, 	// Terror Stuff
 	-1, 	// Barely Legal
 	-1, 	// Gang Shop (s)
@@ -2370,5 +2370,6 @@ INV_ItemShops =
 	[ILG_PMC_HelicopterShop, "PMC Helicopter Shop",dummyobj,PMC_HelicopterSpawn,_ILG_PMC_HelicopterShop,_ILG_PMC_HelicopterShop,true],
 	[ILG_PMC_VehicleShop, "PMC Vehicle Shop",dummyobj,PMC_VehicleSpawn,_ILG_PMC_VehicleShop,_ILG_PMC_VehicleShop,true],
 	[ILG_PMC_BoatShop, "PMC Vehicle Shop",dummyobj,PMC_BoatSpawn,_ILG_PMC_BoatShop,_ILG_PMC_BoatShop,true],
-	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true]
+	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true],
+	[ILG_SellWhaleRebel,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true]	
 	];
