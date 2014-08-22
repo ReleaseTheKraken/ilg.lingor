@@ -15,14 +15,41 @@ _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 _picture = "";
 //--------------------------------------BUY-----------------------------------------
 
-//Stop Civs using cop shops. code by {tcg}shaun//
-_CopOnlyShops = [copair,copcar,copcar1,copbasic,coppatrol,copsheriff,copswat,copbasic2,copboatshop,tdoc,copk9cars,coptrafficcars,coptraffic,copvicecars,copswatcars,copbasic3,copfbi,copfbicars];
+//Stop Civs using cop shops. code by {tcg}shaun
+_CopOnlyShops = [copair,copcar,copcar1,copbasic,coppatrol,copsheriff,copswat,copbasic2,copboatshop,tdoc,copk9cars,coptrafficcars,coptraffic,copvicecars,copswatcars,copbasic3,copfbi,copfbicars,ILG_CgBoatShop,ILG_CgJetShop];
 if (_shop in _CopOnlyShops) then {
      _PlayerTeam = str(playerSide);
     if (_PlayerTeam == "CIV") exitWith {player groupchat "ACCESS DENIED TO CIVILIANS!"; closedialog 0};
     };
+	
+//COCK H.Q. - Gang Base
 if (_shop == Cock_Mansion_Shop && !((getPlayerUID player) in Cock_HQ_UID)) exitWith {player groupchat "ACCESS DENIED TO YOU!"; closedialog 0};
-if (_shop == pmcstore && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED TO YOU!"; closedialog 0};
+
+//IslandLifeGaming.com PMC Shops
+if (_shop == ILG_PMC_AircraftShop && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED. VISIT OUR WEBSITE TO APPLY TO BECOME A PMC: WWW.ISLANDLIFEGAMING.COM"; closedialog 0};
+if (_shop == ILG_PMC_HelicopterShop && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED. VISIT OUR WEBSITE TO APPLY TO BECOME A PMC: WWW.ISLANDLIFEGAMING.COM"; closedialog 0};
+if (_shop == ILG_PMC_VehicleShop && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED. VISIT OUR WEBSITE TO APPLY TO BECOME A PMC: WWW.ISLANDLIFEGAMING.COM"; closedialog 0};
+if (_shop == ILG_PMC_BoatShop && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED. VISIT OUR WEBSITE TO APPLY TO BECOME A PMC: WWW.ISLANDLIFEGAMING.COM"; closedialog 0};
+if (_shop == ILG_PMC_WeaponShop && !((getPlayerUID player) in PMC_Store_UID)) exitWith {player groupchat "ACCESS DENIED. VISIT OUR WEBSITE TO APPLY TO BECOME A PMC: WWW.ISLANDLIFEGAMING.COM"; closedialog 0};
+
+//Low Level ILG Donator Shops
+if (_shop == T1Shop && !((getPlayerUID player) in donatorlevel1)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == T2Shop && !((getPlayerUID player) in donatorlevel2)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+
+//ILG - Soviet Base (Tier-3)
+if (_shop == vipterrorbox && !((getPlayerUID player) in donatorlevel3)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == vipterrorboxammo && !((getPlayerUID player) in donatorlevel3)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == terrorvipvehicle && !((getPlayerUID player) in donatorlevel3)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+
+//ILG Tier-X Donator Shops 
+if (_shop == tierxweapons && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxweapons2 && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxweapons3 && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxweapons4 && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxweapons5 && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxweapons6 && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+if (_shop == tierxammo && !((getPlayerUID player) in donatorlevel4)) exitWith {player groupchat "ACCESS DENIED. Visit our website and donate to gain access: www.IslandLifeGaming.com"; closedialog 0};
+
 
 for [{_i=0}, {_i < (count _itembuyarray)}, {_i=_i+1}] do 
 

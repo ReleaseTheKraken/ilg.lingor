@@ -34,7 +34,7 @@ INV_Lizenzen =
 ["patrol_training",copbank,localize "STRS_license_coppatrol",5000],
 ["sobr_training",copswat,localize "STRS_license_copswat",15000],
 ["cg_boat",copbank,"PD Patrol Boat Training",1000],
-["piratelicense",pirategearbox,"Pirate Training",400000],
+["piratelicense",pirategearbox,"Pirate Training",850000],
 ["Donator_licence",Donatebuy,"Tier 1 Donator License",300000],
 ["Donator_licence",Donatebuy,"Tier 2 Donator License",300000],
 ["Donator_licence",Donatebuy,"Tier 3 Donator License",300000],

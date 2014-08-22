@@ -83,22 +83,26 @@ INV_itemstocks =
 	-1, 	// Tier 1 Donator Shop
 	-1, 	// Tier 2 Donator Shop
 	-1, 	// Tier 3 Donator Shop
-	-1, 	// Piracy Gear
-	-1, 	// IRA Vehicles
-	-1, 	// IRA Weapons
-	-1, 	// Tier-X Weapon Shop (s)
-	-1, 	// Tier-X Ammo Shop
-	-1, 	// VIP Terrorist Weapons
-	-1, 	// VIP Terrorist Ammo
-	-1, 	// VIP Terrorist Vehicles
-	-1, 	// VICE Shop
-	-1, 	// VICE Vehicles
-	-1, 	// Amazing Shop of Doom
-	-1,  	// Mafia Shop
-	-1,		// PMC Shop
-	-1,		// Pirate Weapon Shop
-	-1,		// CoastGuard Jet Shop
-	-1 		//Coast Guard Helicopter Shop
+	-1, 	// Piracy Gear - ILG
+	-1, 	// IRA Vehicles - ILG
+	-1, 	// IRA Weapons - ILG
+	-1, 	// Tier-X Weapon Shop (s) - ILG
+	-1, 	// Tier-X Ammo Shop - ILG
+	-1, 	// VIP Terrorist Weapons - ILG
+	-1, 	// VIP Terrorist Ammo - ILG
+	-1, 	// VIP Terrorist Vehicles - ILG
+	-1, 	// VICE Shop - ILG
+	-1, 	// VICE Vehicles - ILG
+	-1, 	// Amazing Shop of Doom - ILG
+	-1,  	// Mafia Shop - ILG
+	-1,		// Pirate Weapon Shop - ILG
+	-1,		// CoastGuard Jet Shop - ILG
+	-1,		// Coast Guard Helicopter Shop - ILG
+	-1,		// PMC Aircraft Shop - ILG
+	-1,		// PMC Helicopter Shop - ILG
+	-1,		// PMC Vehicle Shop - ILG
+	-1,		// PMC Boat Shop - ILG
+	-1		// PMC Weapon Shop - ILG
 ];
 
 publicvariable "INV_itemstocks";
@@ -183,22 +187,26 @@ INV_itemmaxstocks =
 	-1, 	// Tier 1 Donator Shop
 	-1, 	// Tier 2 Donator Shop
 	-1, 	// Tier 3 Donator Shop
-	-1, 	// Piracy Gear
-	-1, 	// IRA Vehicles
-	-1, 	// IRA Weapons
-	-1, 	// Tier-X Weapon Shop (s)
-	-1, 	// Tier-X Ammo Shop
-	-1, 	// VIP Terrorist Weapons
-	-1, 	// VIP Terrorist Ammo
-	-1, 	// VIP Terrorist Vehicles
-	-1, 	// VICE Shop
-	-1, 	// VICE Vehicles
-	-1, 	// Amazing Shop of Doom
-	-1,  	// Mafia Shop
-	-1,		// PMC Shop
-	-1,		// Pirate Weapon Shop
-	-1,		// CoastGuard Jet Shop
-	-1		// Coast Guard Helicopter Shop
+	-1, 	// Piracy Gear - ILG
+	-1, 	// IRA Vehicles - ILG
+	-1, 	// IRA Weapons - ILG
+	-1, 	// Tier-X Weapon Shop (s) - ILG
+	-1, 	// Tier-X Ammo Shop - ILG
+	-1, 	// VIP Terrorist Weapons - ILG
+	-1, 	// VIP Terrorist Ammo - ILG
+	-1, 	// VIP Terrorist Vehicles - ILG
+	-1, 	// VICE Shop - ILG
+	-1, 	// VICE Vehicles - ILG
+	-1, 	// Amazing Shop of Doom - ILG
+	-1,  	// Mafia Shop - ILG
+	-1,		// Pirate Weapon Shop - ILG
+	-1,		// CoastGuard Jet Shop - ILG
+	-1,		// Coast Guard Helicopter Shop - ILG
+	-1,		// PMC Aircraft Shop - ILG
+	-1,		// PMC Helicopter Shop - ILG
+	-1,		// PMC Vehicle Shop - ILG
+	-1,		// PMC Boat Shop - ILG
+	-1		// PMC Weapon Shop - ILG
 ];
 
 // Shop items
@@ -390,10 +398,7 @@ _cs1 =
 	"Volha_2_TK_CIV_EP1", 		// Vohla Grey
 	"Lada2_TK_CIV_EP1", 		// Lada Hippie
 	"S1203_TK_CIV_EP1", 		// S1203 Van
-	"civic", 					// Honda Civic
-	"Car_hatchback", 			// Hatchback
 	"VWGolf", 					// Volkswagen Golf
-	"Car_Sedan", 				// Sedan
 	"SkodaBlue", 				// Blue Skoda
 	"Skodared", 				// Red Skoda
 	"lada1", 					// VAZ (White)
@@ -401,7 +406,6 @@ _cs1 =
 	"LandRover_TK_CIV_EP1", 	// LandRover
 	"datsun1_civil_3_open", 	// Pick-Up (Tube frame)
 	"UAZ_Unarmed_TK_CIV_EP1", 	// Old UAZ
-	"oldtruck", 				// GMC Fleetliner
 	"Tractor" 					// Tractor
 	];
 	
@@ -2155,29 +2159,24 @@ _Cock_Mansion_Shop =
 	"h1c_grey"  						// Hummer Grey Custom
 	];
 
-_pmcshop = 
-	[
-	"medikit",					// Medkit
-	"Ka60_GL_PMC",				// KA-60 PMC
-	"SUV_TK_EP1",				// PMC SUV
-	"PMC_M4_SPR", 				// MK 12 SPR
-	"PMC_Massada_ACOG_SD",		// Massad SD Acog Black
-	"PMC_Massada_ACOG",			// Massad Acog Black
-	"PMC_L110A2",				// L110A2 LMG
-	"PMC_L110A2_ACOG",			// L110A2 ACOG LMG
-	"PMC_M4_CCO",				// M4 CCO
-	"PMC_HK_G27",				// HK G27
-	"PMC_M136",					// AT4
-	"KPFS_20Rnd_762x51_G27",	// HK G27 AMMO
-	"30Rnd_556x45_Stanag",		// Stanag mag
-	"30Rnd_556x45_StanagSD",	// Stanag SD mag
-	"200Rnd_556x45_L110A1",		// L110A2 - M249 Ammo 200 Rounds
-	"AM136"						// AT4 AMMO
-	];
-	
 _pirateweaponshop = 
 	[
-	"medikit"					// Medkit
+	"medikit",					// Medkit
+	"ILG_PIRATE_RPG7",			// RPG-7 
+	"ILG_PIRATE_IGLA",			// Igla (AA)
+	"ILG_PIRATE_KARS",			// Karabiner S (Kar S - WW2)
+	"ILG_PIRATE_M1Grand",		// M1 Grand (WW2) 
+	"ILG_PIRATE_RPD",			// RPD LMG (Cold war)
+	"ILG_PIRATE_RPK74",			// RPK74 
+	"ILG_PIRATE_SVD",			// SVD Sniper
+	"PG7VR",					// AT Rockets (RPG-7)
+	"OG7",						// HE Rockets (RPG-7)
+	"Igla_mag",					// Igla Rockets (AA)
+	"KPFS_10Rnd_762x39_SKS",	// Karbiner S (Kar S Ammo)
+	"KPFS_8Rnd_cal30_60_Gar",   // M1 Grand (Ammo)
+	"KPFS_100Rnd_762x39_RPD",   // RPD LMG (Ammo)
+	"RH_45Rnd_545x39_mag", 		// RPK74 (Ammo)
+	"10Rnd_762x54_SVD"			// SVD (Ammo)	
 	];
 	
 _ILG_CoastGuardJets =
@@ -2196,6 +2195,53 @@ _ILG_CoastGuardHelicopters =
 	"CH_47F_BAF",				// Chinook HC4	
 	"PRACS_AB212_M",			// RACS Huey (Door Gunner version)	
 	"PRACS_puma330_Marine_MED"	// RACS SA330 Puma (Medevac)	
+	];
+	
+_ILG_PMC_AircraftShop =
+	[
+	"AC130",					// AC-130U Spooky II
+	"PRACS_C130"				// RACS C-130H Hercules
+	];
+	
+_ILG_PMC_HelicopterShop =
+	[
+	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
+	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
+	"MH6J_EP1"					// Littlebird (Transport version)
+	];
+	
+_ILG_PMC_VehicleShop =
+	[
+	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
+	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
+	"MH6J_EP1"					// Littlebird (Transport version)
+	];
+	
+_ILG_PMC_BoatShop =
+	[
+	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
+	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
+	"MH6J_EP1"					// Littlebird (Transport version)
+	];
+	
+_ILG_PMC_WeaponShop = 
+	[
+	"medikit",					// Medkit
+	"Ka60_GL_PMC",				// KA-60 PMC
+	"SUV_TK_EP1",				// PMC SUV
+	"PMC_M4_SPR", 				// MK 12 SPR
+	"PMC_Massada_ACOG_SD",		// Massad SD Acog Black
+	"PMC_Massada_ACOG",			// Massad Acog Black
+	"PMC_L110A2",				// L110A2 LMG
+	"PMC_L110A2_ACOG",			// L110A2 ACOG LMG
+	"PMC_M4_CCO",				// M4 CCO
+	"PMC_HK_G27",				// HK G27
+	"PMC_M136",					// AT4
+	"KPFS_20Rnd_762x51_G27",	// HK G27 AMMO
+	"30Rnd_556x45_Stanag",		// Stanag mag
+	"30Rnd_556x45_StanagSD",	// Stanag SD mag
+	"200Rnd_556x45_L110A1",		// L110A2 - M249 Ammo 200 Rounds
+	"AM136"						// AT4 AMMO
 	];
 	
 
@@ -2313,7 +2359,6 @@ INV_ItemShops =
 	[copfbicars,"VICE Vehicles",dummyobj, ccarspawnfbi,_fbivehicles,_fbivehicles,true],
 	[Cock_Mansion_Shop,"Amazing Shop of Doom",Cock_Mansion_Box, Cock_Mansion_Vehicle,_Cock_Mansion_Shop,_Cock_Mansion_Shop,true],
 	[mafs,"Mafia Shop",mafbox,mafspawn,_mafia,_mafia,true],
-	[pmcstore,"PMC Store",pmcbox,pmcvehiclespawn,_pmcshop,_pmcshop,true],
 	[ILG_PirateWeaponShop,"ILG Pirate Weapon Store",ILG_PirateWeaponShop,dummyobj,_pirateweaponshop,_pirateweaponshop,true],
 	[ILG_CarShopSouth,"Used Cars (South)",dummyobj,ILG_CarSpawnSouth,_cs1,_cs1,true],
 	[ILG_SouthMiningShop,"Equipment & Mining Tools (South)",ILG_SouthMiningShop,dummyobj,_es,_es,true],
@@ -2321,5 +2366,9 @@ INV_ItemShops =
 	[ILG_ChopperJetShop,"Chopper and Jet Shop (South)",dummyobj,ILG_ChopperAndJetSpawn,_assa,_assa,true],
 	[ILG_CgBoatShop, "Coast Guard Boat Shop",dummyobj,ILG_CgBoatSpawn,_cb,_cb,true],
 	[ILG_CgJetShop, "Coast Guard Jet Shop",dummyobj,ILG_CgJetSpawn,_ILG_CoastGuardJets,_ILG_CoastGuardJets,true],
-	[ILG_CgHeliShop, "Coast Guard Helicopter Shop",dummyobj,ILG_CgHeliSpawn,_ILG_CoastGuardHelicopters,_ILG_CoastGuardHelicopters,true]
+	[ILG_PMC_AircraftShop, "PMC Aircraft Shop",dummyobj,PMC_AircraftSpawn,_ILG_PMC_AircraftShop,_ILG_PMC_AircraftShop,true],
+	[ILG_PMC_HelicopterShop, "PMC Helicopter Shop",dummyobj,PMC_HelicopterSpawn,_ILG_PMC_HelicopterShop,_ILG_PMC_HelicopterShop,true],
+	[ILG_PMC_VehicleShop, "PMC Vehicle Shop",dummyobj,PMC_VehicleSpawn,_ILG_PMC_VehicleShop,_ILG_PMC_VehicleShop,true],
+	[ILG_PMC_BoatShop, "PMC Vehicle Shop",dummyobj,PMC_BoatSpawn,_ILG_PMC_BoatShop,_ILG_PMC_BoatShop,true],
+	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true]
 	];
