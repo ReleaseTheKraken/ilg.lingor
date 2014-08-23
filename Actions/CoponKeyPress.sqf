@@ -49,14 +49,18 @@ switch _key do
 
 	{
 
-	if(!INV_shortcuts)exitwith{};
-	
-	_vcls = nearestobjects [getposatl player, ["LandVehicle", "Air", "ship"], 7];
-	_vcl = _vcls select 0;
+		if(!INV_shortcuts)exitwith{};
 
-	if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";_handled=true;};
-	["schluessel", _vcl, 0] execVM "keys.sqf";
-	_handled=true;
+		if(surfaceIsWater getposATL player)then{
+			_vcls = nearestobjects [getposASL player, ["LandVehicle", "Air", "ship"], 7];
+		}else{
+			_vcls = nearestobjects [getposATL player, ["LandVehicle", "Air", "ship"], 7];
+		};
+		_vcl = _vcls select 0;
+
+		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";_handled=true;};
+		["schluessel", _vcl, 0] execVM "keys.sqf";
+		_handled=true;
 	
 	};
 
