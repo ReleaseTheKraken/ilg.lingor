@@ -105,6 +105,9 @@ switch (PlayerTeam) do
 };
 if(!isDedicated) then
 {
+	If(side player == west)then{
+		LinLib_LoadSkin = false;
+	};
 	_h = [player] spawn LinLib_fnc_InitClient;
 	waitUntil{scriptDone  _h};
 	JIP_Stats_Ready = true;
