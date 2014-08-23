@@ -102,36 +102,39 @@ _a3 = 0;		};				};
 
 //======================================LICENSES=========================================
 
-for [{_i = 0}, {_i <= (count INV_Lizenzen)}, {_i = _i + 1}] do 
+for [{_i = 0}, {_i <= (count INV_Lizenzen)}, {_i = _i + 1}] do
 
-{	
-													
+{
 _license     = ((INV_Lizenzen select _i) select 0);
-_flag        = ((INV_Lizenzen select _i) select 1);
-_licensename = ((INV_Lizenzen select _i) select 2);								
-_cost        = ((INV_Lizenzen select _i) select 3);								
-_added       = _Arr2 select _i;	
-																																							
-if ((player distance _flag <= 5) and !(_license call INV_HasLicense) && (_added == 0)) then 
+_flags        = ((INV_Lizenzen select _i) select 1);
+_licensename = ((INV_Lizenzen select _i) select 2);
+_cost        = ((INV_Lizenzen select _i) select 3);
+_added       = _Arr2 select _i;
+_flag1			= (_flags select 0);
+_flag2			= (_flags select 1);
+_flag3			= (_flags select 2);
+
+if ( ((player distance _flag1 <= 5) OR (player distance _flag2 <= 5) OR (player distance _flag3 <= 5)) AND !(_license call INV_HasLicense) and (_added == 0) ) then
 
 	{
-																											
-	call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call ISSE_str_IntToStr)]; 																																				
-	_Arr2 set [_i, 1];	
 
-	};																																				
+	call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call ISSE_str_IntToStr)];
+	_Arr2 set [_i, 1];
 
-if ((player distance _flag > 5) and (_added == 1) || (_license call INV_HasLicense)) then 
+	};
 
-	{																														
+if (((player distance _flag1 > 5) AND (player distance _flag2 > 5) AND (player distance _flag3 > 5)) AND (_added == 1) || (_license call INV_HasLicense)) then
 
-	call compile format ["player removeaction a_license%1; ", _i];																																													
-	_Arr2 set [_i,0];		
+	{
 
-	};		
+	call compile format ["player removeaction a_license%1; ", _i];
+	_Arr2 set [_i,0];
+
+	};
 
 };
 
 sleep 1;
 
 };
+

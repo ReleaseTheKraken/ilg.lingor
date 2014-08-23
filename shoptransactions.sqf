@@ -353,6 +353,18 @@ if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == OilSell1) then
 	publicvariable "tankencost";
 
 	};
+	
+if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == ILG_OilSellNorth) then 
+
+	{
+
+	tankencost = tankencost - oilsellpricedec*_menge;
+	sleep 0.1;
+	if(tankencost < 100)then{tankencost = 100};
+
+	publicvariable "tankencost";
+
+	};
 
 //=======================================================================================================================
 

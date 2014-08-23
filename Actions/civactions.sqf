@@ -95,6 +95,7 @@ action51 = _role addaction [format ["Pay Bail", slave_cost],"maindialogs.sqf", [
 action53 = _role addaction ["Process Diamond","itemprocess.sqf",["diamond rock", "diamond", 5, ""],1,false,true,"","player distance diamond_1 <= 5 and isciv"];
 action54 = _role addaction ["Process Meth","itemprocess1.sqf",["pharm", "meth", 2, ""],1,false,true,"","player distance methlab <= 5 and isciv"];
 action55 = _role addaction ["Process Oil","itemprocess.sqf",["Oil", "OilBarrel", 1, "oilukp"],1,false,true,"","player distance Oil_1 <= 5 and isciv"];
+ILG_ProcessOilSouth = _role addaction ["Process Oil","itemprocess.sqf",["Oil", "OilBarrel", 1, "oilukp"],1,false,true,"","player distance ILG_OilProcessSouth <= 5 and isciv"];
 action56 = _role addaction ["Process Wheat","itemprocess.sqf",["getreide", "Bread", 2, "Baker"],1,false,true,"","player distance bakery <= 5 and isciv"];
 action57 = _role addaction ["Process Strawberries","itemprocess.sqf",["straw", "Frozens", 3, "Baker"],1,false,true,"","player distance bakery <= 5 and isciv"];
 //ga1
