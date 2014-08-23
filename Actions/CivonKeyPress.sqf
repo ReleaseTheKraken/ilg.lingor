@@ -81,7 +81,7 @@ switch _key do
 
 	{
 		if(!INV_shortcuts)exitwith{};
-		
+		_vcls = objNull;
 		if(surfaceIsWater getposATL player)then{
 			_vcls = nearestobjects [getposASL player, ["LandVehicle", "Air", "ship"], 7];
 		}else{
