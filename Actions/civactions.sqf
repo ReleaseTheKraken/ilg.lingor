@@ -3,6 +3,8 @@ _role = player;
 //action1 = _role addaction ["Test","test.sqf",[1],1,false,true,"",""];
 action2 = _role addaction ["Furniture FAQ","furniturehelp.sqf",[1],1,false,true,"","player distance workplace_getjobflag_5 <= 5"];
 action2a = _role addaction ["How To Play Paintball","pbhelp.sqf",[1],1,false,true,"","player distance paintballbox <= 30"];
+//========================   LICENSE EXTRAS   =====================================
+actionlic1 = _role addAction ["Take Driving Test","drivingtest.sqf",[],1,false,true,"","player distance dmv <= 3"];
 //========================   HOSTAGE  ================================================
 action3 = _role addaction ["Take Hostage Mission","hostage.sqf",["getajob_hostage"],1,false,true,"","player distance hostage <= 3 and isciv"];
 action4 = _role addaction ["Take Hostage", "noscript.sqf", "[hostage1] join (group player); player groupchat ""Keep the hostage close or you will fail!"";",1,false,true,"","player distance hostage1 < 5"];

@@ -27353,7 +27353,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=374;
+		items=381;
 		class Item0
 		{
 			position[]={6685.6836,12.187677,6609.5972};
@@ -29773,7 +29773,7 @@ class Mission
 		};
 		class Item270
 		{
-			position[]={3821.0134,12.83209,5701.7246};
+			position[]={-2630.9841,0.6895287,5473.584};
 			name="notvip2";
 			type="Empty";
 			angle=-63.326202;
@@ -29786,7 +29786,7 @@ class Mission
 		};
 		class Item272
 		{
-			position[]={2966.0125,12.044169,6076.6567};
+			position[]={-2509.3,0.60621089,5786.1138};
 			name="notvipX";
 			type="Empty";
 			angle=-0.54845345;
@@ -30794,6 +30794,48 @@ class Mission
 			colorName="ColorWhite";
 			a=70;
 			b=70;
+		};
+		class Item374
+		{
+			position[]={3081.0559,6.4071169,5442.9785};
+			name="startofcartest";
+			type="Empty";
+		};
+		class Item375
+		{
+			position[]={6448.9482,12.187677,6844.3726};
+			name="passedcartest";
+			type="Empty";
+		};
+		class Item376
+		{
+			position[]={5195.1294,17.950615,5015.5552};
+			name="endofcartest1";
+			type="Empty";
+		};
+		class Item377
+		{
+			position[]={4757.0771,9.1557045,4386.1943};
+			name="endofcartest2";
+			type="Empty";
+		};
+		class Item378
+		{
+			position[]={3545.9807,249.8282,3763.0022};
+			name="endofcartest3";
+			type="Empty";
+		};
+		class Item379
+		{
+			position[]={877.27332,22.688059,5283.4985};
+			name="endofcartest4";
+			type="Empty";
+		};
+		class Item380
+		{
+			position[]={722.60553,39.216888,5659.2964};
+			name="endofcartest5";
+			type="Empty";
 		};
 	};
 	class Sensors

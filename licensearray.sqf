@@ -9,7 +9,7 @@ INV_Lizenzen =
 ["bus_license",[truckshop,objnull,objnull],"Bus License",1000],
 ["truck",[truckshop,objnull,objnull],localize "STRS_license_truck",5000],
 ["taxi",[taxishop,objnull,objnull],"Taxi License",5000],
-["car",[dmv,objnull,objnull],localize "STRS_license_car",2500],
+["car",[BuildSUV,objnull,objnull],localize "STRS_license_car",2500],
 ["oilukp",[Oil_1,ILG_OilProcessSouth,objnull],"Processing Training",30000],
 ["Baker",[Bakery,objnull,objnull],"Baker's license",10000],
 ["mafial",[mafs,objnull,objnull],"Mafia invitation",350000],
