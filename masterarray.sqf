@@ -1142,7 +1142,7 @@ INV_AlleMagazinObjekte = [
 INV_AlleVehicleeArray = [
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Coast Guard Aircraft
+// ILG Coast Guard Aircraft
 ["No_1sqn_204",				        ["Vehicle", "Air"],				["No_1sqn_204", "F18 Super Hornet"],							    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["14US_S",				            ["Vehicle", "Air"],				["14US_S", "F-14D Interceptor"],						        	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["14US_SUD3",				        ["Vehicle", "Air"],				["14US_SUD3", "F14D Bombcat (MK84)"],						    	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
@@ -1150,7 +1150,7 @@ INV_AlleVehicleeArray = [
 ["TowingTractor",				    ["Vehicle", "Air"],		        ["TowingTractor", "Towing Tractor"],							    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Coast Guard Helicopters
+// ILG Coast Guard Helicopters
 ["PRACS_AB212_M",				    ["Vehicle", "Air"],		        ["PRACS_AB212_M", "Huey (Door Gunners)"],							[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["PRACS_puma330_Marine_MED",	    ["Vehicle", "Air"],             ["PRACS_puma330_Marine_MED", "SA330 Puma Medevac"],				    [500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["CH_47F_BAF",				        ["Vehicle", "Air"],		        ["CH_47F_BAF", "Chinook HC4"],						            	[500000, 25000], 	 [5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
@@ -1812,9 +1812,14 @@ INV_AlleVehicleeArray = [
 ["pook_PBR_PMCWEST",				["Vehicle", "boat"],			["pook_PBR_PMCWEST", "PMC PBR Patrolboat"],							[500000, 15000], 	[0, "pmclicense", "pmclicense", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ILG Coastguard / PMC Boats
-["PRACS_PatrolBoat",				["Vehicle", "boat"],			["PRACS_PatrolBoat", "Serka Class Patrolboat"],						[750000, 15000], 	[0, "pmclicense", "cg_boat", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
-["PRACS_RB90",						["Vehicle", "boat"],			["PRACS_RB90", "RB-90 Sea Horse"],									[1000000, 15000], 	[0, "pmclicense", "cg_boat", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
+// ILG Coastguard Boats
+["PRACS_PatrolBoat",				["Vehicle", "boat"],			["PRACS_PatrolBoat", "Serka Class Patrolboat"],						[750000, 15000], 	[0, "cg_boat", "cg_boat", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
+["PRACS_RB90",						["Vehicle", "boat"],			["PRACS_RB90", "RB-90 Sea Horse"],									[350000, 15000], 	[0, "cg_boat", "cg_boat", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ILG PMC Boats
+["ILG_PMC_SERKA",					["Vehicle", "boat"],			["PRACS_PatrolBoat", "Serka Class Patrolboat"],						[1000000, 15000], 	[0, "pmclicense", "pmclicense", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
+["ILG_PMC_RB90",					["Vehicle", "boat"],			["PRACS_RB90", "RB-90 Sea Horse"],									[350000, 15000], 	[0, "pmclicense", "pmclicense", 250], [100, [1,0,0,4] ], "speedboat2" call ISSE_Cfg_Vehicle_GetName, "speedboat2" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 2],["ebauteile", 1],["glass", 2],["plastic", 5],["plastic", 5],["Mishy",3000]] ],
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // IslandLifeGaming Coastguard
