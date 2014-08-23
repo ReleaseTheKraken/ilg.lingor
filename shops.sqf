@@ -1,4 +1,4 @@
-// Cleaned by ILG - Use freely in your mission! We don't own this file nor does any other server. It took a long ass time to have this completed. Don't make a mess of this file!
+// Cleaned by ILG - Use freely in your mission! We don't own this file nor does any other server. It took a long ass time to have this completed though, so don't make a mess of this file!
 
 
 if(isServer)then
@@ -46,7 +46,7 @@ INV_itemstocks =
 	-1, 	// Jetski Shop
 	-1, 	// Boat Shop (s)
 	-1, 	// Sea Plane Shop
-	-1, 	// Coast Guard Boat Shop
+	-1, 	// SWAT Boat Shop
 	-1, 	// Bryces Pretty Jewelry Shop
 	-1, 	// Insurance
 	-1, 	// Fire Rescue Equipment
@@ -54,7 +54,7 @@ INV_itemstocks =
 	-1, 	// Jackos Cheeseburgers
 	-1, 	// BG Emporium
 	-1, 	// Wigworths
-	-1, 	// Oil Dealer
+	-1, 	// ILG Oil Dealers (Two shops total North and South)
 	-1, 	// Exports
 	-1, 	// Sell Whale (Two shops total)
 	-1, 	// Terror Stuff
@@ -97,7 +97,8 @@ INV_itemstocks =
 	-1,  	// Mafia Shop - ILG
 	-1,		// Pirate Weapon Shop - ILG
 	-1,		// CoastGuard Jet Shop - ILG
-	-1,		// Coast Guard Helicopter Shop - ILG
+	-1,		// CoastGuard Helicopter Shop - ILG
+	-1,		// CoastGuard Boat Shop - ILG
 	-1,		// PMC Aircraft Shop - ILG
 	-1,		// PMC Helicopter Shop - ILG
 	-1,		// PMC Vehicle Shop - ILG
@@ -150,15 +151,15 @@ INV_itemmaxstocks =
 	-1, 	// Jetski Shop
 	-1, 	// Boat Shop (s)
 	-1, 	// Sea Plane Shop
-	-1, 	// Coast Guard Boat Shop (Two shops SWAT and Coast Guard)
+	-1, 	// SWAT Boat Shop
 	-1, 	// Bryces Pretty Jewelry Shop
 	-1, 	// Insurance
 	-1, 	// Fire Rescue Equipment
-	-1, 	// Sell Resources
+	-1, 	// Sell Resources (Two shops total) 
 	-1, 	// Jackos Cheeseburgers
 	-1, 	// BG Emporium
 	-1, 	// Wigworths
-	-1, 	// Oil Dealer
+	-1, 	// ILG Oil Dealers (Two shops total North and South)
 	-1, 	// Exports
 	-1, 	// Sell Whale (Two shops total)
 	-1, 	// Terror Stuff
@@ -201,7 +202,8 @@ INV_itemmaxstocks =
 	-1,  	// Mafia Shop - ILG
 	-1,		// Pirate Weapon Shop - ILG
 	-1,		// CoastGuard Jet Shop - ILG
-	-1,		// Coast Guard Helicopter Shop - ILG
+	-1,		// CoastGuard Helicopter Shop - ILG
+	-1,		// CoastGuard Boat Shop - ILG
 	-1,		// PMC Aircraft Shop - ILG
 	-1,		// PMC Helicopter Shop - ILG
 	-1,		// PMC Vehicle Shop - ILG
@@ -713,7 +715,6 @@ _ts =
 	"Ural_TK_CIV_EP1", 		// Ural Truck
 	"V3S_Open_TK_CIV_EP1", 	// V3S Truck
 	"V3S_TK_EP1", 			// V3S Covered Truck
-	"UralOpen_CDF", 		// Ural Open
 	"KamazOpen", 			// Kamaz (Open)
 	"Ural_CDF", 			// Ural
 	"schoolbus", 			// TCG Schoolbus
@@ -886,17 +887,14 @@ _bsp =
 	"tcg_wave_red3" 	// White Red Jet Ski
 	];
 	
-//cop boat shop
-_cb = 
+//ILG SWAT Boat Shop
+_ILG_SWAT_BOAT = 
 	[
-	"fishingpole", 			// Fishing Pole
-	"JFH_USCG_ZODIAC", 		// Police Zodiac
-	"JFH_USCG_RHIB", 		// Police RHIB M2
 	"cl_inflatable", 		// Small Inflatable Boat
 	"tcg_wrun" 				// Jet Ski
 	];
 	
-//Terror Boat Shop
+// Terrorist Boat Shop
 _bt = 
 	[
 	"fishingpole", 					// Fishing Pole
@@ -2210,18 +2208,29 @@ _ILG_PMC_HelicopterShop =
 	"MH6J_EP1"					// Littlebird (Transport version)
 	];
 	
+_ILG_CgBoatShop =
+	[
+	"JFH_USCG_RHIB",			// Coastguard RHIB (Armed)
+	"JFH_USCG_ZODIAC",			// Coastguard Zodiac (Unarmed) 
+	"PRACS_PatrolBoat",			// Serka Class Patrolboat
+	"PRACS_RB90"				// RB-90 Sea Horse
+	];
+	
 _ILG_PMC_VehicleShop =
 	[
-	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
-	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
-	"MH6J_EP1"					// Littlebird (Transport version)
+	"ArmoredSUV_PMC",			// Armored SUV (Armed)
+	"SUV_TK_EP1"				// SUV (Unarmed)
 	];
 	
 _ILG_PMC_BoatShop =
 	[
-	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
-	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
-	"MH6J_EP1"					// Littlebird (Transport version)
+	"pook_escort_TKGUE",		// PMC Escort Ship
+	"pook_ASSAULT_BOAT_TKGUE",	// PMC Assault Boat
+	"pook_ASSAULT_SHIP_TAK",	// PMC Assault Ship
+	"pook_PATROL_BOAT_TAK",		// PMC Patrol Boat
+	"pook_PBR_PMCWEST",			// PMC PBR Patrolboat
+	"PRACS_PatrolBoat",			// Serka Class Patrolboat
+	"PRACS_RB90"				// RB-90 Sea Horse
 	];
 	
 _ILG_PMC_WeaponShop = 
@@ -2301,16 +2310,18 @@ INV_ItemShops =
 	[boatshop3, "Boat Shop",dummyobj,boatspawn3,_bs,_bs,false],
 	[ukpbshop, "Boat Shop",dummyobj,ukpbspawn,_ukpbs,_ukpbs,true],
 	[boatshop4, "Sea Plane Shop",dummyobj,boatspawn4,_bsp,_bsp,false],
-	[copboatshop, "Coast Guard Boat Shop (SWAT)",dummyobj,copboatspawn,_cb,_cb,true],
+	[copboatshop, "SWAT Boat Shop ",dummyobj,copboatspawn,_ILG_SWAT_BOAT,_ILG_SWAT_BOAT,true],
 	[tboatshop1,"Boat Shop",dummyobj,tboatspawn1,_bt,_bt,true],
 	[Diamond_1,"Bryces Pretty Jewelry Shop",dummyobj,dummyobj,_js,_js,true],
 	[mainbank,"Insurance",mainbank,dummyobj,_ins, _emptyshop,false],
 	[tdoc,"Fire Rescue Equipment",dummyobj,tdocspawn,_td,_td,true],
 	[resourcesell,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
+	[ILG_ResourceSellSouth,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
 	[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
 	[workplace_getjobflag_4,"BG Emporium",dummyobj,dummyobj,_gds1,_gds1,true],
 	[workplace_getjobflag_6,"Wigworths",dummyobj,dummyobj,_gds3,_gds3,true],
 	[OilSell1,"Oil Dealer", dummyobj,dummyobj, _emptyshop,_os,true],
+	[ILG_OilSellNorth,"Oil Dealer", dummyobj,dummyobj, _emptyshop,_os,true],
 	[OilSell2,"Exports", dummyobj,dummyobj, _emptyshop,_ukp,true],
 	[whalesell,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],	
 	[terrorbox,"Terror Stuff",terrorbox,dummyobj, _terrorshop,_terrorshop,true],
@@ -2363,9 +2374,9 @@ INV_ItemShops =
 	[ILG_CarShopSouth,"Used Cars (South)",dummyobj,ILG_CarSpawnSouth,_cs1,_cs1,true],
 	[ILG_SouthMiningShop,"Equipment & Mining Tools (South)",ILG_SouthMiningShop,dummyobj,_es,_es,true],
 	[ILG_AirplaneShop,"Airplane Shop (South)",dummyobj,ILG_AirplaneSpawn,_as,_as,true],
-	[ILG_ChopperJetShop,"Chopper and Jet Shop (South)",dummyobj,ILG_ChopperAndJetSpawn,_assa,_assa,true],
-	[ILG_CgBoatShop, "Coast Guard Boat Shop",dummyobj,ILG_CgBoatSpawn,_cb,_cb,true],
-	[ILG_CgJetShop, "Coast Guard Jet Shop",dummyobj,ILG_CgJetSpawn,_ILG_CoastGuardJets,_ILG_CoastGuardJets,true],
+	[ILG_CgHeliShop,"Coastguard Helicopter Shop",dummyobj,ILG_CgHeliSpawn,_ILG_CoastGuardHelicopters,_ILG_CoastGuardHelicopters,true],
+	[ILG_CgBoatShop, "Coastguard Boat Shop",dummyobj,ILG_CgBoatSpawn,_ILG_CgBoatShop,_ILG_CgBoatShop,true],
+	[ILG_CgJetShop, "Coastguard Jet Shop",dummyobj,ILG_CgJetSpawn,_ILG_CoastGuardJets,_ILG_CoastGuardJets,true],
 	[ILG_PMC_AircraftShop, "PMC Aircraft Shop",dummyobj,PMC_AircraftSpawn,_ILG_PMC_AircraftShop,_ILG_PMC_AircraftShop,true],
 	[ILG_PMC_HelicopterShop, "PMC Helicopter Shop",dummyobj,PMC_HelicopterSpawn,_ILG_PMC_HelicopterShop,_ILG_PMC_HelicopterShop,true],
 	[ILG_PMC_VehicleShop, "PMC Vehicle Shop",dummyobj,PMC_VehicleSpawn,_ILG_PMC_VehicleShop,_ILG_PMC_VehicleShop,true],

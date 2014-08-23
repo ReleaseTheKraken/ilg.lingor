@@ -319,6 +319,7 @@ INV_FarmItemArray =
 [[["woodarea1",70]],"wood",15,5,["Man"]],
 [[["sandarea",70]],"sand",15,5,["Man"]],
 [[["sandarea1",70]],"sand",15,5,["Man"]],
+[[["ILG_SandNorth",70]],"sand",15,5,["Man"]],
 [[["apfelfeld1",50]],"apple",10,5,["Man"]],
 [[["apfelfeld2",50]],"apple",10,5,["Man"]]
 ];
@@ -326,8 +327,10 @@ INV_FarmItemArray =
 Miningarray = 
 
 [
-[["OilArea1",15],"Oil",12],
-[["OilArea2",15],"Oil",12],
+[["ILG_OilArea1",15],"Oil",12],
+[["ILG_OilArea2",15],"Oil",12],
+[["ILG_OilArea3",15],"Oil",12],
+[["ILG_OilArea4",15],"Oil",12],
 [["OilRig1",5],"Oil",12],
 [["IronArea",30],"iron",12],
 [["IronArea1",30],"iron",12],
@@ -343,21 +346,21 @@ fishingarray =
 [
 [["fishingwhale",200], "whale",1],
 [["fishingwhale1",200], "whale",1],
-[["fishingblowfish",30], "blowfish",6],
-[["fishingblowfish_1",30], "blowfish",6],
-[["fishingblowfish_2",30], "blowfish",6],
-[["fishingherring",30], "herring",6],
-[["fishingherring_1",30], "herring",6],
-[["fishingherring_2",30], "herring",6],
-[["fishingmackerel",30], "mackerel",6],
-[["fishingmackerel_1",30], "mackerel",6],
-[["fishingmackerel_2",30], "mackerel",6],
+[["fishingblowfish",100], "blowfish",6],
+[["fishingblowfish_1",100], "blowfish",6],
+[["fishingblowfish_2",100], "blowfish",6],
+[["fishingherring",100], "herring",6],
+[["fishingherring_1",100], "herring",6],
+[["fishingherring_2",100], "herring",6],
+[["fishingmackerel",100], "mackerel",6],
+[["fishingmackerel_1",100], "mackerel",6],
+[["fishingmackerel_2",100], "mackerel",6],
 [["fishingbass",100], "bass",6],
 [["fishingbass_1",100], "bass",6],
 [["fishingbass_2",100], "bass",6],
-[["percharea",30], "perch",6],
-[["walleyearea",30], "walleye",6],
-[["troutarea",30], "trout",6]
+[["percharea",100], "perch",6],
+[["walleyearea",100], "walleye",6],
+[["troutarea",100], "trout",6]
 ];
 
 fishingarray1 = ["blowfish","herring","mackerel","bass","perch","walleye","trout"];

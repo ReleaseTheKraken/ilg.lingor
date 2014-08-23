@@ -157,7 +157,18 @@ if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == OilSell1)then
 	};
 	
 		
-};													
+};			
+
+if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == ILG_OilSellNorth)then
+{
+	switch (_item) do 
+	{
+	case "oil";
+	case "OilBarrel": {_demand = ((tankencost - 100)/200);_preis = round((_preisOhneTax*(_preis/_preisOhneTax))*_demand);if(_preis < oilbaseprice)then{_preis = oilbaseprice};};
+	};
+	
+		
+};												
 
 if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == OilSell2)then
 {

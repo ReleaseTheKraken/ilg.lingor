@@ -3,6 +3,8 @@ _role = player;
 //action1 = _role addaction ["Test","test.sqf",[1],1,false,true,"",""];
 action2 = _role addaction ["Furniture FAQ","furniturehelp.sqf",[1],1,false,true,"","player distance workplace_getjobflag_5 <= 5"];
 action2a = _role addaction ["How To Play Paintball","pbhelp.sqf",[1],1,false,true,"","player distance paintballbox <= 30"];
+//========================   LICENSE EXTRAS   =====================================
+actionlic1 = _role addAction ["Take Driving Test","drivingtest.sqf",[],1,false,true,"","player distance dmv <= 3"];
 //========================   HOSTAGE  ================================================
 action3 = _role addaction ["Take Hostage Mission","hostage.sqf",["getajob_hostage"],1,false,true,"","player distance hostage <= 3 and isciv"];
 action4 = _role addaction ["Take Hostage", "noscript.sqf", "[hostage1] join (group player); player groupchat ""Keep the hostage close or you will fail!"";",1,false,true,"","player distance hostage1 < 5"];
@@ -95,6 +97,7 @@ action51 = _role addaction [format ["Pay Bail", slave_cost],"maindialogs.sqf", [
 action53 = _role addaction ["Process Diamond","itemprocess.sqf",["diamond rock", "diamond", 5, ""],1,false,true,"","player distance diamond_1 <= 5 and isciv"];
 action54 = _role addaction ["Process Meth","itemprocess1.sqf",["pharm", "meth", 2, ""],1,false,true,"","player distance methlab <= 5 and isciv"];
 action55 = _role addaction ["Process Oil","itemprocess.sqf",["Oil", "OilBarrel", 1, "oilukp"],1,false,true,"","player distance Oil_1 <= 5 and isciv"];
+ILG_ProcessOilSouth = _role addaction ["Process Oil","itemprocess.sqf",["Oil", "OilBarrel", 1, "oilukp"],1,false,true,"","player distance ILG_OilProcessSouth <= 5 and isciv"];
 action56 = _role addaction ["Process Wheat","itemprocess.sqf",["getreide", "Bread", 2, "Baker"],1,false,true,"","player distance bakery <= 5 and isciv"];
 action57 = _role addaction ["Process Strawberries","itemprocess.sqf",["straw", "Frozens", 3, "Baker"],1,false,true,"","player distance bakery <= 5 and isciv"];
 //ga1
