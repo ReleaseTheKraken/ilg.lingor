@@ -183,7 +183,7 @@ if (_itemart == "Vehicle" and instock) then
 	
 	INV_SteuernGezahlt = (INV_SteuernGezahlt + _einzelSteuer);								
 	player groupChat format [localize "STRS_inv_buyvehicles_buy_car", (_infos call INV_getitemName), (_CostMitTax call ISSE_str_IntToStr)];																												
-	[_item, _logic] spawn 
+	[(_infos call INV_getitemClassName), _logic] spawn 
 
 		{
 
