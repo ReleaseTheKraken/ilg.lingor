@@ -103,7 +103,8 @@ INV_itemstocks =
 	-1,		// PMC Helicopter Shop - ILG
 	-1,		// PMC Vehicle Shop - ILG
 	-1,		// PMC Boat Shop - ILG
-	-1		// PMC Weapon Shop - ILG
+	-1,		// PMC Weapon Shop - ILG
+	-1		// Rebel Aircraft - ILG
 ];
 
 publicvariable "INV_itemstocks";
@@ -207,8 +208,8 @@ INV_itemmaxstocks =
 	-1,		// PMC Aircraft Shop - ILG
 	-1,		// PMC Helicopter Shop - ILG
 	-1,		// PMC Vehicle Shop - ILG
-	-1,		// PMC Boat Shop - ILG
-	-1		// PMC Weapon Shop - ILG
+	-1,		// PMC Weapon Shop - ILG
+	-1		// Rebel Aircraft - ILG
 ];
 
 // Shop items
@@ -2382,5 +2383,6 @@ INV_ItemShops =
 	[ILG_PMC_VehicleShop, "PMC Vehicle Shop",dummyobj,PMC_VehicleSpawn,_ILG_PMC_VehicleShop,_ILG_PMC_VehicleShop,true],
 	[ILG_PMC_BoatShop, "PMC Vehicle Shop",dummyobj,PMC_BoatSpawn,_ILG_PMC_BoatShop,_ILG_PMC_BoatShop,true],
 	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true],
-	[ILG_SellWhaleRebel,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true]	
+	[ILG_SellWhaleRebel,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],
+	[ILG_RebelAircraft, "Lingor Rebel's Aircraft Dealer",dummyobj,ILG_RebelAircraftSpawn,_ILG_RebelAircraft,_ILG_RebelAircraft,true]
 	];

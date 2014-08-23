@@ -168,7 +168,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=226;
+		items=227;
 		class Item0
 		{
 			side="LOGIC";
@@ -4794,10 +4794,29 @@ class Mission
 				};
 			};
 		};
+		class Item226
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={813.51654,15.828876,1973.5615};
+					azimut=949.72302;
+					id=2440;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="ILG_RebelAircraftSpawn";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=2214;
+		items=2215;
 		class Item0
 		{
 			position[]={3965.7817,143.96144,4228.6665};
@@ -27216,12 +27235,13 @@ class Mission
 		};
 		class Item2202
 		{
-			position[]={717.85461,17.230196,1851.6818};
-			azimut=227.18268;
+			position[]={715.60193,16.868305,1825.0686};
+			azimut=50.228802;
 			id=2426;
 			side="EMPTY";
 			vehicle="TK_WarfareBVehicleServicePoint_Base_EP1";
 			skill=0.60000002;
+			init="this allowDamage false;";
 		};
 		class Item2203
 		{
@@ -27350,10 +27370,23 @@ class Mission
 			text="ILG_OilSellNorth";
 			init="this allowdamage false;";
 		};
+		class Item2214
+		{
+			position[]={712.57666,25.088211,1798.6346};
+			azimut=-218.57001;
+			special="NONE";
+			id=2439;
+			side="EMPTY";
+			vehicle="ilg_shop";
+			leader=1;
+			skill=0.60000002;
+			text="ILG_RebelAircraft";
+			init="this allowdamage false;";
+		};
 	};
 	class Markers
 	{
-		items=381;
+		items=382;
 		class Item0
 		{
 			position[]={6685.6836,12.187677,6609.5972};
@@ -30386,7 +30419,7 @@ class Mission
 		{
 			position[]={169.67169,0.63761789,221.51416};
 			name="ILG_RebelAreaSouth";
-			text="Rebel Controlled Area";
+			text="Terrorist / Rebel Controlled Area";
 			type="Faction_CDF";
 			colorName="ColorRed";
 			fillName="DiagGrid";
@@ -30397,7 +30430,7 @@ class Mission
 		{
 			position[]={178.2357,0.61399877,2666.1621};
 			name="ILG_RebelAreaNorth";
-			text="Rebel Controlled Area";
+			text="Terrorist / Rebel Controlled Area";
 			type="Faction_CDF";
 			colorName="ColorRed";
 			fillName="DiagGrid";
@@ -30836,6 +30869,16 @@ class Mission
 			position[]={722.60553,39.216888,5659.2964};
 			name="endofcartest5";
 			type="Empty";
+		};
+		class Item381
+		{
+			position[]={714.07764,25.120901,1798.7421};
+			name="ILG_RebelAircraftMarker";
+			text="Rebel Aircraft Dealer";
+			type="mil_flag";
+			colorName="ColorBlue";
+			a=0.60000002;
+			b=0.60000002;
 		};
 	};
 	class Sensors
