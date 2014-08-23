@@ -105,6 +105,7 @@ switch (PlayerTeam) do
 };
 if(!isDedicated) then
 {
+	waitUntil{!isNil "LinLib_RemovedWeapons"};
 	If(side player == west)then{
 		LinLib_LoadSkin = false;
 	};

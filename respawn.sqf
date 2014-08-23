@@ -4,6 +4,9 @@ while {true} do
 waituntil {alive player};
 //player removeweapon "ItemGPS";
 removeAllWeapons player;
+if(isNil "LinLib_RemovedWeapons")then{
+	LinLib_RemovedWeapons = true;
+};
 execVM "briefing.sqf";
 if (isciv) then {player addweapon "ItemGPS";};
 if (iscop) then 
