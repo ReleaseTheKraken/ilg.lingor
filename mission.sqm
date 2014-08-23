@@ -4533,9 +4533,9 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="Cop29";
+					text="Cop26";
 					init="removeallweapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+7.9]; this setVariable [""isTazed"",false,true]; this addEventHandler [""HandleDamage"",{_this call DDOPP_taser_handleHit}];";
-					description="Cop29 Coast Guard (Goose)";
+					description="Cop26 Coast Guard (Goose)";
 				};
 			};
 		};
@@ -4547,18 +4547,18 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9786.375,0.77946746,9987.9492};
-					azimut=43.1092;
+					position[]={9791.3545,0.86060053,9990.8125};
+					azimut=-133.40601;
 					special="NONE";
 					id=2385;
 					side="WEST";
-					vehicle="FR_TL";
+					vehicle="USN_Fighter_Pilot";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="Cop30";
+					text="Cop27";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+7.9];  this setVariable [""isTazed"",false,true]; this addEventHandler [""HandleDamage"",{_this call DDOPP_taser_handleHit}];";
-					description="Cop18 Patrol (Trained Officers Only)";
+					description="Cop27 Coast Guard (Maverick)";
 				};
 			};
 		};
@@ -4570,18 +4570,18 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9791.3604,0.77106082,9990.8594};
-					azimut=588.16699;
+					position[]={9786.8428,0.8810938,9987.6006};
+					azimut=405.952;
 					special="NONE";
 					id=2386;
 					side="WEST";
-					vehicle="USN_Fighter_Pilot";
+					vehicle="FR_TL";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Cop28";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+7.9];  this setVariable [""isTazed"",false,true]; this addEventHandler [""HandleDamage"",{_this call DDOPP_taser_handleHit}];";
-					description="Cop28 Coast Guard (Maverick)";
+					description="Cop28 Coast Guard Team Leader ";
 				};
 			};
 		};
@@ -4601,10 +4601,10 @@ class Mission
 					vehicle="FR_AC";
 					player="PLAY CDG";
 					leader=1;
-					skill=0.60000002;
-					text="Cop27";
+					skill=0.6611799;
+					text="Cop29";
 					init="removeallweapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+11.7]; this setVariable [""isTazed"",false,true]; this addEventHandler [""HandleDamage"",{_this call DDOPP_taser_handleHit}];";
-					description="Cop27 Coast Guard (Assault Squad)";
+					description="Cop29 Coast Guard (Assault Squad)";
 				};
 			};
 		};
@@ -4625,9 +4625,9 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="Cop26";
+					text="Cop30";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+11.9];  this setVariable [""isTazed"",false,true]; this addEventHandler [""HandleDamage"",{_this call DDOPP_taser_handleHit}];";
-					description="Cop26 Coast Guard (Assault Squad)";
+					description="Cop30 Coast Guard (Assault Squad)";
 				};
 			};
 		};
