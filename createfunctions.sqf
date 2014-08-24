@@ -57,7 +57,7 @@ _classname = _this select 0;
 _logic	   = _this select 1;
 _type = typeof vehicle player;
 _type1 = ["MH6J_EP1"];
-_type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","GazelleD","Gazelle","Gazelle1","Gazelle3","adf_as350","ibr_as350_specops","ibr_as350_jungle","OH58g","UH1H_TK_GUE_EP1","MH60S","HH65C","ibr_as350_civ","UH1H_TK_GUE_EP1_LIN","PRACS_AB212_cas"];
+_type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","GazelleD","Gazelle","Gazelle1","Gazelle3","adf_as350","ibr_as350_specops","ibr_as350_jungle","OH58g","UH1H_TK_GUE_EP1","MH60S","HH65C","ibr_as350_civ","UH1H_TK_GUE_EP1_LIN","PRACS_AB212_cas","kyo_MH47E_base","kyo_MH47E_SRO"];
 
 
 	if ((_classname in _type1) or (_classname in _type2))  then 
