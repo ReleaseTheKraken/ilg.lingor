@@ -138,8 +138,8 @@ if (_art == "itemkauf") then
 
 	if (((_itemart == "waffe") or (_itemart == "magazin")) and instock) then 
 
-		{
-		
+	{
+	
 		if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)];shopactivescript = 0; _exitvar = 1};
 		if (!(_license2 call INV_HasLicense) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call INV_GetLicenseName)];shopactivescript = 0; _exitvar = 1};								
 		if (_Mishy < _cost) exitWith {player groupChat localize "STRS_inv_buyitems_keinMishy"; _exitvar = 1};																						
@@ -148,27 +148,22 @@ if (_art == "itemkauf") then
 		
 		if (_itemart == "Waffe") then 
 
-			{
-			
+		{
 			[(_infos call INV_getitemClassName), _menge, _crate] spawn INV_CreateWeapon;
 			player groupChat format[localize "STRS_inv_buyitems_gekauft", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];	
-			
-			
-			} 
-			else 
-			{	
-				
+
+		} 
+		else 
+		{	
 			[(_infos call INV_getitemClassName), _menge, _crate] spawn INV_CreateMag;
 			player groupChat format [localize "STRS_inv_buyitems_gekauft", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];
-			
-			
-			};			
+		};			
 
-		};
+	};
 														
 	if (_itemart == "Vehicle" and instock) then 
 
-		{
+	{
 
 		_menge = 1;
 		if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)]; shopactivescript = 0; _exitvar = 1};
@@ -183,7 +178,7 @@ if (_art == "itemkauf") then
 		player groupChat format [localize "STRS_inv_buyvehicles_buy_car", (_infos call INV_getitemName), (_CostMitTax call ISSE_str_IntToStr)];																												
 		[(_infos call INV_getitemClassName), _logic] spawn 
 
-			{
+		{
 
 			INV_UsingCarshop = 1;
 			sleep 5;
@@ -191,13 +186,13 @@ if (_art == "itemkauf") then
 			if (not(alive player)) exitWith {};																																																										
 			[_this select 0, _this select 1] spawn INV_CreateVehicle;
 			
-			};
+		};
 
-		}; 
+	}; 
 
 	if (_fahne == mafs) then {
-	mafiabank = mafiabank + round(_cost / 2);
-	publicvariable "mafiabank";
+		mafiabank = mafiabank + round(_cost / 2);
+		publicvariable "mafiabank";
 	};
 
 
@@ -205,11 +200,11 @@ if (_art == "itemkauf") then
 
 	if (_stock != -1 and _exitvar == 0) then
 
-		{
+	{
 
 		format['["%1", (%2 - %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call broadcast;
 
-		};	
+	};	
 		
 }; 
 
@@ -220,153 +215,146 @@ if (_art == "itemkauf") then
 if (_art == "itemverkauf") then 
 
 {
-if (shopactivescript == 1) exitwith {player groupchat "script already active"};
-shopactivescript = 1;
-maxstock=false;
-_stock    = [_item, INV_ActiveShopNumber] call INV_getstock;
-_maxstock = [_item, INV_ActiveShopNumber] call INV_getmaxstock;
-	
-if (_maxstock != -1) then
+	if (shopactivescript == 1) exitwith {player groupchat "script already active"};
+	shopactivescript = 1;
+	maxstock=false;
+	_stock    = [_item, INV_ActiveShopNumber] call INV_getstock;
+	_maxstock = [_item, INV_ActiveShopNumber] call INV_getmaxstock;
+		
+	if (_maxstock != -1) then
 
 	{
-	
-	if ((_stock + _menge) > _maxstock)then{maxstock=true; _menge = _maxstock - _stock;_cost = _menge*_CostMitTax;};
+
+		if ((_stock + _menge) > _maxstock)then{maxstock=true; _menge = _maxstock - _stock;_cost = _menge*_CostMitTax;};
 
 	};
 
-if(_menge <= 0)exitwith{player groupchat "the shop has reached its maximum stock for this item/vehicle"};
+	if(_menge <= 0)exitwith{player groupchat "the shop has reached its maximum stock for this item/vehicle"};
 
-if (_itemart == "item") then 
+	if (_itemart == "item") then 
 
 	{
 													
-	if (_item call INV_GetItemAmount == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};								
-	if (_item call INV_GetItemAmount < _menge) then {_menge = (_item call INV_GetItemAmount); _cost = _CostMitTax*_menge;};
-	
-	if (_infos call INV_getitemIsIllegal and _infos call INV_getitemKindOf == "drug") then
+		if (_item call INV_GetItemAmount == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};								
+		if (_item call INV_GetItemAmount < _menge) then {_menge = (_item call INV_GetItemAmount); _cost = _CostMitTax*_menge;};
+
+		if (_infos call INV_getitemIsIllegal and _infos call INV_getitemKindOf == "drug") then
 
 		{
 
-		_list = _fahne getvariable "druglist";
-		if(isnil "_list")then{_list = [[player, _menge, _cost/_menge]]}else{_list = _list + [[player, _menge, _cost/_menge]]};
-		_fahne setvariable["druglist", _list, true];
+			_list = _fahne getvariable "druglist";
+			if(isnil "_list")then{_list = [[player, _menge, _cost/_menge]]}else{_list = _list + [[player, _menge, _cost/_menge]]};
+			_fahne setvariable["druglist", _list, true];
 
 		};
 
-	['Mishy', _cost] call INV_AddInvItem;																								
-	[_item, -(_menge)] call INV_AddInvItem;
-	if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
-	player groupChat format [localize "STRS_inv_shop_sold", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];					
+		['Mishy', _cost] call INV_AddInvItem;																								
+		[_item, -(_menge)] call INV_AddInvItem;
+		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
+		player groupChat format [localize "STRS_inv_shop_sold", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];					
 
 	};																		
-	
-if (_itemart == "waffe") then 
+		
+	if (_itemart == "waffe") then 
 
 	{
 
-	_verkauft  = 0;										
-	_gewinn    = 0;
-	_weaps      = {_x == (_infos call INV_getitemClassName)} count weapons player;																														
-	if (_weaps == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};	
-	if (_weaps < _menge) then {_menge = _weaps;};		
-	_cost = _CostMitTax;																											
-	['Mishy', _cost] call INV_AddInvItem;
-	if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
+		_verkauft  = 0;										
+		_gewinn    = 0;
+		_weaps      = {_x == (_infos call INV_getitemClassName)} count weapons player;																														
+		if (_weaps == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};	
+		if (_weaps < _menge) then {_menge = _weaps;};		
+		_cost = _CostMitTax;																											
+		['Mishy', _cost] call INV_AddInvItem;
+		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
 
-	for [{_i=0}, {_i < _menge}, {_i=_i+1}] do 
+		for [{_i=0}, {_i < _menge}, {_i=_i+1}] do 
 
-		{
-																					
-		player removeWeapon (_infos call INV_getitemClassName);	
+			{
+																						
+			player removeWeapon (_infos call INV_getitemClassName);	
 
-		};
-	
-	player groupChat format [localize "STRS_inv_buyitems_verkauft", 1, (_infos call INV_getitemName), (_CostMitTax call ISSE_str_IntToStr)];												
+			};
+
+		player groupChat format [localize "STRS_inv_buyitems_verkauft", 1, (_infos call INV_getitemName), (_CostMitTax call ISSE_str_IntToStr)];												
 
 	};
 
-if (_itemart == "magazin") then 
+	if (_itemart == "magazin") then 
 
 	{
 																						
-	_verkauft  = 0;										
-	_gewinn    = 0;								
-	_mags      = {_x == (_infos call INV_getitemClassName)} count magazines player;																														
-	if (_mags == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};						
-	if (_mags < _menge) then {_menge = _mags;};																																						
-	_cost = _menge*_CostMitTax;																						
-	['Mishy', _cost] call INV_AddInvItem;
-	if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
-	
-	for [{_i=0}, {_i < _menge}, {_i=_i+1}] do 
+		_verkauft  = 0;										
+		_gewinn    = 0;								
+		_mags      = {_x == (_infos call INV_getitemClassName)} count magazines player;																														
+		if (_mags == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; shopactivescript = 0; _exitvar = 1};						
+		if (_mags < _menge) then {_menge = _mags;};																																						
+		_cost = _menge*_CostMitTax;																						
+		['Mishy', _cost] call INV_AddInvItem;
+		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
 
-		{																											
+		for [{_i=0}, {_i < _menge}, {_i=_i+1}] do 
 
-		player removeMagazine (_infos call INV_getitemClassName);																														
+			{																											
 
-		};
-	
-	player groupChat format [localize "STRS_inv_buyitems_verkauft", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];
-	_exitvar = 1;
+			player removeMagazine (_infos call INV_getitemClassName);																														
+
+			};
+
+		player groupChat format [localize "STRS_inv_buyitems_verkauft", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];
+		_exitvar = 1;
 
 
 	};
 
-if (_itemart == "Vehicle") then 
+	if (_itemart == "Vehicle") then {																																												
+		_menge = 1;																																						
+		_vehicle = call compile format ["%1", _extrainfo];																								
+		_posInVclArray = INV_VehicleArray find _vehicle;																						
+		if (_posInVclArray == -1) exitWith {player groupChat localize "STRS_inv_buyvehicles_noowner"; shopactivescript = 0; _exitvar = 1};																								
+		if (not (alive _vehicle))            exitWith {player groupChat localize "STRS_inv_buyvehicles_destroyed"; shopactivescript = 0; _exitvar = 1};										
+		if ((_vehicle distance player) > 25) exitWith {player groupChat localize "STRS_inv_buyitems_sell_toofar"; shopactivescript = 0; _exitvar = 1};																												
+		['Mishy', (_CostMitTax)] call INV_AddInvItem;												
+		player groupChat format [localize "STRS_inv_shop_vehiclesold", (_CostMitTax call ISSE_str_IntToStr)];																														
+		INV_VehicleArray = INV_VehicleArray - [_vehicle];				
+		deleteVehicle _vehicle;
+	};
+
+	if (_stock != -1 and _exitvar == 0) then
 
 	{
-																																														
-	_menge = 1;																																						
-	_vehicle = call compile format ["%1", _extrainfo];																								
-	_posInVclArray = INV_VehicleArray find _vehicle;																						
-	if (_posInVclArray == -1) exitWith {player groupChat localize "STRS_inv_buyvehicles_noowner"; shopactivescript = 0; _exitvar = 1};																								
-	if (not (alive _vehicle))            exitWith {player groupChat localize "STRS_inv_buyvehicles_destroyed"; shopactivescript = 0; _exitvar = 1};										
-	if ((_vehicle distance player) > 25) exitWith {player groupChat localize "STRS_inv_buyitems_sell_toofar"; shopactivescript = 0; _exitvar = 1};																												
-	['Mishy', (_CostMitTax)] call INV_AddInvItem;												
-	player groupChat format [localize "STRS_inv_shop_vehiclesold", (_CostMitTax call ISSE_str_IntToStr)];																														
-	INV_VehicleArray = INV_VehicleArray - [_vehicle];				
-	deleteVehicle _vehicle;
+
+		format['["%1", (%2 + %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call broadcast;
+
+	};
+
+	//============================================== OIL TRADING SUPPLY/DEMAND ============================================
+
+	if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == OilSell1) then 
+
+	{
+
+		tankencost = tankencost - oilsellpricedec*_menge;
+		sleep 0.1;
+		if(tankencost < 100)then{tankencost = 100};
+
+		publicvariable "tankencost";
+
+	};
 		
-
-	};
-
-if (_stock != -1 and _exitvar == 0) then
+	if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == ILG_OilSellNorth) then 
 
 	{
+		tankencost = tankencost - oilsellpricedec*_menge;
+		sleep 0.1;
+		if(tankencost < 100)then{tankencost = 100};
 
-	format['["%1", (%2 + %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call broadcast;
-	
+		publicvariable "tankencost";
 	};
 
-//============================================== OIL TRADING SUPPLY/DEMAND ============================================
+	//=======================================================================================================================
 
-if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == OilSell1) then 
-
-	{
-
-	tankencost = tankencost - oilsellpricedec*_menge;
-	sleep 0.1;
-	if(tankencost < 100)then{tankencost = 100};
-
-	publicvariable "tankencost";
-
-	};
-	
-if (((INV_ItemShops select INV_ActiveShopNumber) select 0) == ILG_OilSellNorth) then 
-
-	{
-
-	tankencost = tankencost - oilsellpricedec*_menge;
-	sleep 0.1;
-	if(tankencost < 100)then{tankencost = 100};
-
-	publicvariable "tankencost";
-
-	};
-
-//=======================================================================================================================
-
-if(maxstock)then{player groupchat "the shop has reached its maximum stock for this item/vehicle"};
+	if(maxstock)then{player groupchat "the shop has reached its maximum stock for this item/vehicle"};
 
 
 

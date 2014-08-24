@@ -26569,7 +26569,7 @@ class Mission
 			vehicle="JDG_carrier_Spawner";
 			leader=1;
 			skill=0.60000002;
-			init="disableSerialization; this enableSimulation false; this allowDamage false;";
+			init="this allowDamage false;";
 		};
 		class Item2134
 		{
