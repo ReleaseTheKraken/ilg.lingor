@@ -127,7 +127,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	};
 	
 	//Coast Guard Helicopter
-		if(_classname == "UH60CG")then{
+	if(_classname == "UH60CG")then{
 		newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
 		processInitCommands; 
 	};
@@ -135,36 +135,26 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	//JFH Coastguard Zodiac
 	if(_classname == "JFH_USCG_ZODIAC")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
-		newvehicle lock false;
-		processInitCommands; 
 	};
 	
 	//JFH Coastguard RHIB
 	if(_classname == "JFH_USCG_RHIB")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
-		newvehicle lock false;
-		processInitCommands; 
 	};
 	
 	//Zodiac
 	if(_classname == "Zodiac")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
-		newvehicle lock false;
-		processInitCommands; 
 	};
 	
 	//RHIB
 	if(_classname == "RHIB")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
-		newvehicle lock false;
-		processInitCommands; 
 	};
 	
 	//PBX
 	if(_classname == "PBX")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
-		newvehicle lock false;
-		processInitCommands; 
 	};
 		
 	//IRA BOMB TRUCK 
