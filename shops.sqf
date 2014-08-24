@@ -2192,7 +2192,8 @@ _ILG_CoastGuardHelicopters =
 	"UH60CG",					// CoastGuard Rescue Blackhawk	
 	"UH60M_EP1",				// UH-60 Blackhawk 	
 	"CH_47F_BAF",				// Chinook HC4	
-	"PRACS_AB212_M",			// RACS Huey (Door Gunner version)	
+	"kyo_MH47E_base", 			// MH-47E Helicopter
+	"kyo_MH47E_SRO",			// MH-47E Helicopter (SRO)
 	"PRACS_puma330_Marine_MED"	// RACS SA330 Puma (Medevac)	
 	];
 	
