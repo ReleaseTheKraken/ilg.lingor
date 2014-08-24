@@ -1,114 +1,110 @@
 // Cleaned by ILG - Use freely in your mission! We don't own this file nor does any other server. It took a long ass time to have this completed though, so don't make a mess of this file!
 
 
-if(isServer)then
+if(isServer)then{
+	INV_itemstocks = 
 
-{
+	[
+		-1, 	// Fuel Shop
+		-1, 	// Fuel Shop 2
+		-1, 	// Item Shop
+		-1, 	// Cop Food Shop
+		-1, 	// Pub Shop(s) 
+		-1, 	// Firearms Dealer
+		-1, 	// Assassin Shop
+		-1, 	// Government Equipment Shop
+		-1, 	// Equipment & Mining Tools (Two shops total North and South)
+		-1, 	// Texas Go-Carts Shop
+		-1, 	// Car Upgrades
+		-1, 	// Used Cars (2 Shops North and South car Shops)
+		-1, 	// Farm Equipment
+		-1, 	// Muscle Car Shop
+		-1, 	// Charger and Mazda
+		-1, 	// Low End Sports
+		-1, 	// Mid Level Sports
+		-1, 	// High End Sports
+		-1, 	// Nissan Car Shop
+		-1, 	// 350z Car Shop
+		-1, 	// Ford Car Shop
+		-1, 	// BMW Car Shop
+		-1, 	// Tahoe Shop
+		-1, 	// Pickup Shop
+		-1, 	// Taxi Shop
+		-1, 	// Mikes Bike Shop
+		-1, 	// Quad Bike Shop
+		-1, 	// Sports Bike Shop
+		-1, 	// Truck and Bus Shop
+		-1, 	// Truck Shop
+		-1, 	// Sport Truck Shop
+		-1, 	// Airplane Shop
+		-1, 	// Chopper and Jet Shop
+		-1, 	// Commercial Air Shop
+		-1, 	// Chopper and Jet Shop
+		-1, 	// Jetski Shop
+		-1, 	// Boat Shop (s)
+		-1, 	// Sea Plane Shop
+		-1, 	// SWAT Boat Shop
+		-1, 	// Bryces Pretty Jewelry Shop
+		-1, 	// Insurance
+		-1, 	// Fire Rescue Equipment
+		-1, 	// Sell Resources
+		-1, 	// Jackos Cheeseburgers
+		-1, 	// BG Emporium
+		-1, 	// Wigworths
+		-1, 	// ILG Oil Dealers (Two shops total North and South)
+		-1, 	// Exports
+		-1, 	// Sell Whale (Two shops total)
+		-1, 	// Terror Stuff
+		-1, 	// Barely Legal
+		-1, 	// Gang Shop (s)
+		-1, 	// Sell Cocaine
+		-1, 	// Sell marijuana
+		-1, 	// Sell LSD
+		-1, 	// Sell Heroin
+		-1, 	// Sell Meth
+		-1, 	// Pharmacy
+		-1, 	// Police Aircraft
+		-1, 	// Police vehicles
+		-1, 	// Sheriff Vehicles
+		-1, 	// Basic Police Gear
+		-1, 	// Patrol Officer Gear
+		-1, 	// Sheriffs Department Gear
+		-1, 	// SWAT Equipment
+		-1, 	// BROKE Trained Cop Equipment
+		-1, 	// SWAT Vehicles
+		-1, 	// Traffic Division Equipment
+		-1, 	// Traffic Division Vehicles
+		-1, 	// Trained Cop Vehicles
+		-1, 	// K9 Unit and APO Vehicles
+		-1, 	// Trained Cop Equipment
+		-1, 	// Tier 1 Donator Shop
+		-1, 	// Tier 2 Donator Shop
+		-1, 	// Tier 3 Donator Shop
+		-1, 	// Piracy Gear - ILG
+		-1, 	// IRA Vehicles - ILG
+		-1, 	// IRA Weapons - ILG
+		-1, 	// Tier-X Weapon Shop (s) - ILG
+		-1, 	// Tier-X Ammo Shop - ILG
+		-1, 	// VIP Terrorist Weapons - ILG
+		-1, 	// VIP Terrorist Ammo - ILG
+		-1, 	// VIP Terrorist Vehicles - ILG
+		-1, 	// VICE Shop - ILG
+		-1, 	// VICE Vehicles - ILG
+		-1, 	// Amazing Shop of Doom - ILG
+		-1,  	// Mafia Shop - ILG
+		-1,		// Pirate Weapon Shop - ILG
+		-1,		// CoastGuard Jet Shop - ILG
+		-1,		// CoastGuard Helicopter Shop - ILG
+		-1,		// CoastGuard Boat Shop - ILG
+		-1,		// PMC Aircraft Shop - ILG
+		-1,		// PMC Helicopter Shop - ILG
+		-1,		// PMC Vehicle Shop - ILG
+		-1,		// PMC Boat Shop - ILG
+		-1,		// PMC Weapon Shop - ILG
+		-1		// Rebel Aircraft - ILG
+	];
 
-INV_itemstocks = 
-
-[
-	-1, 	// Fuel Shop
-	-1, 	// Fuel Shop 2
-	-1, 	// Item Shop
-	-1, 	// Cop Food Shop
-	-1, 	// Pub Shop(s) 
-	-1, 	// Firearms Dealer
-	-1, 	// Assassin Shop
-	-1, 	// Government Equipment Shop
-	-1, 	// Equipment & Mining Tools (Two shops total North and South)
-	-1, 	// Texas Go-Carts Shop
-	-1, 	// Car Upgrades
-	-1, 	// Used Cars (2 Shops North and South car Shops)
-	-1, 	// Farm Equipment
-	-1, 	// Muscle Car Shop
-	-1, 	// Charger and Mazda
-	-1, 	// Low End Sports
-	-1, 	// Mid Level Sports
-	-1, 	// High End Sports
-	-1, 	// Nissan Car Shop
-	-1, 	// 350z Car Shop
-	-1, 	// Ford Car Shop
-	-1, 	// BMW Car Shop
-	-1, 	// Tahoe Shop
-	-1, 	// Pickup Shop
-	-1, 	// Taxi Shop
-	-1, 	// Mikes Bike Shop
-	-1, 	// Quad Bike Shop
-	-1, 	// Sports Bike Shop
-	-1, 	// Truck and Bus Shop
-	-1, 	// Truck Shop
-	-1, 	// Sport Truck Shop
-	-1, 	// Airplane Shop
-	-1, 	// Chopper and Jet Shop
-	-1, 	// Commercial Air Shop
-	-1, 	// Chopper and Jet Shop
-	-1, 	// Jetski Shop
-	-1, 	// Boat Shop (s)
-	-1, 	// Sea Plane Shop
-	-1, 	// SWAT Boat Shop
-	-1, 	// Bryces Pretty Jewelry Shop
-	-1, 	// Insurance
-	-1, 	// Fire Rescue Equipment
-	-1, 	// Sell Resources
-	-1, 	// Jackos Cheeseburgers
-	-1, 	// BG Emporium
-	-1, 	// Wigworths
-	-1, 	// ILG Oil Dealers (Two shops total North and South)
-	-1, 	// Exports
-	-1, 	// Sell Whale (Two shops total)
-	-1, 	// Terror Stuff
-	-1, 	// Barely Legal
-	-1, 	// Gang Shop (s)
-	-1, 	// Sell Cocaine
-	-1, 	// Sell marijuana
-	-1, 	// Sell LSD
-	-1, 	// Sell Heroin
-	-1, 	// Sell Meth
-	-1, 	// Pharmacy
-	-1, 	// Police Aircraft
-	-1, 	// Police vehicles
-	-1, 	// Sheriff Vehicles
-	-1, 	// Basic Police Gear
-	-1, 	// Patrol Officer Gear
-	-1, 	// Sheriffs Department Gear
-	-1, 	// SWAT Equipment
-	-1, 	// BROKE Trained Cop Equipment
-	-1, 	// SWAT Vehicles
-	-1, 	// Traffic Division Equipment
-	-1, 	// Traffic Division Vehicles
-	-1, 	// Trained Cop Vehicles
-	-1, 	// K9 Unit and APO Vehicles
-	-1, 	// Trained Cop Equipment
-	-1, 	// Tier 1 Donator Shop
-	-1, 	// Tier 2 Donator Shop
-	-1, 	// Tier 3 Donator Shop
-	-1, 	// Piracy Gear - ILG
-	-1, 	// IRA Vehicles - ILG
-	-1, 	// IRA Weapons - ILG
-	-1, 	// Tier-X Weapon Shop (s) - ILG
-	-1, 	// Tier-X Ammo Shop - ILG
-	-1, 	// VIP Terrorist Weapons - ILG
-	-1, 	// VIP Terrorist Ammo - ILG
-	-1, 	// VIP Terrorist Vehicles - ILG
-	-1, 	// VICE Shop - ILG
-	-1, 	// VICE Vehicles - ILG
-	-1, 	// Amazing Shop of Doom - ILG
-	-1,  	// Mafia Shop - ILG
-	-1,		// Pirate Weapon Shop - ILG
-	-1,		// CoastGuard Jet Shop - ILG
-	-1,		// CoastGuard Helicopter Shop - ILG
-	-1,		// CoastGuard Boat Shop - ILG
-	-1,		// PMC Aircraft Shop - ILG
-	-1,		// PMC Helicopter Shop - ILG
-	-1,		// PMC Vehicle Shop - ILG
-	-1,		// PMC Boat Shop - ILG
-	-1,		// PMC Weapon Shop - ILG
-	-1		// Rebel Aircraft - ILG
-];
-
-publicvariable "INV_itemstocks";
-
+	publicvariable "INV_itemstocks";
 };
 
 INV_itemmaxstocks = 
@@ -259,7 +255,7 @@ _fs2 =
 
 //Item Shop
 _is = 
-	[
+[
 	"apple", 		// Apple
 	"straw", 		// Pumpkin
 	"getreide", 	// Wheat
@@ -271,20 +267,20 @@ _is =
 	"walleye", 		// Walleye
 	"bass", 		// Bass
 	"boar" 			// Boar
-	];
+];
 
 //Copbasefood
 _cf = 
-	[
+[
 	"wulf", 	// Red Bull Energy Drink
 	"bjerk", 	// Skittles
 	"tcgmp", 	// Mozzarella Pizza
 	"doshd" 	// Hot Dog
-	];
+];
 	
 //Alcohol shop
 _pub = 
-	[
+[
 	"beer", 		// Coors Light
 	"beer2", 		// Guinness
 	"vodka", 		// Vodka
@@ -292,11 +288,11 @@ _pub =
 	"wiskey", 		// Jack Daniels
 	"wine", 		// White Wine
 	"wine2" 		// Red Wine
-	];
+];
 
 //Pistol Shop
 _gss = 
-	[
+[
 	"RH_g19t", 				// Glock 19 Tan
 	"RH_17Rnd_9x19_g17", 	// Glock 19 Mag
 	"RH_p38", 				// P38
@@ -329,10 +325,10 @@ _gss =
 	"RH_6Rnd_44_Mag", 		// Taurus Raging Bull Mag
 	"C1987_P99_black", 		// P99
 	"15Rnd_9x19_p99" 		// P99 15Rnd Mag
-	];
+];
 
 _ass = 
-	[
+[
 	"RH_m9sd", 				// M9 Silenced
 	"15Rnd_9x19_M9SD", 		// M9 Silenced Mag
 	"RH_g17sd", 			// Glock17 Silenced
@@ -345,10 +341,10 @@ _ass =
 	"RH_9mm_32RND_SD_Mag", 	// Uzi SD Mag
 	"C1987_P99_black_sd", 	// P99 SD
 	"15Rnd_9x19_p99_sd" 	// P99 15Rnd SD Mag
-	];
+];
 	
 _mgs = 
-	[
+[
 	"RH_mk22", 				// MK22
 	"RH_8Rnd_9x19_Mk", 		// MK22 Mag
 	"RH_muzi", 				// Micro Uzi
@@ -363,11 +359,11 @@ _mgs =
 	"CHRYSLER_B_limmo", 	// Armored Black Limo
 	"tcg_taurus_security", 	// Taurus Security
 	"ilpd_ags_cvpi" 		// CV Security
-	];
+];
 	
 //Equiptment shop
 _es = 
-	[
+[
 	"Binocular", 	// Binocular
 	"GPS", 			// GPS
 	"NVGoggles", 	// NVGoggles
@@ -376,26 +372,26 @@ _es =
 	"Shovel", 		// Shovel
 	"Pickaxe", 		// Pickaxe
 	"JackHammer" 	// JackHammer
-	];
+];
 	
 //gocart
 _gc = 
-	[
+[
 	"Da_kart" 		// Go-Kart
-	];
+];
 	
 //Car Upgrades
 _cu = 
-	[
+[
 	"isupgrade1", 	// Illegal Speed Upgrade 1
 	"isupgrade2", 	// Illegal Speed Upgrade 2
 	"isupgrade3", 	// Illegal Speed Upgrade 3
 	"kanister" 		// GasCan
-	];
+];
 	
 //Car Shop
 _cs1 = 
-	[
+[
 	"MMT_USMC", 				// Mountain Bike
 	"Volha_1_TK_CIV_EP1", 		// Vohla Blue
 	"Volha_2_TK_CIV_EP1", 		// Vohla Grey
@@ -410,19 +406,19 @@ _cs1 =
 	"datsun1_civil_3_open", 	// Pick-Up (Tube frame)
 	"UAZ_Unarmed_TK_CIV_EP1", 	// Old UAZ
 	"Tractor" 					// Tractor
-	];
+];
 	
 _cs2 = 
-	[
+[
 	"MMT_USMC", 		// Bicycle
 	"tractor", 			// Tractor
 	"oldtruc2", 		// Farm Truck
 	"oldtruc2a" 		// Farm Truck Wooden
-	];
+];
 	
 //Sports Car Shop
 _sc1 = 
-	[
+[
 	"440cuda", 						// 440 Cuda
 	"general", 						// General Lee
 	"roadrunner", 					// Green Road Runner
@@ -452,10 +448,10 @@ _sc1 =
 	"challenger_green", 			// Challenger Green
 	"challenger_red", 				// Challenger Red
 	"challenger_orange" 			// Challenger Orange
-	];
+];
 	
 _sc2 = 
-	[
+[
 	"cl_charger", 			// Charger Orange 2
 	"cl_charger_black", 	// Charger Black 2
 	"il_charger_blue", 		// Dodge Blue Charger
@@ -468,10 +464,10 @@ _sc2 =
 	"MAZDA_RX_75", 			// Red MAZDA RX7
 	"MAZDA_RX_74", 			// Purple MAZDA RX7
 	"MAZDA_MAZDASPEED_3"	// Mazda Speed 3
-	];
+];
 	
 _sc3 = 
-	[
+[
 	"CHRYSLER_300", 					// CHRYSLER 300
 	"RENAULT_CLIO_SPORT_V6", 			// Renault Clio Sport V6
 	"SUBARU_IMPREZA_WRX_STI_AWD", 		// Subaru Impreza WRX STI AWD
@@ -480,10 +476,10 @@ _sc3 =
 	"ALFA_ROMEO_BRERA", 				// Alfa Romeo Brera
 	"NISSAN_240SX_SE", 					// NISSAN 240SX SE
 	"PONTIAC_GTO_6" 					// Pontiac GTO
-	];
+];
 	
 _sc4 = 
-	[
+[
 	"MustangGTRyellow_MLOD", 		// Mustang Lime
 	"Convertible_MLOD", 			// Mustang Convert
 	"FORD_SHELBY_GT", 				// Ford Shelby GT
@@ -494,10 +490,10 @@ _sc4 =
 	"MERCEDES_BENZ_SL_65_AMG", 		// Mercedes Benz SL 65 AMG
 	"JAGUAR_XK", 					// Jaguar XK
 	"CADILLAC_CTS" 					// Black CADILLAC
-	];
+];
 	
 _sc5 = 
-	[
+[
 	"CL_PORSCHE_997", 			// Porshe 997
 	"CL_LAMBORGHINI_GT3", 		// Racing Lamborghini
 	"KOENIGSEGG_CCX", 			// Blue KOENIGSEGG
@@ -519,10 +515,10 @@ _sc5 =
 	"AUDI_FSI_LE_MANS", 		// Audi FSI Le Lans
 	"PAGANI_ZONDA_F", 			// Pagani Zonda F
 	"ASTON_MARTIN_DB9" 			// Aston Martin DB9
-	];
+];
 	
 _sc6 = 
-	[
+[
 	"NISSAN_GTR_SPECV", 		// Nissan GTR Black
 	"NISSAN_GTR_SPECV1", 		// Nissan GTR Green
 	"NISSAN_GTR_SPECV2", 		// Nissan GTR Red
@@ -537,10 +533,10 @@ _sc6 =
 	"NISSAN_SKYLINE_GT_R_Z1", 	// Nissan Skyline GTR Green
 	"NISSAN_SKYLINE_GT_R_Z2", 	// Nissan Skyline GTR Red
 	"NISSAN_SKYLINE_GT_R_Z3" 	// Nissan Skyline GTR Army
-	];
+];
 	
 _sc7 = 
-	[
+[
 	"350z_red",  		// 350Z Red
 	"350z_kiwi", 		// 350Z Kiwi
 	"350z_black", 		// 350Z Black
@@ -554,10 +550,10 @@ _sc7 =
 	"350z_ruben", 		// 350Z Ruben
 	"350z_v", 			// 350Z V
 	"350z_yellow" 		// 350Z Yellow
-	];
+];
 	
 _sc8 = 
-	[
+[
 	"tcg_taurus_civ1", 		// Taurus Purple
 	"tcg_taurus_civ2", 		// Taurus Black
 	"tcg_taurus_civ3", 		// Taurus Spec
@@ -570,10 +566,10 @@ _sc8 =
 	"il_fordcv_darkblue", 	// Crown Victoria (DarkBlue)
 	"il_fordcv_maroon", 	// Crown Victoria (Maroon)
 	"il_fordcv_sandstone" 	// Crown Victoria (Sandstone)
-	];
+];
 	
 _sc9 = 
-	[
+[
 	"m5_red", 					// M5 Red
 	"m5_grey", 					// M5 Grey
 	"m5_blue", 					// M5 Red Blue
@@ -595,10 +591,10 @@ _sc9 =
 	"tcg_bmw_m3_c7", 			// BMW M3 E92 Yellow 
 	"tcg_bmw_m3_c8", 			// BMW M3 E92 Kitty
 	"tcg_bmw_m3_c9" 			// BMW M3 E92 Black
-	];
+];
 //Tahoe shop
 _tahoe = 
-	[
+[
 	"tahoe_grey", 			// Grey Tahoe
 	"tahoe_darkblue", 		// DarkBlue Tahoe
 	"tahoe_blue", 			// Blue Tahoe
@@ -617,11 +613,11 @@ _tahoe =
 	"tahoe_green_cb", 		// Green Pimp Tahoe
 	"tahoe_black_cb", 		// Black Pimp Tahoe
 	"tahoe_orange_cb" 		// Orange Pimp Tahoe
-	];
+];
 	
 //Pickup Shop  
 _ps = 
-	[
+[
 	"il_silverado_black", 		// Black Silverado
 	"il_silverado_red", 		// Red Silverado
 	"il_silverado_orange", 		// Orange Silverado
@@ -643,19 +639,19 @@ _ps =
 	"f350_pink", 				// F350 Pink
 	"f350_white", 				// F350 White
 	"f350_black" 				// F350 Black
-	];
+];
 	
 //taxi shop
 _tx = 
-	["GLT_M300_LT", 	// Lada Taxi
+["GLT_M300_LT", 	// Lada Taxi
 	"GLT_M300_ST", 		// Sedan Taxi
 	"il_fordcv_taxi", 	// Crown Vic Taxi
 	"tcg_taurus_taxi" 	// Taurus Taxi
-	];
+];
 	
 //motorcycle shop
 _mbs = 
-	[
+[
 	"tcg_hrly", 			// Flame Harley
 	"tcg_hrly_coco", 		// Coco Harley
 	"tcg_hrly_demon", 		// Demon Harley
@@ -672,10 +668,10 @@ _mbs =
 	"TT650_Ins", 			// Sports Motorbike
 	"TT650_Civ", 			// Motorbike
 	"ATV_CZ_EP1" 			// ATV civ
-	];
+];
 	
 _qbs = 
-	[
+[
 	"cl_quaddescammo", 		// Desert Camo Quad
 	"cl_green", 			// Green Quad
 	"cl_quadred", 			// Red Quad
@@ -684,10 +680,10 @@ _qbs =
 	"cl_blue2", 			// Blue Quad
 	"cl_chark", 			// Gray Quad
 	"cl_dirtyred" 			// Dirty Red Quad
-	]; 
+]; 
 	
 _qbss = 
-	[
+[
 	"tcg_aprilia_blue", 		// Blue Sport Bike
 	"tcg_aprilia_yellow", 		// Yellow Sport Bike
 	"tcg_aprilia_white", 		// White Sport Bike
@@ -705,11 +701,11 @@ _qbss =
 	"tcg_aprilia_red_2", 		// Red 2 Sport Bike
 	"tcg_aprilia_white_2", 		// White 2 Sport Bike
 	"tcg_aprilia_yellow_2" 		// Yellow 2 Sport Bike
-	];
+];
 	
 //Truck Shop
 _ts = 
-	[
+[
 	"cl_del_mackr", 		// Delivery Truck
 	"cl_trucktest_mackr", 	// Cargo Truck
 	"cl_flatbed_mackr", 	// Flatbed Truck
@@ -721,12 +717,12 @@ _ts =
 	"schoolbus", 			// TCG Schoolbus
 	"Ikarus_TK_CIV_EP1", 	// Bus
 	"Ikarus" 				// Bus
-	];	
+];	
 	
 _ukpts = ["cl_del_mackr"];
 //Sport Truck Shops
 _sts = 
-	[
+[
 	"raptor_black", 			// Raptor Black
 	"raptor_grey", 				// Raptor Grey
 	"raptor_blue", 				// Raptor Blue
@@ -783,11 +779,11 @@ _sts =
 	"h1c_red", 					// Hummer Red Custom
 	"h1c_white", 				// Hummer White Custom
 	"h1c_grey" 					// Hummer Grey Custom
-	];
+];
 	
 //Air Shop
 _as = 
-	[
+[
 	"An2_1_TK_CIV_EP1", 	// An-2 Prop Plane Red
 	"An2_2_TK_CIV_EP1", 	// An-2 Prop Plane Green
 	"USEC_MAULE_M7_STD", 	// Maule Single Prop
@@ -797,10 +793,10 @@ _as =
 	"GNT_C185R", 			// Cessna Yellow
 	"GNT_C185C", 			// Cessna White
 	"GNT_C185" 				// Cessna Red and Yellow
-	];
+];
 	
 _assa = 
-	[
+[
 	"kyo_ultralight", 		// Ultralight
 	"AH6X_EP1", 			// Little Bird
 	"KA137_PMC", 			// Experimental Craft
@@ -822,20 +818,20 @@ _assa =
 	"tcg_bell206_5", 		// Bell Red and White
 	"tcg_bell206", 			// Bell 206 Santini Air
 	"MH6J_EP1" 				// Little Bird w/ Benches
-	];
+];
 	
 _asc = 
-	[
+[
 	"can_c130", 		// Air Canada C130
 	"airnz_C130", 		// New Zealand C130
 	"luf_c130", 		// Luftasia C130
 	"qantas_C130", 		// Quantas C130
 	"A320MPA" 			// FedEx Airbus
-	];
+];
 	
 //Scuba Shop
 _sb = 
-	[
+[
 	"fishingpole", 		// Fishing Pole
 	"tcg_wrun", 		// Jet Ski
 	"tcg_wave_red",		// Red White Jet Ski
@@ -843,11 +839,11 @@ _sb =
 	"tcg_wave_red2", 	// Red White Jet Ski
 	"tcg_wave_sky", 	// Sky Jet Ski
 	"tcg_wave_red3" 	// White Red Jet Ski
-	];
+];
 	
 //Boat Shop
 _bs = 
-	[
+[
 	"fishingpole", 					// Fishing Pole
 	"tcg_wrun", 					// Jet Ski
 	"tcg_wave_red", 				// Red White Jet Ski
@@ -865,16 +861,16 @@ _bs =
 	"Smallboat_2", 					// Leisure Boat 2
 	"lcu", 							// CB Island Ferry Boat
 	"big_boat" 						// Yacht
-	];
+];
 	
 _ukpbs = 
-	[
+[
 	"PBX", 					// PBX
 	"cl_container_boat" 	// Cargo Boat
-	];
+];
 	
 _bsp = 
-	[
+[
 	"fishingpole", 		// Fishing Pole
 	"GNT_C185F", 		// Cessna Seaplane Blue
 	"GNT_C185E", 		// Cessna Seaplane Yellow
@@ -886,18 +882,18 @@ _bsp =
 	"tcg_wave_red2", 	// Red White Jet Ski
 	"tcg_wave_sky", 	// Sky Jet Ski
 	"tcg_wave_red3" 	// White Red Jet Ski
-	];
+];
 	
 //ILG SWAT Boat Shop
 _ILG_SWAT_BOAT = 
-	[
+[
 	"cl_inflatable", 		// Small Inflatable Boat
 	"tcg_wrun" 				// Jet Ski
-	];
+];
 	
 // Terrorist Boat Shop
 _bt = 
-	[
+[
 	"fishingpole", 					// Fishing Pole
 	"PBX", 							// PBX
 	"Zodiac", 						// Zodiac
@@ -907,23 +903,23 @@ _bt =
 	"cl_inflatable", 				// Small Inflatable Boat
 	"RHIB", 						// RHIB
 	"lcu" 							// CB Island Ferry Boat
-	];
+];
 	
 //Jewelry shop
 _js = 
-	[
+[
 	"Diamond" 		// Diamond rock
-	];
+];
 	
 //insurance
 _ins = 
-	[
+[
 	"bankversicherung" 		// Bank insurance
-	];
+];
 	
 //Doctor
 _td = 
-	[
+[
 	"kanister", 			// Gas Can
 	"esusupgrade1", 		// ESU Speed Upgrade 1
 	"esusupgrade2", 		// ESU Speed Upgrade 2
@@ -942,33 +938,33 @@ _td =
 	"roadbarrierlong", 		// Caution Barrier Large
 	"roadbarriersmall", 	// Caution Barrier Small
 	"bjerk" 				// Skittles
-	];
+];
 	
 //Resource Shop
 _rs = 
-	[
+[
 	"gold", 			// gold
 	"iron", 			// iron
 	"copper", 			// copper
 	"diamond rock" 		// diamond rock
-	];
+];
 	
 //Jackos Cheesburgers
 _gds = 
-	[
+[
 	"bread", 	// Cheeseburger
 	"straw", 	// Frozen Strawberries
 	"kanister" 	// Gas Can
-	];
+];
 _gds1 = 
-	[
+[
 	"reparaturkit", 	// Repair Kit
 	"bjerk", 			// Skittles
 	"kanister" 			// Gas Can
-	];
+];
 	
 _gds3 = 
-	[
+[
 	"roadblock", 							// Roadblock
 	"kanister", 							// Gas Can
 	"glt_roadsign_octagon", 				// Stop Sign
@@ -976,82 +972,82 @@ _gds3 =
 	"SearchLight_UN_EP1", 					// Search Light
 	"roadcone", 							// Road Cone
 	"bunkersmall" 							// Bunker (Small)
-	];
+];
 	
 //Oil Trader/Seller
 _os = 
-	[
+[
 	"Oil", 				// Crude Oil
 	"OilBarrel" 		// Petroleum
-	];
+];
 	
 //ukp sell processed
 _ukp = 
-	[
+[
 	"OilBarrel", 		// Petroleum
 	"Oil" 				// Crude Oil
-	];
+];
 	
 //Whale Sale
 _ws = 
-	[
+[
 	"Whale" 	// Whale
-	];
+];
 	
 //Cocaine Sell
 _dsc = 
-	[
+[
 	"cocaine", 		// Cocaine
 	"cocaineseed" 	// Coca Seed
-	];
+];
 	
 //Marijuana Sell
 _dsm = 
-	[
+[
 	"marijuana", 		// marijuana
 	"marijuanaseed" 	// Marijuana Seed
-	];
+];
 	
 //LSD Sell
 _dsl = 
-	[
+[
 	"lsd" // LSD
-	];
+];
 	
 //Heroin Sell
 _dsh = 
-	[
+[
 	"heroin", 		// heroin
 	"heroinseed" 	// Poppy Seed
-	];
+];
 	
 _psc = 
-	[
+[
 	"medikit", 			// Med-kit
 	"pharm", 			// Pharmaceutical Items
 	"GymMem1", 			// Blades Natural Supplements
 	"GymMem2", 			// Hiros Hero Pills
 	"cl_wheelchair" 	// Jackos Wheel Chair
-	];
+];
 	
 _msc = 
-	[
+[
 	"meth", 		// Meth
 	"GymMem3", 		// CCTs Generic Steroids
 	"GymMem4" 		// Illegal Steroids
-	];
+];
 	
 //Cop Air Shop
 _ca = 
-	[
+[
 	"MH6J_EP1", 			// Little Bird w/ Benches
 	"HH65C", 				// Dolphin Coast Guard Chopper
 	"tcg_police_bell206" 	// Police Bell 206
-	];
+];
 	
 //Cop Vehicle Shop
 _cv = 
-	[
+[
 	"MMT_USMC", 			// Bicycle
 	"M1030_US_DES_EP1", 	// Police Dirtbike
 	"cl_quadcarbonlight", 	// Police ATV
@@ -1068,10 +1064,10 @@ _cv =
 	"tahoe_pd", 			// Police Tahoe
 	"vil_lublin_AMBU", 		// Police Support Van
 	"jailbus" 				// IL Jailbus
-	];
+];
 	
 _cv1 =
-	[
+[
 	"MMT_USMC", 				// Mountain Bike
 	"cl_quadcarbonlight", 		// Police ATV
 	"M1030_US_DES_EP1", 		// Police Dirtbike
@@ -1090,11 +1086,11 @@ _cv1 =
 	"20Rnd_556x45_Stanag", 		// 20Rnd AR-15 and HK416 Magazine
 	"RH_m14", 					// M14 Long Rifle
 	"20Rnd_762x51_DMR" 			// 10Rnds M14
-	];
+];
 
 _copshop = 
 
-	[
+[
 	"kanister", 				// Gas Can
 	"DDOPP_X3", 				// X3 Taser
 	"DDOPP_3Rnd_X3", 			// X3 Taser Cartridge
@@ -1119,10 +1115,10 @@ _copshop =
 	"reparaturkit", 			// Repair Kit
 	"kanister", 				// Gas Can
 	"NVGoggles" 				// NVGoggles
-	];
+];
 
 _copshop_patrol = 
-	[
+[
 	"kanister", 			// Gas Can
 	"RAB_L111A1", 			// Flashbang
 	"SmokeShell", 			// Tear Gas Grenade
@@ -1148,10 +1144,10 @@ _copshop_patrol =
 	"20Rnd_556x45_Stanag", 	// 20Rnd AR-15 and HK416 Magazine
 	"ILG_M32_TEARGAS", 		// M32 Tear Gas Launcher
 	"6Rnd_Smoke_M203" 		// 6Rnd M32 tear gas
-	];
+];
 
 _copshop_sobr = 
-	[
+[
 	"kanister", 					// Gas Can
 	"DDOPP_X3_b", 					// X3 Taser Black
 	"DDOPP_3Rnd_X3", 				// X3 Taser Cartridge
@@ -1187,10 +1183,10 @@ _copshop_sobr =
 	"1Rnd_Smoke_M203", 				// 1Rnd M79 Thumper tear gas
 	"Stinger", 						// Stinger Launcher
 	"Stinger_mag" 					// Stinger Missile
-	];
+];
 
 _swatcarshop =
-	[
+[
 	"ilpd_scu_black", 			// SWAT CV (Black)
 	"ilpd_scu_grey", 			// SWAT CV (Grey)
 	"ilpd_scu_maroon", 			// SWAT CV (Maroon)
@@ -1204,10 +1200,10 @@ _swatcarshop =
 	"ilf350swat", 				// SWAT F350
 	"suburban_swat", 			// Armoured S.W.A.T Suburban (Marked)
 	"il_bearcat" 				// SWAT Bearcat APC
-	];
+];
 
 _trafficshop =
-	[
+[
 	"roadblock", 				// roadblock
 	"glt_roadsign_octagon", 	// Stop Sign
 	"bargate", 					// Bar Gate
@@ -1215,19 +1211,19 @@ _trafficshop =
 	"roadcone", 				// Road Cone
 	"bunkersmall", 				// Bunker (Small)
 	"il_barrier" 				// Short Concrete Road Block Barrier
-	];
+];
 
 _trafficcars =
-	[
+[
 	"ilpd_traffic_t101", 		// Marked Traffic CV
 	"ilpd_Traffic_black", 		// Traffic CV (Black)
 	"ilpd_Traffic_white", 		// Traffic CV (White)
 	"tcg_suburban_patrol", 		// Traffic Suburban 2006
 	"suburban_pd_stealth" 		// Traffic Suburban 2008
-	];
+];
 
 _vicecars =
-	[
+[
 	"MMT_USMC", 				// Mountain Bike
 	"cl_quadcarbonlight", 		// Police ATV
 	"Volha_1_TK_CIV_EP1", 		// Vohla Blue
@@ -1250,16 +1246,16 @@ _vicecars =
 	"ilpd_unmarked_darkblue", 	// Unmarked Detective CV (Dark Blue)
 	"ilpd_unmarked_grey", 		// Unmarked Detective CV (Grey)
 	"m5_pd_traffic" 			// Detective and APO Response Vehicle
-	];
+];
 
 _k9cars =
-	[
+[
 	"suburban_pd_k9", 		// K9 and APO Suburban 2008 
 	"m5_pd_traffic" 		// Detective and APO Response Vehicle
-	];
+];
 
 _terrorshop = 
-	[ 
+[ 
 	"NVGoggles", 				// NVGoggles
 	"ziptie", 					// Zip Tie"
 	"ILG_Rebel_RPG7",			// RPG7
@@ -1290,17 +1286,17 @@ _terrorshop =
 	"Igla_mag",					// Igla AA Mag
 	"PG7VR",					// RPG 7 AT Rockets VR
 	"OG7"						// RPG 7 HE Rockets OG
-	];
+];
 
 _shady =
-	[
+[
 	"lockpick", 	// Lockpick
 	"ziptie"	 	// Zip Tie
-	];
+];
 
 _gangshop_buy = 
 
-	[
+[
 	"UH1H_TK_GUE_EP1", 			// Armed Huey
 	"lockpick", 				// Lockpick
 	"ziptie", 					// Zip Tie
@@ -1334,7 +1330,7 @@ _gangshop_buy =
 	"15Rnd_9x19_M9SD", 			// Beretta M9 SD Mag
 	"KPFS_30Rnd_792x33_STG44", 	// STG-44 Ammo
 	"KPFS_8Rnd_cal30_60_gar" 	// M1 Garand Ammo
-	];
+];
 
 _gangshop_buy2 = 
 
@@ -1372,7 +1368,7 @@ _gangshop_buy2 =
 
 _gangshop_buy3 = 
 
-	[
+[
 	"lockpick", 				// lockpick
 	"ziptie", 					// ziptie
 	"burgl", 					// Burglary Tools
@@ -1404,11 +1400,11 @@ _gangshop_buy3 =
 	"RH_30Rnd_9x19_tec", 		// 30 Round Tec 9 Mag
 	"KPFS_PM63", 				// PM63
 	"supgrade1" 				// Speed Upgrade 1
-	];
+];
 
 _gangshop_buy4 = 
 
-	[
+[
 	"UH1H_TK_GUE_EP1", 				// Armed Huey
 	"lockpick", 					// Lockpick
 	"ziptie", 						// Zip Tie
@@ -1443,11 +1439,11 @@ _gangshop_buy4 =
 	"KPFS_30Rnd_792x33_STG44", 		// STG-44 Ammo
 	"30Rnd_556x45_Stanag",			// Stanag mag
 	"KPFS_8Rnd_cal30_60_gar" 		// M1 Garand Ammo
-	];
+];
 
 
 _copshop3 = 
-	[
+[
 	"kanister", 				// Gas Can
 	"DDOPP_3Rnd_X3", 			// X3 Taser Cartridge
 	"DDOPP_X26_b", 				// X26 Taser Black
@@ -1483,11 +1479,11 @@ _copshop3 =
 	"cop20Rnd_762x51_DMR", 		// 10Rnds M14
 	"SmokeShell", 				// Tear Gas Grenade
 	"DDOPP_X3_b" 				// X3 Taser Black
-	];
+];
 	
 
 _t1shoplist = 
-	[
+[
 	"reparaturkit", 		// Repair Kit
 	"kanister", 			// Gas Can
 	"lockpick", 			// lockpick
@@ -1506,10 +1502,10 @@ _t1shoplist =
 	"30Rnd_762x39_AK47", 	// 30rd AK/RK95 Mag
 	"T1_RH_krisseot", 		// KRISS Eotech
 	"RH_45ACP_30RND_Mag" 	// 30rd Kriss Mag
-	];
+];
 
 _t2shoplist =
-	[
+[
 	"reparaturkit", 			// Repair Kit
 	"kanister", 				// Gas Can
 	"lockpick", 				// lockpick
@@ -1552,10 +1548,10 @@ _t2shoplist =
 	"h1c_red", 					// Hummer Red Custom
 	"h1c_white", 				// Hummer White Custom
 	"h1c_grey" 					// Hummer Grey Custom
-	];
+];
 
 _t3shoplist = 
-	[
+[
 	"medikit", 					// Med Kit
 	"reparaturkit", 			// Repair Kit 
 	"kanister", 				// Gas Can
@@ -1581,10 +1577,10 @@ _t3shoplist =
 	"RH_20Rnd_762x51_AR10", 	// 20rd AR10 mag
 	"T3_RH_P90", 				// FN P90
 	"RH_57x28mm_50RND_Mag" 		// 50 round P90
-	];
+];
 
 _txshoplist = 
-	[
+[
 	"medikit", 					// Med Kit
 	"reparaturkit", 			// Repair Kit
 	"kanister", 				// Gas Can
@@ -1616,10 +1612,10 @@ _txshoplist =
 	"10Rnd_762x54_SVD", 		// SVD or SVU Mag
 	"TX_RH_M249acog",  			// M249 ACOG
 	"200Rnd_556x45_M249" 		// 200Rnd M249 Mag
-	];
+];
 
 _pirategearshop =
-	[
+[
 	"fishgun", 		// Boat Gun
 	"gnt_scubaw", 	// Scuba Gear
 	"boatammo", 	// Boat Ammo
@@ -1627,19 +1623,19 @@ _pirategearshop =
 	"smallboat_1", 	// Leisure Boat
 	"smallboat_2", 	// Leisure Boat 2
 	"tcg_wave_red" 	// Red Jet Ski
-	];
+];
 
 _IRAvehicles =
-	[
+[
 	"KPFS_vwt4_bgs_FLIR", 	// Surveillance Van
 	"cl_fuel_mackr", 		// IRA Pain Train (Bomb Truck - Ram target)
 	"240GD", 				// 240GD
 	"Kamaz" 				// Ira Kamaz
-	];
+];
 
 
 _IRAweapons = 
-	[
+[
 	"ziptie", 						// Ziptie
 	"IRAIgla",						// Igla
 	"IRAar15", 						// US Imported AR-15
@@ -1662,12 +1658,12 @@ _IRAweapons =
 	"KPFS_15Rnd_cal30_Carbine", 	// M1 Carbine Ammo
 	"KPFS_10Rnd_762x39_SKS", 		// Karabiner S Ammo
 	"KPFS_8Rnd_cal30_60_Gar" 		// M1 Garand Ammo
-	];
+];
 
 //AR
 
 _xwepshop = 
-	[ 
+[ 
 	"ziptie", 					// ZipTie
 	"dKPFS_MP44", 				// WW2 MP-44 Sturmgewehr
 	"dRH_acrglacog", 			// dRH_acrglacog
@@ -1747,11 +1743,11 @@ _xwepshop =
 	"dRH_m4sbracog", 			// M4A1 SBR ACOG
 	"dRH_m4sdacog", 			// M4A1 Magpul Silenced ACOG
 	"dm8_holo_sd" 				// M8 Holo Silenced
-	];
+];
 
 // SMG 
 _xwepshop2 = 
-	[ 
+[ 
 	"dRH_P90", 				// FN P-90 White Dot
 	"dRH_P90aim", 			// FN P-90 CCO
 	"dRH_P90eot", 			// FN P-90 Holo
@@ -1808,11 +1804,11 @@ _xwepshop2 =
 	"dRH_uzig", 			// Uzi
 	"dKPFS_MP5A3SD", 		// MP5A3 SD
 	"dMP5SD" 				// MP5SD
-	];
+];
 
 // PISTOLS
 _xwepshop3 = 
-	[ 
+[ 
 	"dRH_m93r", 					// Beretta M93R Burst
 	"dRH_m9", 						// Beretta M9
 	"dRH_m9sd", 					// Beretta M9 Silenced
@@ -1837,11 +1833,11 @@ _xwepshop3 =
 	"dRH_bull", 					// Taurus Raging Bull
 	"dRH_usp", 						// HK USP
 	"dRH_uspsd" 					// HK USP Silenced
-	];
+];
 
 // SNIPERS
 _xwepshop4 = 
-	[ 
+[ 
 	"dRH_MK12", 		// MK 12 SPR
 	"dRH_MK12sd", 		// MK 12 SPR Silenced
 	"dRH_MK12mod1", 	// MK 12 Mod 1 SPR
@@ -1851,11 +1847,11 @@ _xwepshop4 =
 	"dRH_star21", 		// TAR-21 Marksman Rifle
 	"RH_hk417sp", 		// HK417 Sniper
 	"Lin_RH_m21" 		// M21 Sniper Rifle
-	];
+];
 
 // LMG
 _xwepshop5 = 
-	[
+[
 //	"SMAW", 				// SMAW Launcher
 	"dM249", 				// M249
 	"dRH_M249pelcan", 		// M249 ELCAN Scope
@@ -1864,11 +1860,11 @@ _xwepshop5 =
 	"dRH_Mk48mod1", 		// Mk 8 Mod 1 MG
 	"M60A4_EP1", 			// M60E4
 	"dRH_Mk48mod1acog" 		// Mk 48 Mod 1 ACOG
-	];
+];
 
 // WW2
 _xwepshop6 = 
-	[
+[
 	"KPFS_BAR", 			// B.A.R 1918
 	"KPFS_KarS", 			// Karabiner S
 	"KPFS_M1_Carbine", 		// M1 Carbine
@@ -1885,10 +1881,10 @@ _xwepshop6 =
 	"KPFS_Walther_M9", 		// WW2 Walther Model 9
 	"KPFS_P1", 				// WW2 Walther P1
 	"KPFS_P38" 				// WW2 alther P38
-	];
+];
 
 _xammoshop = 
-	[ 
+[ 
 	"KPFS_20Rnd_cal30_60_bar", 				// B.A.R Ammo
 	"KPFS_10Rnd_762x39_SKS", 				// Karabiner S Ammo
 	"KPFS_15Rnd_cal30_Carbine", 			// M1 Carbine Ammo
@@ -1940,16 +1936,16 @@ _xammoshop =
 	"FlareRed_M203", 						// Red M203 Flare
 	"SmokeShellGreen", 						// Tear-Gas
 	"SmokeShell" 							// Tear Gas Grenade	
-	];
+];
 
 _IRAhelicopters =
-	[
+[
 	"Gazelle1" 		// Gazelle Camo
-	];
+];
 
 
 _vipterrorshop = 
-	[ 
+[ 
 	"NVGoggles", 		// NVGoggles
 	"ziptie", 			// ziptie
 	"dRH_ak105glsp", 	// AK 105 GL SP
@@ -1994,10 +1990,10 @@ _vipterrorshop =
 	"dM14_EP1",  		// M14
 	"ddRH_ctar21", 		// Tar21
 	"rpg7v"				// RPG7
-	];
+];
 
 _vipterrorshopammo = 
-	[
+[
 	"30Rnd_545x39_AK", 					// To be tested
 	"30Rnd_545x39_AKSD", 				// To be tested
 	"64rnd_9x19_bizon", 				// Bizon Mag
@@ -2028,18 +2024,18 @@ _vipterrorshopammo =
 	"FlareRed_M203", 					// Red M203 Flare
 	"PG7VR",							// RPG 7 AT Rockets VR
 	"OG7"								// RPG 7 HE Rockets OG
-	];
+];
 	
 _vipterroristvehicles = 
-	[ 
+[ 
 	"Pickup_PK_INS", 		// Pickup (PK)
 	"GAZ_Vodnik", 			// Vodnik (2xPK)
 	"UH1H_TK_GUE_EP1" 		// Armed Huey
-	];
+];
 
 //Now VICE
 _fbiwep = 
-	[
+[
 	"lockpick", 				// lockpick
 	"Fuelline",  				// Syphon Fuel-kit
 	"medikit", 					// Med Kit
@@ -2062,20 +2058,20 @@ _fbiwep =
 	"30Rnd_545x39_AKSD", 		// AK SD Mag
 	"30Rnd_762x39_AK47", 		// 30rd AK/RK95 Mag
 	"RH_30Rnd_762x39_SDmag" 	// 30rd AK/RK95 Silenced Mag
-	];
+];
 
 _fbivehicles =
-	[
+[
 	"KPFS_vwt4_bgs_FLIR", 		// Surveillance Van
 	"ilpd_Traffic_black", 		// Traffic CV (Black)
 	"il_fordcv_taxi", 			// Crown Vic Taxi
 	"tcg_taurus_uc", 			// Unmarked Taurus
 	"tcg_suburban_uc_black" 	// Unmarked Suburban Black
-	];
+];
 
 _mafia = 
 
-	[
+[
 	"lockpick", 					// LockPick
 	"ziptie", 						// ziptie
 	"burgl", 						// Burgulary Tools 
@@ -2104,10 +2100,10 @@ _mafia =
 	"CHRYSLER_W_limmo", 			// Chrysler 300 Limo White
 	"SUV_TK_CIV_EP1", 				// Suburban
 	"ibr_van_BNK" 					// Sketchy White Van
-	];
+];
 
 _Cock_Mansion_Shop =
-	[
+[
 	"lockpick", 						// LockPick
 	"ziptie", 							// ZipTie
 	"burgl", 							// Burgulary Tools 
@@ -2158,10 +2154,10 @@ _Cock_Mansion_Shop =
 	"h1c_red", 							// Hummer Red Custom
 	"h1c_white", 						// Hummer White Custom
 	"h1c_grey"  						// Hummer Grey Custom
-	];
+];
 
 _pirateweaponshop = 
-	[
+[
 	"medikit",					// Medkit
 	"ILG_PIRATE_RPG7",			// RPG-7 
 	"ILG_PIRATE_IGLA",			// Igla (AA)
@@ -2178,20 +2174,20 @@ _pirateweaponshop =
 	"KPFS_100Rnd_762x39_RPD",   // RPD LMG (Ammo)
 	"RH_45Rnd_545x39_mag", 		// RPK74 (Ammo)
 	"10Rnd_762x54_SVD"			// SVD (Ammo)	
-	];
+];
 	
 _ILG_CoastGuardJets =
-	[
+[
 	"MAV_RAVEN_BACKPACK",		// RQ-11 Raven UAV
 	"No_1sqn_204",				// F18 Super Hornet
 	"14US_S",					// F-14D Interceptor 
 	"14US_SUD3",				// F14D Bombcat (MK84)
 	"3lb_f22",					// F22 Raptor
 	"TowingTractor"				// Towing Tractor
-	];
+];
 	
 _ILG_CoastGuardHelicopters =
-	[
+[
 	"MAV_RAVEN_BACKPACK",		// RQ-11 Raven UAV
 	"UH60CG",					// CoastGuard Rescue Blackhawk	
 	"UH60M_EP1",				// UH-60 Blackhawk 	
@@ -2199,37 +2195,37 @@ _ILG_CoastGuardHelicopters =
 	"kyo_MH47E_base", 			// MH-47E Helicopter
 	"kyo_MH47E_SRO",			// MH-47E Helicopter (SRO)
 	"PRACS_puma330_Marine_MED"	// RACS SA330 Puma (Medevac)	
-	];
+];
 	
 _ILG_PMC_AircraftShop =
-	[
+[
 	"AC130",					// AC-130U Spooky II
 	"PRACS_C130"				// RACS C-130H Hercules
-	];
+];
 	
 _ILG_PMC_HelicopterShop =
-	[
+[
 	"PRACS_AB212_cas",			// UH-1 GUNSHIP (CAS)
 	"Ka60_GL_PMC",				// KA-60 GL PMC (Re-armed version)
 	"MH6J_EP1"					// Littlebird (Transport version)
-	];
+];
 	
 _ILG_CgBoatShop =
-	[
+[
 	"JFH_USCG_RHIB",			// Coastguard RHIB (Armed)
 	"JFH_USCG_ZODIAC",			// Coastguard Zodiac (Unarmed) 
 	"PRACS_PatrolBoat",			// Serka Class Patrolboat
 	"PRACS_RB90"				// RB-90 Sea Horse
-	];
+];
 	
 _ILG_PMC_VehicleShop =
-	[
+[
 	"ArmoredSUV_PMC",			// Armored SUV (Armed)
 	"SUV_TK_EP1"				// SUV (Unarmed)
-	];
+];
 	
 _ILG_PMC_BoatShop =
-	[
+[
 	"pook_escort_TKGUE",		// PMC Escort Ship
 	"pook_ASSAULT_BOAT_TKGUE",	// PMC Assault Boat
 	"pook_ASSAULT_SHIP_TAK",	// PMC Assault Ship
@@ -2237,10 +2233,10 @@ _ILG_PMC_BoatShop =
 	"pook_PBR_PMCWEST",			// PMC PBR Patrolboat
 	"PRACS_PatrolBoat",			// Serka Class Patrolboat
 	"PRACS_RB90"				// RB-90 Sea Horse
-	];
+];
 	
 _ILG_PMC_WeaponShop = 
-	[
+[
 	"medikit",					// Medkit
 	"Ka60_GL_PMC",				// KA-60 PMC
 	"SUV_TK_EP1",				// PMC SUV
@@ -2257,11 +2253,11 @@ _ILG_PMC_WeaponShop =
 	"30Rnd_556x45_StanagSD",	// Stanag SD mag
 	"200Rnd_556x45_L110A1",		// L110A2 - M249 Ammo 200 Rounds
 	"AM136"						// AT4 AMMO
-	];
+];
 	
 
 INV_ItemShops = 
-	[
+[
 	[fuelshop1,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 	[fuelshop2,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 	[fuelshop3,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
@@ -2390,4 +2386,4 @@ INV_ItemShops =
 	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true],
 	[ILG_SellWhaleRebel,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],
 	[ILG_RebelAircraft, "Lingor Rebel's Aircraft Dealer",dummyobj,ILG_RebelAircraftSpawn,_ILG_RebelAircraft,_ILG_RebelAircraft,true]
-	];
+];
