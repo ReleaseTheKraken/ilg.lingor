@@ -101,7 +101,7 @@ while {true} do
 
 			_currentMayor = _MaxPos;																																																				
 			_MayorString  = (playerstringarray select _currentMayor);																																																				
-			format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call TurnMayorFunc;} else {isMayor = false;false call TurnMayorFunc;};", _MaxPos, _MaxStimmen, _MayorString] call broadcast;
+			format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call TurnMayorFunc; ["LIN_ElPresidente"] call clothes;} else {isMayor = false;false call TurnMayorFunc;};", _MaxPos, _MaxStimmen, _MayorString] call broadcast;
 			};		
 
 		};	

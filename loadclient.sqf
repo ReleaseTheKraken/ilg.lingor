@@ -83,6 +83,7 @@ add_copmoney = add_copmoney + loadRewardBonus;
 
 server globalChat format["Persistent stats loaded. Your reward bonus is %1 which will be added to each salary paycheck.", loadRewardBonus];
 hint "Stats Loading Complete!";
+
 if (("mafial" call INV_HasLicense) && !(player in mafiamembers)) then 
 {
 	["Functionary1"] call clothes;

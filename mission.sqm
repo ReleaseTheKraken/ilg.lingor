@@ -79,7 +79,8 @@ class Mission
 		"ibr_arl",
 		"sg_ira",
 		"USN_FP",
-		"usn_fp_a2_config"
+		"usn_fp_a2_config",
+		"usec_rig_a"
 	};
 	addOnsAuto[]=
 	{
@@ -157,6 +158,7 @@ class Mission
 		"jdg_carrier",
 		"KPFS_EUROPE_UI_EAST",
 		"warfarebuildings",
+		"usec_rig_a",
 		"ibr_lingor"
 	};
 	randomSeed=16149006;
@@ -450,7 +452,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6102.2466,1.2611778,4760.0518};
+					position[]={6144.854,0.73700595,4761.3335};
 					azimut=450.681;
 					id=24;
 					side="LOGIC";
@@ -799,7 +801,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6101.4316,1.2995675,4770.6421};
+					position[]={6144.0391,0.59880269,4771.9238};
 					azimut=89.802994;
 					id=69;
 					side="LOGIC";
@@ -3535,7 +3537,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6102.8301,1.2326473,4748.9331};
+					position[]={6145.4375,0.54732728,4750.2148};
 					azimut=88.698616;
 					id=1863;
 					side="LOGIC";
@@ -4827,7 +4829,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2212;
+		items=2217;
 		class Item0
 		{
 			position[]={3965.7817,143.96144,4228.6665};
@@ -27365,10 +27367,55 @@ class Mission
 			text="ILG_RebelAircraft";
 			init="this allowdamage false;";
 		};
+		class Item2212
+		{
+			position[]={7885.208,0.67292607,9766.4932};
+			id=2438;
+			side="EMPTY";
+			vehicle="oilrig_base";
+			skill=0.60000002;
+			init="this setPos [getPos this select 0, getPos this select 1, 2.5]";
+		};
+		class Item2213
+		{
+			position[]={5741.6143,0.42013565,9153.9629};
+			id=2439;
+			side="EMPTY";
+			vehicle="oilrig_base";
+			skill=0.60000002;
+			init="this setPos [getPos this select 0, getPos this select 1, 2.5]";
+		};
+		class Item2214
+		{
+			position[]={347.17682,0.62264305,3604.825};
+			id=2440;
+			side="EMPTY";
+			vehicle="oilrig_base";
+			skill=0.60000002;
+			init="this setPos [getPos this select 0, getPos this select 1, 2.5]";
+		};
+		class Item2215
+		{
+			position[]={2567.0806,0.75203031,147.9873};
+			id=2441;
+			side="EMPTY";
+			vehicle="oilrig_base";
+			skill=0.60000002;
+			init="this setPos [getPos this select 0, getPos this select 1, 2.5]";
+		};
+		class Item2216
+		{
+			position[]={6213.5991,0.7007584,1357.2885};
+			id=2442;
+			side="EMPTY";
+			vehicle="oilrig_base";
+			skill=0.60000002;
+			init="this setPos [getPos this select 0, getPos this select 1, 2.5]";
+		};
 	};
 	class Markers
 	{
-		items=382;
+		items=387;
 		class Item0
 		{
 			position[]={6685.6836,12.187677,6609.5972};
@@ -30859,6 +30906,56 @@ class Mission
 			text="Rebel Aircraft Dealer";
 			type="mil_flag";
 			colorName="ColorBlue";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item382
+		{
+			position[]={7884.8975,0.66560519,9766.3213};
+			name="Business_1_1_1";
+			text="Abandoned Oil Rig";
+			type="mil_box";
+			colorName="ColorYellow";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item383
+		{
+			position[]={5741.3037,0.42180437,9153.791};
+			name="Business_1_1_2";
+			text="Abandoned Oil Rig";
+			type="mil_box";
+			colorName="ColorYellow";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item384
+		{
+			position[]={346.86627,0.63074142,3604.6531};
+			name="Business_1_1_1_1";
+			text="Abandoned Oil Rig";
+			type="mil_box";
+			colorName="ColorYellow";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item385
+		{
+			position[]={2566.77,0.75842601,147.81543};
+			name="Business_1_1_2_1";
+			text="Abandoned Oil Rig";
+			type="mil_box";
+			colorName="ColorYellow";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item386
+		{
+			position[]={6213.2886,0.70499951,1357.1166};
+			name="Business_1_1_2_1_1";
+			text="Abandoned Oil Rig";
+			type="mil_box";
+			colorName="ColorYellow";
 			a=0.60000002;
 			b=0.60000002;
 		};

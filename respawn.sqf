@@ -104,6 +104,7 @@ if (isciv) then
 	PUBLICVARIABLE "MayorNumber";
 	false call TurnMayorFunc;
 	INV_LizenzOwner = INV_LizenzOwner - ["mayorlic"];
+	["Woodlander3"] call clothes; // Remove El Presidente skin
 	format["civ%1_mayor = 0;", player] call broadcast;
 	};
 

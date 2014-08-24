@@ -1262,7 +1262,8 @@ _terrorshop =
 	[ 
 	"NVGoggles", 				// NVGoggles
 	"ziptie", 					// Zip Tie"
-	"rpg7v",					// RPG7
+	"ILG_Rebel_RPG7",			// RPG7
+	"ILG_Rebel_IGLA",			// Igla (AA)
 	"RH_oc14", 					// OC 14
 	"RH_kriss", 				// Kriss
 	"RH_krissaim", 				// Kriss Scope
@@ -1286,6 +1287,7 @@ _terrorshop =
 	"RH_20Rnd_9x39_SP6_mag", 	// 20Rnd OC14 Mag
 	"20Rnd_B_AA12_Pellets", 	// AA12 Buckshot Mag
 	"30Rnd_556x45_Stanag", 		// 30Rnd 5.56x45 Stanag Mag
+	"Igla_mag",					// Igla AA Mag
 	"PG7VR",					// RPG 7 AT Rockets VR
 	"OG7"						// RPG 7 HE Rockets OG
 	];
@@ -2180,6 +2182,7 @@ _pirateweaponshop =
 	
 _ILG_CoastGuardJets =
 	[
+	"MAV_RAVEN_BACKPACK",		// RQ-11 Raven UAV
 	"No_1sqn_204",				// F18 Super Hornet
 	"14US_S",					// F-14D Interceptor 
 	"14US_SUD3",				// F14D Bombcat (MK84)
@@ -2189,6 +2192,7 @@ _ILG_CoastGuardJets =
 	
 _ILG_CoastGuardHelicopters =
 	[
+	"MAV_RAVEN_BACKPACK",		// RQ-11 Raven UAV
 	"UH60CG",					// CoastGuard Rescue Blackhawk	
 	"UH60M_EP1",				// UH-60 Blackhawk 	
 	"CH_47F_BAF",				// Chinook HC4	
