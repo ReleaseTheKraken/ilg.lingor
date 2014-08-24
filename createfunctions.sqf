@@ -130,19 +130,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 			newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
 			processInitCommands; 
 	};
-	
-	//MH-47E Helicopter
-	if(_classname == "kyo_MH47E_base")then{
-			newvehicle setvehicleinit "none = this execVM 'CRRCScript\init.sqf';";
-			processInitCommands; 
-	};
-	
-	//MH-47E SRO Helicopter
-	if(_classname == "kyo_MH47E_SRO")then{
-			newvehicle setvehicleinit "none = this execVM 'CRRCScript\init.sqf';";
-			processInitCommands; 
-	};
-		
+			
 	//IRA BOMB TRUCK 
 	if (_classname == "cl_fuel_mackr") then{
 		hint "WARNING: Once you have prepared the explosives to blow up your desired target you must ram it. Do NOT hit anything by mistake after the explosives are prepared/armed!";

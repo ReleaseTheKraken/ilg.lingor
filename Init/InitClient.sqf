@@ -16,6 +16,7 @@
 [] execVM "initplayer.sqf";
 [2] execVM "markers.sqf";
 [] execVM "salaries.sqf";
+[] execVM "CRRCScript\init.sqf"
 [] execVM "pistolControl.sqf";
 [] execVM "rifleControl.sqf";
 [] execVM "tluphone\tluphone.sqf";
