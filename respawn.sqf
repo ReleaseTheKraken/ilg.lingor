@@ -4,25 +4,32 @@ while {true} do
 waituntil {alive player};
 //player removeweapon "ItemGPS";
 removeAllWeapons player;
-if(isNil "LinLib_RemovedWeapons")then{
-	LinLib_RemovedWeapons = true;
-};
 execVM "briefing.sqf";
-if (isciv) then {player addweapon "ItemGPS";};
-if (iscop) then 
-{
-	if (count playerWeapons == 0 and count playermagazines == 0) then 
+if(isNil "LinLib_RespawnInit")then{
+	LinLib_RespawnInit = true;
+	if (isciv) then {
+		player addweapon "ItemGPS";
+	};
+	weaponsloaded = true;
+}else{
+	if (isciv) then {
+		player addweapon "ItemGPS"; 
+		weaponsloaded = true;
+	};
+	if (iscop) then 
+	{
+		if (count playerWeapons == 0 and count playermagazines == 0) then 
 		{
-		{player addMagazine _x} forEach CopStartGear_Mags;
-		{player addWeapon   _x} forEach CopStartGear_Weap;	
+			{player addMagazine _x} forEach CopStartGear_Mags;
+			{player addWeapon   _x} forEach CopStartGear_Weap;	
 		} 
-		else 
+			else 
 		{
-		{player addMagazine _x} forEach playermagazines;
-		{player addWeapon   _x} forEach playerWeapons;										
+			{player addMagazine _x} forEach playermagazines;
+			{player addWeapon   _x} forEach playerWeapons;										
 		};
-	player selectweapon (primaryweapon player);
-	weaponsloaded = true;			
+		weaponsloaded = true;			
+	};
 };
 
 if("car" call INV_haslicense)then{demerits = 10};
