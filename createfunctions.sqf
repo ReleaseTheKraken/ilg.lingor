@@ -125,22 +125,60 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 		"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
 		', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
 	};
+	
 	//Coast Guard Helicopter
-	if(_classname == "UH60CG")then{
-			newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
-			processInitCommands; 
+		if(_classname == "UH60CG")then{
+		newvehicle setvehicleinit "none = this execVM 'rescue.sqf';";
+		processInitCommands; 
 	};
 			
+	//JFH Coastguard Zodiac
+	if(_classname == "JFH_USCG_ZODIAC")then{
+		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
+		newvehicle lock false;
+		processInitCommands; 
+	};
+	
+	//JFH Coastguard RHIB
+	if(_classname == "JFH_USCG_RHIB")then{
+		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
+		newvehicle lock false;
+		processInitCommands; 
+	};
+	
+	//Zodiac
+	if(_classname == "Zodiac")then{
+		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
+		newvehicle lock false;
+		processInitCommands; 
+	};
+	
+	//RHIB
+	if(_classname == "RHIB")then{
+		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
+		newvehicle lock false;
+		processInitCommands; 
+	};
+	
+	//PBX
+	if(_classname == "PBX")then{
+		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];
+		newvehicle lock false;
+		processInitCommands; 
+	};
+		
 	//IRA BOMB TRUCK 
 	if (_classname == "cl_fuel_mackr") then{
 		hint "WARNING: Once you have prepared the explosives to blow up your desired target you must ram it. Do NOT hit anything by mistake after the explosives are prepared/armed!";
 		fuelAction = newvehicle addAction ["Prepare explosion","fuelbomb.sqf",[],1,false,true,"","_this in _target"];
+		processInitCommands; 
 	};
 
 	//PRACS CAS HUEY 
 	if (_classname == "PRACS_AB212_cas") then{
 		newvehicle removeWeapon "FFARLauncher_14";
 		newvehicle removeMagazine "14Rnd_FFAR";
+		processInitCommands; 
 	};
 
 	// Attack helicopter re-armament
@@ -151,7 +189,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 		newvehicle removeMagazine "14Rnd_57mm";
 		newvehicle addweapon "CMFlareLauncher";
 		newvehicle addmagazine "60Rnd_CMFlareMagazine";
-
+		processInitCommands; 
 	};
 
 };
