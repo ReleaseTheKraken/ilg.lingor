@@ -33,7 +33,7 @@ while {true} do
 		
 		if(!([_prevmags, magazines player] call BIS_fnc_areEqual))then{
 			if(alive player && iscop)then{
-				playermagazines = weapons player;
+				playermagazines = magazines player;
 			};
 			[player, [["magazines", magazines player]]] call LinLib_fnc_ClientUpdate;
 			_prevmags = magazines player;
