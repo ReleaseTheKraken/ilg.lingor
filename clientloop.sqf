@@ -24,11 +24,13 @@ while {true} do
 		};		
 		
 		if(!([_prevweapons, weapons player] call BIS_fnc_areEqual))then{
+			playerWeapons = weapons player;
 			[player, [["weapons", weapons player]]] call LinLib_fnc_ClientUpdate;
 			_prevweapons = weapons player;
 		};
 		
 		if(!([_prevmags, magazines player] call BIS_fnc_areEqual))then{
+			playermagazines = weapons player;
 			[player, [["magazines", magazines player]]] call LinLib_fnc_ClientUpdate;
 			_prevmags = magazines player;
 		};
