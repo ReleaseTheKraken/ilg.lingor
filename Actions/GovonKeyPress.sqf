@@ -131,8 +131,10 @@ switch _key do
         	_posFind = [(_pos select 0)+(_dirV select 0)*_range,(_pos select 1)+(_dirV select 1)*_range,(_pos select 2)+(_dirV select 2)*_range];
        	 	_men    = nearestobjects [_posFind,["Man", "RUBasicAmmunitionBox", "UNBasicAmmunitionBox_EP1","RUSpecialWeaponsBox","Barrels","ILG_shop"], 1] - [player];
 		_atms   = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
+		_saveP   = nearestObjects [_posFind,["ilg_savepoint"],2];
 		_civ    = _men select 0;
 		_atm	= _atms select 0;
+		_saveP  = _saveP select 0;
 		
 		if(isciv and !(isnull _civ) and _civ in playerarray) exitwith
 
@@ -155,7 +157,13 @@ switch _key do
 			_handled=true; 
 				
 			};
+		if(!(isnull _saveP) && (typeOf _saveP) == "ilg_savepoint") exitwith
 
+		{
+			_i = 4;
+			[] call LinLib_fnc_VehicleMenu;
+			_handled=true;	
+		};
 		if(!(isnull _atm) and _atm in bankflagarray) exitwith
 
 			{

@@ -205,9 +205,3 @@ action122 = _role addaction ["Chop Shop Vehicle","chopshop.sqf",[""],1,false,tru
 actionmaf = _role addaction ["Get Job","noscript.sqf",'[] call getmafjob;',1,true,true,"",'player distance mafs < 10 and ("mafial" call INV_HasLicense) and !hasjob'];
 actionhowtomafia = _role addaction ["How to earn Street Reputation?","streetrephint.sqf",["mafs"],1,false,true,"","player distance mafs <= 15"];
 actionpmc = _role addaction ["Switch to PMC Clothes","noscript.sqf",'["Dixon_PMC"] call clothes;',1,true,true,"",'player distance pmcstore < 10 and ("pmcl" call INV_HasLicense)'];
-
-_role addaction ["Create User","noscript.sqf",'[player, 10+_x, INV_InventarArray, INV_LizenzOwner, 10] call LinLib_fnc_ClientInsert;',1,true,true,"",''];
-_role addaction ["Load User","noscript.sqf",'	[player] spawn LinLib_fnc_InitClient;',1,true,true,"",''];
-_role addaction ["Update User","noscript.sqf",'	[player, [["bank", bnkgeld], ["inventory", INV_InventarArray]]] call LinLib_fnc_ClientUpdate;',1,true,true,"",''];
-_role addaction ["Vehicle Menu","noscript.sqf",'	[] call LinLib_fnc_VehicleMenu;',1,true,true,"",''];
-_role addaction ["Display Return","noscript.sqf",'player sidechat format ["%1", DB_Packet];diag_log DB_Packet;',1,true,true,"",''];

@@ -126,7 +126,7 @@ switch _key do
 
 	for [{_i=1}, {_i < 3}, {_i=_i+1}] do
     
-		{
+	{
 
 		if(vehicle player != player) exitwith{};
 
@@ -135,23 +135,25 @@ switch _key do
        		_pos = player modelToWorld [0,0,0];
         	_posFind = [(_pos select 0)+(_dirV select 0)*_range,(_pos select 1)+(_dirV select 1)*_range,(_pos select 2)+(_dirV select 2)*_range];
        	 	_men    = nearestobjects [_posFind,["Man", "RUBasicAmmunitionBox", "UNBasicAmmunitionBox_EP1","RUSpecialWeaponsBox","Barrels","ILG_shop"], 1] - [player];
-		_atms   = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
-		_civ    = _men select 0;
-		_atm	= _atms select 0;
+			_atms   = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
+			_saveP   = nearestObjects [_posFind,["ilg_savepoint"],2];
+			_civ    = _men select 0;
+			_atm	= _atms select 0;
+			_saveP  = _saveP select 0;
 		
 		if(isciv and !(isnull _civ) and _civ in playerarray) exitwith
 
-			{
+		{
 
 			_i = 4;
 			call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "interact.sqf";', _civ];
 			_handled=true;
 				
-			};
+		};
 
 		if(!(isnull _civ) and _civ in shopusearray) exitwith
 
-			{
+		{
 
 			_i = 4;
 			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "drugsearch.sqf"};
@@ -159,20 +161,27 @@ switch _key do
 			[0,0,0,[_id]] execVM "shopdialogs.sqf";
 			_handled=true; 
 				
-			};
+		};
+		
+		if(!(isnull _saveP) && (typeOf _saveP) == "ilg_savepoint") exitwith
 
+		{
+			_i = 4;
+			[] call LinLib_fnc_VehicleMenu;
+			_handled=true;	
+		};
+		
 		if(!(isnull _atm) and _atm in bankflagarray) exitwith
 
-			{
+		{
 
 			_i = 4;
 			if(!local_useBankPossible)exitwith{hint "The ATM rejected your card"};
 			[] execVM "atm.sqf"; 
 			_handled=true;
 				
-			};
-
 		};
+	};
 
 	if(_handled)exitwith{};
 

@@ -19,7 +19,7 @@ for [{_i=1}, {_i < 25}, {_i=_i+2}] do
 	_objs = nearestObjects [_posFind,["Man", "RUSpecialWeaponsBox", "RUBasicAmmunitionBox","UNBasicAmmunitionBox_EP1","Barrels"],_searchRadius];
 	_vcls = nearestobjects [_posFind,["LandVehicle", "Air", "ship", "LocalBasicWeaponsBox"], 2];
 	_atms = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
-	
+	_saveP   = nearestObjects [_posFind,["ilg_savepoint"],2];
 	if(count _vcls > 0 and INV_shortcuts)then
 
 		{
@@ -67,7 +67,24 @@ for [{_i=1}, {_i < 25}, {_i=_i+2}] do
 			};
 
 		};
+	if(count _saveP > 0 and INV_shortcuts)then
 
+	{
+
+		_saveP = _saveP select 0;
+		_distTP = (_saveP distance player);
+
+		if(!(isnull _saveP) && _distTP < 3) then
+
+			{
+
+			titleRsc["Rtags", "PLAIN"];
+			_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
+			_control ctrlSetText "Save Vehicle (E)";
+
+			};
+
+	};
 	if(count _objs > 0 and INV_shortcuts)then
 
 		{
