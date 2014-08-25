@@ -1,9 +1,4 @@
-/*
-Script by tryteyker
-For use with Konyo's MH-47E Addon
-AddAction to switch back to boat seats.
-SPECIAL THANKS TO F2K SEL FOR IDEAS AND SUCCESSFUL IMPLEMENTATION OF THE IF STATEMENTS.
-*/
+// Script by Tryteyker - Modified by IslandLifeGaming for use within Lingor Life
 
 _unit = _this select 0;
 _caller = _this select 1;
@@ -15,21 +10,11 @@ if (_caller in boat1crew) then {
 	moveout _caller;
 	_caller moveindriver boat1;
 	_caller leaveVehicle _unit;
+	boat1 addAction [("<t color=""#33FFFF"">" + ("Move into Chinook") + "</t>"),"CRRCScript\ILG_MoveInChinook.sqf"];
 	} else {
 	moveout _caller;
+	boat1 addAction [("<t color=""#33FFFF"">" + ("Move into Chinook") + "</t>"),"CRRCScript\ILG_MoveInChinook.sqf"];
 	_caller moveincargo boat1;
-	_caller leaveVehicle _unit;
-	};
-};
-
-if (_caller in boat2crew) then {
-	if ((count crew boat2) == 0) then {
-	 moveout _caller;
-	_caller moveindriver boat2;
-	_caller leaveVehicle _unit;
-	} else {
-	 moveout _caller;
-	_caller moveindriver boat2;
 	_caller leaveVehicle _unit;
 	};
 };
