@@ -1,6 +1,6 @@
 _action = _this select 0;
 _item   = _this select 1;
-_amount = _this select 2;                 
+floor _amount = _this select 2;                 
 
 if (!(_amount call ISSE_str_isInteger))   exitWith {player groupChat localize "STRS_inv_no_valid_number";};
 _amount = _amount call ISSE_str_StrToInt; 
