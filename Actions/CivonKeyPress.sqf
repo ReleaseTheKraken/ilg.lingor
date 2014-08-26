@@ -37,7 +37,7 @@ switch _key do
 	[] execVM "8675309.sqf";
 
 	};
-	//New tool
+	//F4 Key - Linnet's Admin Tool
 	case 62:
 	{
 		if(dialog)exitwith{closeDialog 0;};
