@@ -86,7 +86,7 @@ ILG_Open911CivMenu = {
             ctrlSetText [1, format["Are you sure you want to dial 911 and report your location and an emergency?", _civ]];
             waitUntil {(Antworts >0)}; // Suspends script until Antworts is greater then zero
             if (Antworts == 1) then {
-                playSound "call911"; 
+                [[player], "call911"] call CBA_fnc_globalSay;
                 player groupchat format["You start to call 911..."];
                 sleep 1;
                 player groupchat format["Dialing."];
