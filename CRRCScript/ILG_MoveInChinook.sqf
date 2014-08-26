@@ -4,6 +4,7 @@ _ID = _this select 2;
 _emptypos = _unit emptypositions "cargo";
 
 if (_caller in boat1crew) then {
-moveout _caller; _caller moveincargo chinook; _caller leaveVehicle boat1;
-_caller addAction [("<t color=""#33FFFF"">" + ("Move into boat") + "</t>"),"CRRCScript\boatcargoswitch.sqf"];
+moveout _caller; _caller moveincargo chinook; 
+
+chinook addAction [("<t color=""#33FFFF"">" + ("Move into boat") + "</t>"),"CRRCScript\boatcargoswitch.sqf"];
 };

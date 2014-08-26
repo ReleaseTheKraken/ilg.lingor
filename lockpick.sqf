@@ -9,19 +9,14 @@ _steven = 0;
 if (vehicle player != player) exitWith {player groupchat "You must be on foot to use lockpicks!";};
 if (player distance _obj > 6) exitWith {};//Range
 if (_obj in INV_VehicleArray) exitWith {player groupchat format ["The vehicle %1 is already on your keychain!",_obj];};
-if (!(_obj in INV_ServerVclArray)) exitWith 
-{
-	player groupchat "This vehicle appears to be hacked in. Deleting vehicle....."; 
-	deleteVehicle _obj;
-	(format["server globalchat ""%1 has found a hacked vehicle!"";", name player]) call broadcast;
-};
+
 if (!(_obj isKindOf "LandVehicle") OR (_obj isKindOf "Tank")) exitWith {player groupchat format ["%1 isn't a lockpickable vehicle!",_obj];};
 _dice = random (100);
 if (_dice > 75) then
 {
 	titleText ["Lockpick successful!","plain down"];
 	player groupchat format ["%1 is now on your keychain",_obj];
-	INV_VehicleArray = INV_VehicleArray + [_obj];
+	INV_VehicleArray = INV_VehicleArray + [_obj]; call LinLib_fnc_ClientUpdate;
 	player groupchat format ["Vehicles on your keychain: %1",INV_VehicleArray];
 	_suc = true;
 }

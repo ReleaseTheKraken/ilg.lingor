@@ -13,6 +13,7 @@ if ((count crew boat1 > 0) && (chinook distance boat1 < 4)) then {
 boat1 attachTo [chinook,[0.2,3,-0.5]];
 boat1 enablesimulation false;
 boat1 setDir 180;
+chinook setDamage 0;
 
 chinook addAction [("<t color=""#33FFFF"">" + ("Eject boat") + "</t>"),"CRRCScript\ejectboat.sqf"];
 boat1crew = [];
