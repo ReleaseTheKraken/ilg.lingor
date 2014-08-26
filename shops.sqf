@@ -2009,7 +2009,7 @@ _IRAhelicopters =
 ];
 
 
-_vipterrorshop = 
+_ILG_vipTerroristBase = 
 [ 
 	"NVGoggles", 		// NVGoggles
 	"ziptie", 			// ziptie
@@ -2057,7 +2057,7 @@ _vipterrorshop =
 	"rpg7v"				// RPG7
 ];
 
-_vipterrorshopammo = 
+_ILG_vipTerroristAmmo = 
 [
 	"30Rnd_545x39_AK", 					// To be tested
 	"30Rnd_545x39_AKSD", 				// To be tested
@@ -2091,7 +2091,7 @@ _vipterrorshopammo =
 	"OG7"								// RPG 7 HE Rockets OG
 ];
 	
-_vipterroristvehicles = 
+_ILG_vipTerroristVeh = 
 [ 
 	"Pickup_PK_INS", 		// Pickup (PK)
 	"GAZ_Vodnik", 			// Vodnik (2xPK)
@@ -2436,9 +2436,9 @@ INV_ItemShops =
 	[tierxweapons5,"Tier-X Weapon Shop (LMGs)",tierxweapons5, dummyobj,_xwepshop5,_xwepshop5,true],
 	[tierxweapons6,"Tier-X Weapon Shop (WW2)",tierxweapons6, dummyobj,_xwepshop6,_xwepshop6,true],
 	[tierxammo,"Tier-X Ammo Shop",tierxammo,dummyobj,_xammoshop,_xammoshop,true],
-	[vipterrorbox,"VIP Terrorist Weapons",vipterrorbox,dummyobj, _vipterrorshop,_vipterrorshop,true],
-	[vipterrorboxammo,"VIP Terrorist Ammo",vipterrorboxammo,dummyobj, _vipterrorshopammo,_vipterrorshopammo,true],
-	[terrorvipvehicle,"VIP Terrorist Vehicles",dummyobj, terrorvipvehiclespawn,_vipterroristvehicles,_vipterroristvehicles,true],
+	[ILG_vipTerroristBase,"VIP Terrorist Weapons",ILG_vipTerroristBase,dummyobj, _ILG_vipTerroristBase,_ILG_vipTerroristBase,true],
+	[ILG_vipTerroristAmmo,"VIP Terrorist Ammo",ILG_vipTerroristAmmo,dummyobj, _ILG_vipTerroristAmmo,_ILG_vipTerroristAmmo,true],
+	[ILG_vipTerroristVeh,"VIP Terrorist Vehicles",dummyobj,ILG_TerrorVehSpawn,_ILG_vipTerroristVeh,_ILG_vipTerroristVeh,true],
 	[copfbi,"VICE Shop",copfbi,copfbi,_fbiwep,_fbiwep,true],
 	[copfbicars,"VICE Vehicles",dummyobj, ccarspawnfbi,_fbivehicles,_fbivehicles,true],
 	[Cock_Mansion_Shop,"Amazing Shop of Doom",Cock_Mansion_Box, Cock_Mansion_Vehicle,_Cock_Mansion_Shop,_Cock_Mansion_Shop,true],

@@ -135,6 +135,17 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	//SCUD - Mando Missiles (Nuclear warhead - IslandLifeGaming Area 51)
 	if(_classname == "MAZ_543_SCUD_TK_EP1")then{
 		newvehicle setVariable ["mando_scud_type", 2];
+		if (iscop) then {
+		player sideChat "SCUD Launcher detected! Intellegence suggests it is armed with a Nuclear Warhead."; call broadcast; 
+		player sideChat "Scramble fighters and destroy the SCUD launcher before it has time to fire!"; call broadcast; 
+		[[dmv,mafs,pirategearbox,ILG_CarShopSouth,ILG_SellWhaleRebel,ILG_vipTerroristVeh,ILG_Area51,ILG_RebelAircraft,terrorbox,ILG_ServicePoint1,ILG_PMC_HelicopterShop,fuelshop1,OilPump,ILG_Nimitz,OilPump2], ["AirRaidSiren",500]] call CBA_fnc_globalSay;
+		};
+		if (isciv) then {
+		player sideChat "SCUD Launcher detected. Initial reports indicate it is armed with a Nuclear Warhead."; call broadcast; 
+		player sideChat "It is advised that you get indoors immediately and take cover. "; call broadcast; 
+		[[dmv,mafs,pirategearbox,ILG_CarShopSouth,ILG_SellWhaleRebel,ILG_vipTerroristVeh,ILG_Area51,ILG_RebelAircraft,terrorbox,ILG_ServicePoint1,ILG_PMC_HelicopterShop,fuelshop1,OilPump,ILG_Nimitz,OilPump2], ["AirRaidSiren",500]] call CBA_fnc_globalSay;
+		};		
+		
 	};
 	
 	//JFH Coastguard Zodiac

@@ -3643,13 +3643,13 @@ class Mission
 				class Item0
 				{
 					position[]={677.47528,34.209183,1036.4323};
-					azimut=666.01318;
+					azimut=666.013;
 					id=1878;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="terrorvipvehiclespawn";
+					text="ILG_TerrorVehSpawn";
 					init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];";
 				};
 			};
@@ -4834,7 +4834,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={598.96356,30.053015,4665.6118};
+					position[]={680.13538,51.177868,7235.5259};
 					azimut=459.49399;
 					id=2450;
 					side="LOGIC";
@@ -4864,8 +4864,8 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={684.19324,51.177868,7249.062};
-			azimut=175.793;
+			position[]={622.7804,30.053015,4646.228};
+			azimut=189.92474;
 			special="NONE";
 			id=1;
 			side="EMPTY";
@@ -4877,8 +4877,8 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={690.57343,51.177868,7246.8765};
-			azimut=253.96805;
+			position[]={618.18903,30.053015,4647.9326};
+			azimut=189.38193;
 			special="NONE";
 			id=2;
 			side="EMPTY";
@@ -5752,12 +5752,13 @@ class Mission
 		class Item84
 		{
 			position[]={8822.0957,43.40712,7998.5444};
-			azimut=180.65674;
+			azimut=180.657;
 			id=136;
 			side="EMPTY";
 			vehicle="Land_Ind_Oil_Pump_EP1";
 			leader=1;
 			skill=0.60000002;
+			text="OilPump";
 			init="this addAction [""Drill for Oil"", ""mine.sqf""];";
 		};
 		class Item85
@@ -22231,7 +22232,7 @@ class Mission
 			vehicle="ilg_shop";
 			leader=1;
 			skill=0.60000002;
-			text="vipterrorbox";
+			text="ILG_vipTerroristBase";
 			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;";
 		};
 		class Item1713
@@ -23663,7 +23664,7 @@ class Mission
 			vehicle="ilg_shop";
 			leader=1;
 			skill=0.60000002;
-			text="terrorvipvehicle";
+			text="ILG_vipTerroristVeh";
 			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;";
 		};
 		class Item1858
@@ -23675,7 +23676,7 @@ class Mission
 			vehicle="ilg_shop";
 			leader=1;
 			skill=0.60000002;
-			text="vipterrorboxammo";
+			text="ILG_vipTerroristAmmo";
 			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;";
 		};
 		class Item1859
@@ -26573,6 +26574,7 @@ class Mission
 			vehicle="JDG_carrier_Spawner";
 			leader=1;
 			skill=0.60000002;
+			text="ILG_Nimitz";
 			init="this allowDamage false;";
 		};
 		class Item2133
@@ -27221,6 +27223,7 @@ class Mission
 			side="EMPTY";
 			vehicle="TK_WarfareBVehicleServicePoint_Base_EP1";
 			skill=0.60000002;
+			text="ILG_ServicePoint1";
 		};
 		class Item2198
 		{
@@ -27289,6 +27292,7 @@ class Mission
 			vehicle="Land_Ind_Oil_Pump_EP1";
 			leader=1;
 			skill=0.60000002;
+			text="OilPump2";
 			init="this addAction [""Drill for Oil"", ""mine.sqf""];";
 		};
 		class Item2204
@@ -27516,8 +27520,8 @@ class Mission
 		};
 		class Item2224
 		{
-			position[]={610.83704,30.053015,4655.2612};
-			azimut=549.55103;
+			position[]={681.06165,51.177868,7253.4819};
+			azimut=305.00684;
 			id=2451;
 			side="EMPTY";
 			vehicle="ilg_shop";
@@ -27728,7 +27732,7 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={692.86859,51.177868,7242.5698};
+			position[]={617.56775,30.053015,4646.5313};
 			name="gangmarker2";
 			text="South District (Heroin - LSD)";
 			type="mil_warning";
@@ -29352,7 +29356,7 @@ class Mission
 		};
 		class Item200
 		{
-			position[]={696.84924,51.177868,7253.0415};
+			position[]={621.54846,30.053015,4657.0029};
 			name="gangarea1_2_1";
 			text="Gang area";
 			markerType="RECTANGLE";
@@ -30057,7 +30061,7 @@ class Mission
 		class Item282
 		{
 			position[]={650.00513,34.209183,1029.4132};
-			name="SovietVIPbase";
+			name="ILG_SovietMarker";
 			text="Soviet Compound (Tier 3 Donator)";
 			type="Faction_sowjet";
 			a=0.89999998;
@@ -30432,7 +30436,7 @@ class Mission
 		};
 		class Item322
 		{
-			position[]={697.0155,51.177868,7252.7837};
+			position[]={621.71472,30.053015,4656.7451};
 			name="ILG_GangAreaOutline";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -31147,7 +31151,7 @@ class Mission
 		};
 		class Item395
 		{
-			position[]={612.15186,30.053015,4660.7168};
+			position[]={686.98004,51.177868,7243.0337};
 			name="ILG_Area51Marker";
 			type="hd_unknown";
 			colorName="ColorRed";

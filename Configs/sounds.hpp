@@ -1,3 +1,14 @@
+class AirRaidSiren
+
+{
+
+	name     = "";	
+	sound[]  = {"\snd\AirRaidSiren.ogg", 10, 1};
+	titles[] = {};
+
+};
+
+
 class Siren_Short 
 
 {
