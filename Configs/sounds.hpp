@@ -34,7 +34,7 @@ class call911
 {
 
 	name     = "";
-	sound[]  = {"\snd\911call.ogg", 1, 1};
+	sound[]  = {"\snd\911call.ogg", 0.1, 1};
 	titles[] = {};
 
 };

@@ -104,7 +104,7 @@ switch _key do
 		};
 
 	};
-		//U key
+	//U key
   	case 22:
 
     {
@@ -115,6 +115,16 @@ switch _key do
 	[] spawn SpeedGun_init;
 	[] execVM "speedgun.sqf";
 	
+	};
+	
+	//F4 key - Linnet's Admin Tool
+	case 62:
+	{
+		if(dialog)exitwith{closeDialog 0;};
+		if(!INV_shortcuts)exitwith{};
+		if(!(isClass(configFile >> "CfgPatches" >> "Lin_Admin")))exitWith{};
+		_handled=true;
+		[] call LinLib_fnc_Admin_Start;
 	};
 	
 	//E key

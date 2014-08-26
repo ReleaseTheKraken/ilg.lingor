@@ -28,6 +28,16 @@ switch _key do
 		
 	};
 	
+	//F4 Key - Linnet's Admin tool
+	case 62:
+	{
+		if(dialog)exitwith{closeDialog 0;};
+		if(!INV_shortcuts)exitwith{};
+		if(!(isClass(configFile >> "CfgPatches" >> "Lin_Admin")))exitWith{};
+		_handled=true;
+		[] call LinLib_fnc_Admin_Start;
+	};
+	
 	//6 key
 	case 7:
 	{
