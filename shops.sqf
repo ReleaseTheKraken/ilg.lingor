@@ -23,20 +23,20 @@ if(isServer)then{
 		-1,		// Pub Shop 2 
 		-1, 	// Pub Shop 3 
 		-1, 	// Pub Shop 4 
-		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (Pistol shop - 31 items)
+		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (31 Items Total)
 		-1, 	// Assassin Shop
 		-1, 	// Government Equipment Shop
-		-1, 	// Equipment & Mining Tools (Two shops total North and South)
+		-1, 	// Equipment & Mining Tools 
 		-1, 	// Texas Go-Carts Shop
 		-1, 	// Car Upgrades
-		[10,10,10,10,10,10,10,10,10,10,10,10,10,10],   	// Used Cars (2 Shops North and South car Shops - 14 items)
+		[10,10,10,10,10,10,10,10,10,10,10,10,10,10],   	// Used Cars (14 Items Total)
 		-1, 	// Farm Equipment
-		-1, 	// Muscle Car Shop
+		[2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2], 	// Muscle Car Shop (29 Items Total)
 		-1, 	// Charger and Mazda
 		-1, 	// Low End Sports
 		-1, 	// Mid Level Sports
 		-1, 	// High End Sports
-		-1, 	// Nissan Car Shop
+		[2,2,2,2,2,2,2,2,2,2,2,2,2,2],	// Nissan Car Shop (14 items total)
 		-1, 	// 350z Car Shop
 		-1, 	// Ford Car Shop
 		-1, 	// BMW Car Shop
@@ -160,20 +160,20 @@ INV_itemmaxstocks =
 		-1,		// Pub Shop 2 
 		-1, 	// Pub Shop 3 
 		-1, 	// Pub Shop 4 
-		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (Pistol shop - 31 items)
+		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (31 Items Total)
 		-1, 	// Assassin Shop
 		-1, 	// Government Equipment Shop
-		-1, 	// Equipment & Mining Tools (Two shops total North and South)
+		-1, 	// Equipment & Mining Tools 
 		-1, 	// Texas Go-Carts Shop
 		-1, 	// Car Upgrades
-		[20,20,20,20,20,20,20,20,20,20,20,20,20,20],   	// Used Cars (2 Shops North and South car Shops - 14 items)
+		[20,20,20,20,20,20,20,20,20,20,20,20,20,20],   	// Used Cars (14 Items Total)
 		-1, 	// Farm Equipment
-		-1, 	// Muscle Car Shop
+		[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5], 	// Muscle Car Shop (29 Items Total)
 		-1, 	// Charger and Mazda
 		-1, 	// Low End Sports
 		-1, 	// Mid Level Sports
 		-1, 	// High End Sports
-		-1, 	// Nissan Car Shop
+		[5,5,5,5,5,5,5,5,5,5,5,5,5,5],	// Nissan Car Shop (14 items total)
 		-1, 	// 350z Car Shop
 		-1, 	// Ford Car Shop
 		-1, 	// BMW Car Shop
@@ -481,7 +481,7 @@ _cs2 =
 	"oldtruc2a" 		// Farm Truck Wooden
 ];
 	
-//Sports Car Shop
+//Muscle Car Shop
 _sc1 = 
 [
 	"440cuda", 						// 440 Cuda
