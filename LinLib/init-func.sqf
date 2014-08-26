@@ -3,16 +3,19 @@ systemchat "Initalizing LinLib Functions";
 _functionarray =
 [
 //FUNCTION								DIR					SQF
-["LinLib_MoveBuildings",          	"Buildings\",        "LinLib_MoveBuildings"			],
-//["LinLib_CreateBuildings",          	"Buildings\",        "LinLib_CreateBuildings"			],
-["LinLib_OpenGate",          	"Buildings\",        "LinLib_OpenGate"			],
-//shops
+["LinLib_MoveBuildings",          	"Buildings\",       "LinLib_MoveBuildings"		],
+//["LinLib_CreateBuildings",        "Buildings\",       "LinLib_CreateBuildings"	],
+["LinLib_OpenGate",          		"Buildings\",       "LinLib_OpenGate"			],
+//Hideouts
+["LinLib_HideoutDelete",          	"Hideout\",			"LinLib_HideoutDelete"		],
+
+//Shops
 ["LinLib_GetCfgImage",          	"Shops\",        "LinLib_GetCfgImage"			],
 ["LinLib_GetCfgSpeed",          	"Shops\",        "LinLib_GetCfgSpeed"			],
 ["LinLib_GetCfgDamage",          	"Shops\",        "LinLib_GetCfgDamage"			],
-["LinLib_GetCfgMagCount",          	"Shops\",        "LinLib_GetCfgMagCount"			],
-["LinLib_OnSelect",          	"Shops\",        "LinLib_OnSelect"			],
-["LinLib_OnLoad",          	"Shops\",        "LinLib_OnLoad"			]
+["LinLib_GetCfgMagCount",          	"Shops\",        "LinLib_GetCfgMagCount"		],
+["LinLib_OnSelect",          		"Shops\",        "LinLib_OnSelect"				],
+["LinLib_OnLoad",          			"Shops\",        "LinLib_OnLoad"				]
 
 ];
 _maindir = "LinLib\";

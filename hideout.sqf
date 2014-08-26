@@ -31,6 +31,6 @@ ClearWeaponCargoGlobal _box;
 _tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 
 ["DB_Hideout", [player, _pos]] call CBA_fnc_globalEvent;
-
-_tent addaction ["Remove this shit","noscript.sqf",'[_this select 0, true] call LinLib_RemoveHideout;',1,true,true,"",''];
+(format ["%1 addaction ['Remove this shit','noscript.sqf','[_this select 0] call LinLib_HideoutDelete;',1,true,true,'',''];", _tent]) call broadcast;
+_tent 
 [_item, -1] call INV_AddInvItem;
