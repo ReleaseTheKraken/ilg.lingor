@@ -65,6 +65,7 @@ while {true} do
 		sleep 4;
 		player setPos (getmarkerPos "passedcartest");
 		INV_LizenzOwner = INV_LizenzOwner + ["car"];
+		[player, [["license", INV_LizenzOwner]]] call LinLib_fnc_ClientUpdate;
 	};
 		
 	if (_counter > _timeallowed) exitWith 
@@ -112,4 +113,3 @@ while {true} do
 	hintSilent parseText Format ["<t color='#FF0000' size='2'>------------------<br/><t color='#0099FF'>ILG<br/>Driving School<br/><t color='#FF0000'>------------------<br/><t color='#0099FF'>Time Remaining:<br/><t color='#FFFF00' size='7'>%1<t <t color='#FF0000' size='1.5'><br/>",(_timeallowed - _counter)];
 	sleep 1;
 };
-
