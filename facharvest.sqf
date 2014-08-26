@@ -1,201 +1,126 @@
+//Illegal Weapons Factory
 _weaponfactory =
-
 [
-"tcg_mossberg",
-"tcg_combat",
-"Rnd_B_Beneli_Pellets",
-"Saiga12K",
-"Rnd_B_Saiga12_Pellets",
-"RH_g19t",
-"RH_17Rnd_9x19_g17",
-"RH_p38",
-"RH_8Rnd_9x19_p38",
-"RH_tt33",
-"RH_8Rnd_762_tt33",
-"RH_browninghp",
-"RH_13Rnd_9x19_bhp",
-"RH_uspm",
-"RH_12Rnd_45cal_usp",
-"RH_usp",
-"RH_15Rnd_9x19_usp",
-"RH_mk2",
-"RH_10Rnd_22LR_mk2",
-"M14_EP1",
-"20Rnd_762x51_DMR",
-"RH_m93r",
-"RH_20Rnd_9x19_M93",
-"RH_anacg",
-"RH_6Rnd_44_Mag",
-"RH_python",
-"RH_6Rnd_357_Mag",
-"RH_deagle",
-"RH_7Rnd_50_AE",
-"RH_g17",
-"RH_19Rnd_9x19_g18",
-"RH_m1911old",
-"RH_8Rnd_45cal_m1911",
-"RH_bull",
-"RH_6Rnd_44_Mag",
-"RH_akm",
-"Rnd_762x39_AK47",
-"RH_aks47",
-"RH_M16a1",
-"FN_FAL",
-"20Rnd_762x51_FNFAL",
-"Rnd_556x45_Stanag",
-"Huntingrifle",
-"x_22_LR_17_HMR",
-"x_303",
-"LeeEnfield"
+	"RH_g19t", 				// Glock 19 Tan
+	"RH_17Rnd_9x19_g17", 	// Glock 19 Mag
+	"RH_p38", 				// P38
+	"RH_8Rnd_9x19_p38", 	// P38 Mag
+	"RH_tt33", 				// TT33
+	"RH_8Rnd_762_tt33", 	// TT33 Mag
+	"RH_browninghp",		// Browning HP 9mm
+	"RH_13Rnd_9x19_bhp", 	// Browning Mag
+	"RH_uspm", 				// USP Match
+	"RH_12Rnd_45cal_usp", 	// 12 Round USP Match Mag
+	"RH_usp", 				// USP Tactical
+	"RH_15Rnd_9x19_usp", 	// 15 Round Sig and USP Mag
+	"RH_mk2", 				// Mk22
+	"RH_10Rnd_22LR_mk2", 	// 10 Round Ruger 22 Mag
+	"RH_m93r", 				// Beretta M93R Burst
+	"RH_20Rnd_9x19_M93", 	// M93R Magazine
+	"RH_m9c", 				// M9 Camo Pistol
+	"Rnd_9x19_M9",			// Beretta M9 Mag
+	"RH_anacg", 			// Colt Anaconda
+	"RH_6Rnd_44_Mag", 		// Colt Anaconda Mag
+	"RH_python", 			// Colt Python 357 Magnum
+	"RH_6Rnd_357_Mag", 		// 357 Moon Clip
+	"RH_deagle", 			// Desert Eagle
+	"RH_7Rnd_50_AE", 		// Desert Eagle Mag
+	"RH_g17", 				// Glock 17 9mm
+	"RH_19Rnd_9x19_g18", 	// GLock 19 and 17 Mag
+	"RH_m1911old", 			// M1911 Old
+	"RH_8Rnd_45cal_m1911", 	// 8 Round Kimber 45 Mag
+	"RH_bull", 				// Taurus Raging Bull
+	"RH_6Rnd_44_Mag", 		// Taurus Raging Bull Mag
+	"C1987_P99_black", 		// P99
+	"15Rnd_9x19_p99", 		// P99 15Rnd Mag
+	"RH_akm",				// RH AKM
+	"Rnd_762x39_AK47",		// AKM / AK47 ammo
+	"RH_aks47",				// RH AK-47
+	"RH_M16a1",				// RH M16A1
+	"FN_FAL",				// FN FAL
+	"20Rnd_762x51_FNFAL",	// FN FAL ammo
+	"Rnd_556x45_Stanag",	// Stanag rounds (M16 ammo)
+	"Huntingrifle",			// Hunting Rifle
+	"x_22_LR_17_HMR",		// Hunting Rifle ammo
+	"x_303",				// Lee Enfiled Ammo
+	"LeeEnfield"			// Lee Enfiled
 ];
 
 
-
+// Used Car Factory
 _vehiclefactory =
-
 [
-"il_fordcv_sandstone",
-"il_fordcv_maroon",
-"il_fordcv_darkblue",
-"il_fordcv_black",
-"il_fordcv_grey",
-"il_fordcv_white",
-"tcg_taurus_civ1",
-"tcg_taurus_civ2",
-"tcg_taurus_civ3",
-"tcg_taurus_civ4",
-"tcg_taurus_civ5",
-"tcg_taurus_civ6",
-"civic",
-"Volha_1_TK_CIV_EP1",
-"Lada2_TK_CIV_EP1",
-"S1203_TK_CIV_EP1",
-"Car_hatchback",
-"VWGolf",
-"Car_Sedan",
-"SkodaBlue",
-"Skodared",
-"lada1",
-"lada2",
-"ibr_van_BNK",
-"CHRYSLER_300",
-"RENAULT_CLIO_SPORT_V6",
-"SUBARU_IMPREZA_WRX_STI_AWD",
-"SUBARU_IMPREZA_STI_AWD",
-"FIAT_PUNTO",
-"ALFA_ROMEO_BRERA",
-"monaco",
-"monaco_grey",
-"monaco_blue",
-"monaco_green",
-"monaco_red",
-"monaco_white",
-"roadrunner",
-"roadrunner2",
-"CHEVROLET_CAMARO_SS_396",
-"chevrolet_chevelle",
-"cuda",
-"hemicuda",
-"cd71hm",
-"challenger",
-"barcuda",
-"fury",
-"FORD_MUSTANG_SHELBY_COBRA",
-"FORD_MUSTANG_SHELBY_COBRA1",
-"FORD_MUSTANG_SHELBY_COBRA2",
-"FORD_MUSTANG_SHELBY_COBRA3",
-"supgrade4",
-"supgrade5"
+	"MMT_USMC", 				// Mountain Bike
+	"Volha_1_TK_CIV_EP1", 		// Vohla Blue
+	"Volha_2_TK_CIV_EP1", 		// Vohla Grey
+	"Lada2_TK_CIV_EP1", 		// Lada Hippie
+	"S1203_TK_CIV_EP1", 		// S1203 Van
+	"VWGolf", 					// Volkswagen Golf
+	"SkodaBlue", 				// Blue Skoda
+	"Skodared", 				// Red Skoda
+	"lada1", 					// VAZ (White)
+	"lada2", 					// VAZ (Red)
+	"LandRover_TK_CIV_EP1", 	// LandRover
+	"datsun1_civil_3_open", 	// Pick-Up (Tube frame)
+	"UAZ_Unarmed_TK_CIV_EP1", 	// Old UAZ
+	"Tractor" 					// Tractor
 ];
 
+// Muscle Car Factory
 _vehiclefactory2 =
-
 [
-"cl_charger",
-"cl_charger_black",
-"il_charger_blue",
-"il_charger_black",
-"il_charger_red",
-"il_charger_orange",
-"MustangGTRyellow_MLOD",
-"Convertible_MLOD",
-"FORD_SHELBY_GT",
-"FORD_GT",
-"CHRYSLER_W_limmo",
-"CORVETTE_Z06",
-"INFINITI_G35",
-"MERCEDES_BENZ_CLK_500",
-"MERCEDES_BENZ_SL_65_AMG",
-"RENAULT_CLIO_SPORT_V6",
-"CL_PORSCHE_997",
-"CL_LAMBORGHINI_GT3",
-"KOENIGSEGG_CCX",
-"KOENIGSEGG_CCX1",
-"KOENIGSEGG_CCX2",
-"KOENIGSEGG_CCX3",
-"MCLAREN_F1",
-"PORSCHE_997_GT3_RSR",
-"PORSCHE_911_TURBO",
-"PORSCHE_911_GT3_RS",
-"LAMBORGHINI_MURCIELAGO",
-"LAMBORGHINI_REVENTON",
-"LAMBORGHINI_GALLARDO",
-"MASERATI_MC12",
-"JAGUAR_XK",
-"BUGATTI_VEYRON",
-"AUDI_TT_QUATTRO_S_LINE",
-"AUDI_FSI_LE_MANS",
-"PAGANI_ZONDA_F",
-"supgrade4",
-"supgrade5"
+	"440cuda", 						// 440 Cuda
+	"general", 						// General Lee
+	"roadrunner", 					// Green Road Runner
+	"roadrunner2",					// Yellow Road Runner
+	"CHEVROLET_CAMARO_SS_396", 		// Chevrolet Camaro SS 396
+	"chevrolet_chevelle", 			// Chevrolet Chevelle
+	"cuda", 						// 70 Plymouth Hemi
+	"hemicuda", 					// 70 Hemicuda
+	"cd71hm", 						// Plymouth Hemicuda
+	"barcuda", 						// Plymouth Barracuda
+	"fury", 						// Fury
+	"FORD_MUSTANG_SHELBY_COBRA", 	// Black Mustang Shelby Cobra
+	"FORD_MUSTANG_SHELBY_COBRA1", 	// Blue Mustang Shelby Cobra
+	"FORD_MUSTANG_SHELBY_COBRA2", 	// Green Mustang Shelby Cobra
+	"FORD_MUSTANG_SHELBY_COBRA3", 	// Red Mustang Shelby Cobra
+	"FORD_GT", 						// Ford GT
+	"monaco_grey", 					// Monaco Grey
+	"monaco_blue", 					// Monaco Blue
+	"monaco_white", 				// Monaco White
+	"monaco_green", 				// Monaco Green
+	"monaco_red", 					// Monaco Red
+	"challenger_grey", 				// Challenger Grey
+	"challenger_blue", 				// Challenger Blue
+	"challenger_yellow", 			// Challenger Yellow
+	"challenger_pink", 				// Challenger Pink
+	"challenger_white", 			// Challenger White
+	"challenger_green", 			// Challenger Green
+	"challenger_red", 				// Challenger Red
+	"challenger_orange" 			// Challenger Orange
 ];
 
+// Nissan Factory
 _vehiclefactory3 =
-
 [
-"NISSAN_GTR_SPECV",
-"NISSAN_GTR_SPECV1",
-"NISSAN_GTR_SPECV2",
-"NISSAN_GTR_SPECV3",
-"NISSAN_350Z",
-"NISSAN_370Z",
-"NISSAN_370Z1",
-"NISSAN_370Z2",
-"NISSAN_370Z3",
-"NISSAN_370Z4",
-"NISSAN_SKYLINE_GT_R_Z",
-"NISSAN_SKYLINE_GT_R_Z1",
-"NISSAN_SKYLINE_GT_R_Z2",
-"NISSAN_SKYLINE_GT_R_Z3",
-"MAZDA_RX_7",
-"MAZDA_RX_71",
-"MAZDA_RX_72",
-"MAZDA_RX_73",
-"MAZDA_RX_75",
-"MAZDA_RX_74",
-"MAZDA_MAZDASPEED_3",
-"tcg_bmw_m3",
-"tcg_bmw_m3_hamwhite",
-"tcg_bmw_m3_c1",
-"tcg_bmw_m3_c3",
-"tcg_bmw_m3_c4",
-"tcg_bmw_m3_c5",
-"tcg_bmw_m3_c6",
-"tcg_bmw_m3_c7",
-"tcg_bmw_m3_c8",
-"tcg_bmw_m3_c9",
-"BMW_M3_RALLY",
-"BMW_M6",
-"BMW_M3_GTR",
-"BMW_M3",
-"BMW_135I",
-"supgrade4",
-"supgrade5"
+	"NISSAN_GTR_SPECV", 		// Nissan GTR Black
+	"NISSAN_GTR_SPECV1", 		// Nissan GTR Green
+	"NISSAN_GTR_SPECV2", 		// Nissan GTR Red
+	"NISSAN_GTR_SPECV3", 		// Nissan GTR Spider
+	"NISSAN_350Z", 				// Nissan 350Z
+	"NISSAN_370Z", 				// Black Nissan 370Z
+	"NISSAN_370Z1", 			// Blue Nissan 370Z
+	"NISSAN_370Z2", 			// Flame Nissan 370Z
+	"NISSAN_370Z3", 			// Green Nissan 370Z
+	"NISSAN_370Z4", 			// Red Nissan 370Z
+	"NISSAN_SKYLINE_GT_R_Z", 	// Nissan Skyline GTR Blue
+	"NISSAN_SKYLINE_GT_R_Z1", 	// Nissan Skyline GTR Green
+	"NISSAN_SKYLINE_GT_R_Z2", 	// Nissan Skyline GTR Red
+	"NISSAN_SKYLINE_GT_R_Z3" 	// Nissan Skyline GTR Army
 ];
 
 
 _itemfactory =
-
 [
 "Land_ladder_half",
 "MBG_Compound_Bow",
@@ -228,7 +153,6 @@ _itemfactory =
 "supgrade1",
 "supgrade2",
 "ziptie"
-
 ];
 
 
@@ -281,9 +205,9 @@ pickupvehiclequeue	= [];
 INV_ItemFabriken =
 
 [
-[Vehiclefactory,"factory1","Bump Bump Car Factory",dummyobj,vfacspawn,_vehiclefactory,150000,"Fabrikablage1", "vehiclequeue"],
-[Vehiclefactory2,"factory2","Zoom Car Factory",dummyobj,vfacspawn2,_vehiclefactory2,425000,"Fabrikablage2", "vehiclequeue2"],
-[Vehiclefactory3,"factory11","MzNiCh Factory",dummyobj,vfacspawn3,_vehiclefactory3,250000,"Fabrikablage11", "vehiclequeue3"],
+[Vehiclefactory,"factory1","Vehicle Factory",dummyobj,vfacspawn,_vehiclefactory,150000,"Fabrikablage1", "vehiclequeue"],
+[Vehiclefactory2,"factory2","Muscle Car Factory",dummyobj,vfacspawn2,_vehiclefactory2,425000,"Fabrikablage2", "vehiclequeue2"],
+[Vehiclefactory3,"factory3","Nissan Factory",dummyobj,vfacspawn3,_vehiclefactory3,250000,"Fabrikablage11", "vehiclequeue3"],
 [igunbox,"factory3","General Factory",igunbox,dummyobj,_itemfactory,1500000,"Fabrikablage3", "itemqueue"],
 [wfgunbox,"factory4","Weapon Factory",wfgunbox,dummyobj,_weaponfactory,1000000,"Fabrikablage4", "weaponqueue"],
 [pickup,"factory6","Pickup Factory",dummyobj,pickupfacspawn,_pickupfactory,275000,"Fabrikablage6", "pickupvehiclequeue"]
@@ -294,20 +218,11 @@ INV_Fabrikowner = [];
 INV_FarmItemArray = 
 
 [
-//[[["fishingwhale",400]],"Whale",2,1,["Ship"]],
-//[[["fishingbass",400]],"bass",15,4,["Ship"]],
-//[[["fishingblowfish",200]],"blowfish",15,8,["Ship"]],
-//[[["fishingherring",200]],"herring",15,8,["Ship"]],
-//[[["fishingmackerel",200]],"mackerel",15,8,["Ship"]],
-//[[["fishingblowfish1",200]],"blowfish",15,8,["Ship"]],
-//[[["fishingherring1",200]],"herring",15,8,["Ship"]],
-//[[["fishingmackerel1",200]],"mackerel",15,8,["Ship"]],
-//[[["cocafield",30]],"Unprocessed_cocaine",15,4,["Man"]],
+
 [[["marifield",50]],"Unprocessed_marijuana",15,4,["Man"]],
 [[["lsdfield",30]],"Unprocessed_lsd",15,4,["Man"]],
 [[["lsdfield_1",30]],"Unprocessed_lsd",15,4,["Man"]],
 [[["lsdfield_2",30]],"Unprocessed_lsd",15,4,["Man"]],
-//[[["heroinfield",30]],"Unprocessed_heroin",15,4,["Man"]],
 [[["DiamondArea",20]],"Diamond rock",15,1,["Man"]],
 [[["farmarea1",90]],"getreide",20,10,["tractor","oldtruc2","oldtruc2a"]],
 [[["farmarea2",90]],"getreide",20,10,["tractor","oldtruc2","oldtruc2a"]],

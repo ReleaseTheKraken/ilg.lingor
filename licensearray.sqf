@@ -26,7 +26,7 @@ INV_Lizenzen =
 ["comair",[airshop3,objnull,objnull],"Commerical Air License",10000],
 ["IRAlicense",[IRAveh,objnull,objnull],"IRA Training",900000],
 ["icartune",[tuning1,objnull,objnull],"Illegal Car Tuning License",50000],
-["Pistollicense",[gundealer1,objnull,objnull],"Pistol license",30000],
+["Pistollicense",[gundealer1,dmv,objnull],"Pistol license",30000],
 ["riflelicense",[vending2,objnull,objnull],"Hunting License",50000],
 ["assassinlic",[assassinshop,objnull,objnull],"Illegal Assassin Weapons Fee",50000],
 ["terrorvip",[vipterrorbox,objnull,objnull],"Terrorist VIP License",1400000],

@@ -5,18 +5,31 @@ if(isServer)then{
 	INV_itemstocks = 
 
 	[
-		-1, 	// Fuel Shop
+		-1, 	// Fuel Shop 1
 		-1, 	// Fuel Shop 2
-		-1, 	// Item Shop
-		-1, 	// Cop Food Shop
-		-1, 	// Pub Shop(s) 
-		-1, 	// Firearms Dealer
+		-1, 	// Fuel Shop 3
+		-1, 	// Fuel Shop 4
+		-1, 	// Fuel Shop 5
+		-1, 	// Fuel Shop 6
+		-1, 	// Fuel Shop 7
+		-1, 	// Fuel Shop 8
+		-1, 	// Fuel Shop 9
+		-1, 	// Vending / Out Door Shop
+		-1, 	// Food Shop 1
+		-1, 	// Food Shop 2 
+		-1,		// Food Shop 3
+		-1,		// Food and Gun Locker
+		-1, 	// Pub Shop 1
+		-1,		// Pub Shop 2 
+		-1, 	// Pub Shop 3 
+		-1, 	// Pub Shop 4 
+		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (Pistol shop - 31 items)
 		-1, 	// Assassin Shop
 		-1, 	// Government Equipment Shop
 		-1, 	// Equipment & Mining Tools (Two shops total North and South)
 		-1, 	// Texas Go-Carts Shop
 		-1, 	// Car Upgrades
-		-1, 	// Used Cars (2 Shops North and South car Shops)
+		[10,10,10,10,10,10,10,10,10,10,10,10,10,10],   	// Used Cars (2 Shops North and South car Shops - 14 items)
 		-1, 	// Farm Equipment
 		-1, 	// Muscle Car Shop
 		-1, 	// Charger and Mazda
@@ -41,31 +54,40 @@ if(isServer)then{
 		-1, 	// Commercial Air Shop
 		-1, 	// Chopper and Jet Shop
 		-1, 	// Jetski Shop
-		-1, 	// Boat Shop (s)
+		-1, 	// Southern Boat Shop
+		-1, 	// Boat Shop 2
+		-1,		// Boat Shop 3 
+		-1, 	// ukpb Boat Shop 
 		-1, 	// Sea Plane Shop
 		-1, 	// SWAT Boat Shop
+		-1,     // Boat Shop 
 		-1, 	// Bryces Pretty Jewelry Shop
 		-1, 	// Insurance
 		-1, 	// Fire Rescue Equipment
 		-1, 	// Sell Resources
+		-1,		// Sell Resources (South)
 		-1, 	// Jackos Cheeseburgers
 		-1, 	// BG Emporium
 		-1, 	// Wigworths
-		-1, 	// ILG Oil Dealers (Two shops total North and South)
+		-1, 	// ILG Oil Dealer (South)
+		-1, 	// ILG Oil Dealer  (North) 
 		-1, 	// Exports
 		-1, 	// Sell Whale (Two shops total)
-		-1, 	// Terror Stuff
+		-1, 	// Terrorist SShop
 		-1, 	// Barely Legal
-		-1, 	// Gang Shop (s)
+		-1, 	// Gang Shop 1 
+		-1, 	// Gang Shop 2 
+		-1, 	// Gang Shop 3 
+		-1, 	// Gang Shop 4 
 		-1, 	// Sell Cocaine
 		-1, 	// Sell marijuana
 		-1, 	// Sell LSD
 		-1, 	// Sell Heroin
 		-1, 	// Sell Meth
-		-1, 	// Pharmacy
+		-1, 	// Pharmacy Shop
 		-1, 	// Police Aircraft
 		-1, 	// Police vehicles
-		-1, 	// Sheriff Vehicles
+		-1, 	// Sheriff Vehicles and Rifles Shop
 		-1, 	// Basic Police Gear
 		-1, 	// Patrol Officer Gear
 		-1, 	// Sheriffs Department Gear
@@ -83,24 +105,33 @@ if(isServer)then{
 		-1, 	// Piracy Gear - ILG
 		-1, 	// IRA Vehicles - ILG
 		-1, 	// IRA Weapons - ILG
-		-1, 	// Tier-X Weapon Shop (s) - ILG
-		-1, 	// Tier-X Ammo Shop - ILG
+		-1, 	// Tier-X Weapon Shop (ARs)
+		-1, 	// Tier-X Weapon Shop (SMGs)
+		-1, 	// Tier-X Weapon Shop (Pistols)
+		-1, 	// Tier-X Weapon Shop (Snipers)
+		-1, 	// Tier-X Weapon Shop (LMGs)
+		-1, 	// Tier-X Weapon Shop (WW2)
+		-1, 	// Tier-X Ammo Shop (Ammo)
 		-1, 	// VIP Terrorist Weapons - ILG
 		-1, 	// VIP Terrorist Ammo - ILG
 		-1, 	// VIP Terrorist Vehicles - ILG
 		-1, 	// VICE Shop - ILG
 		-1, 	// VICE Vehicles - ILG
-		-1, 	// Amazing Shop of Doom - ILG
+		-1, 	// Cock Gang Shop - ILG
 		-1,  	// Mafia Shop - ILG
 		-1,		// Pirate Weapon Shop - ILG
-		-1,		// CoastGuard Jet Shop - ILG
+		-1,		// Used Cars (South)
+		-1,		// Equipment & Mining Tools (South) 
+		-1,		// Airplane Shop (South)
 		-1,		// CoastGuard Helicopter Shop - ILG
 		-1,		// CoastGuard Boat Shop - ILG
+		-1,		// CoastGuard Jet Shop - ILG
 		-1,		// PMC Aircraft Shop - ILG
 		-1,		// PMC Helicopter Shop - ILG
 		-1,		// PMC Vehicle Shop - ILG
 		-1,		// PMC Boat Shop - ILG
 		-1,		// PMC Weapon Shop - ILG
+		-1,		// Sell Whale (Rebel)
 		-1,		// Rebel Aircraft - ILG
 		-1		// Area 51 Shop - ILG
 	];
@@ -111,103 +142,135 @@ if(isServer)then{
 INV_itemmaxstocks = 
 
 [
-	-1, 	// Fuel Shop
-	-1, 	// Fuel Shop 2
-	-1, 	// Item Shop
-	-1, 	// Cop Food Shop
-	-1, 	// Pub Shop(s) 
-	-1, 	// Firearms Dealer
-	-1, 	// Assassin Shop
-	-1, 	// Government Equipment Shop 
-	-1, 	// Equipment & Mining Tools (Two shops total North and South)
-	-1, 	// Texas Go-Carts Shop
-	-1, 	// Car Upgrades
-	-1, 	// Used Cars (2 Shops North and South car Shops)
-	-1, 	// Farm Equipment
-	-1, 	// Muscle Car Shop
-	-1, 	// Charger and Mazda
-	-1, 	// Low End Sports
-	-1, 	// Mid Level Sports
-	-1, 	// High End Sports
-	-1, 	// Nissan Car Shop
-	-1, 	// 350z Car Shop
-	-1, 	// Ford Car Shop
-	-1, 	// BMW Car Shop
-	-1, 	// Tahoe Shop
-	-1, 	// Pickup Shop
-	-1, 	// Taxi Shop
-	-1, 	// Mikes Bike Shop
-	-1, 	// Quad Bike Shop
-	-1, 	// Sports Bike Shop
-	-1, 	// Truck and Bus Shop
-	-1, 	// Truck Shop
-	-1, 	// Sport Truck Shop
-	-1, 	// Airplane Shop (Two Shops North and South)
-	-1, 	// Chopper and Jet Shop
-	-1, 	// Commercial Air Shop
-	-1, 	// Chopper and Jet Shop (Three shops North, North? and South)
-	-1, 	// Jetski Shop
-	-1, 	// Boat Shop (s)
-	-1, 	// Sea Plane Shop
-	-1, 	// SWAT Boat Shop
-	-1, 	// Bryces Pretty Jewelry Shop
-	-1, 	// Insurance
-	-1, 	// Fire Rescue Equipment
-	-1, 	// Sell Resources (Two shops total) 
-	-1, 	// Jackos Cheeseburgers
-	-1, 	// BG Emporium
-	-1, 	// Wigworths
-	-1, 	// ILG Oil Dealers (Two shops total North and South)
-	-1, 	// Exports
-	-1, 	// Sell Whale (Two shops total)
-	-1, 	// Terror Stuff
-	-1, 	// Barely Legal
-	-1, 	// Gang Shop (s)
-	-1, 	// Sell Cocaine
-	-1, 	// Sell marijuana
-	-1, 	// Sell LSD
-	-1, 	// Sell Heroin
-	-1, 	// Sell Meth
-	-1, 	// Pharmacy
-	-1, 	// Police Aircraft
-	-1, 	// Police vehicles
-	-1, 	// Sheriff Vehicles
-	-1, 	// Basic Police Gear
-	-1, 	// Patrol Officer Gear
-	-1, 	// Sheriffs Department Gear
-	-1, 	// SWAT Equipment
-	-1, 	// BROKE Trained Cop Equipment
-	-1, 	// SWAT Vehicles
-	-1, 	// Traffic Division Equipment
-	-1, 	// Traffic Division Vehicles
-	-1, 	// Trained Cop Vehicles
-	-1, 	// K9 Unit and APO Vehicles
-	-1, 	// Trained Cop Equipment
-	-1, 	// Tier 1 Donator Shop
-	-1, 	// Tier 2 Donator Shop
-	-1, 	// Tier 3 Donator Shop
-	-1, 	// Piracy Gear - ILG
-	-1, 	// IRA Vehicles - ILG
-	-1, 	// IRA Weapons - ILG
-	-1, 	// Tier-X Weapon Shop (s) - ILG
-	-1, 	// Tier-X Ammo Shop - ILG
-	-1, 	// VIP Terrorist Weapons - ILG
-	-1, 	// VIP Terrorist Ammo - ILG
-	-1, 	// VIP Terrorist Vehicles - ILG
-	-1, 	// VICE Shop - ILG
-	-1, 	// VICE Vehicles - ILG
-	-1, 	// Amazing Shop of Doom - ILG
-	-1,  	// Mafia Shop - ILG
-	-1,		// Pirate Weapon Shop - ILG
-	-1,		// CoastGuard Jet Shop - ILG
-	-1,		// CoastGuard Helicopter Shop - ILG
-	-1,		// CoastGuard Boat Shop - ILG
-	-1,		// PMC Aircraft Shop - ILG
-	-1,		// PMC Helicopter Shop - ILG
-	-1,		// PMC Vehicle Shop - ILG
-	-1,		// PMC Weapon Shop - ILG
-	-1,		// Rebel Aircraft - ILG
-	-1		// Area 51 Shop - ILG
+		-1, 	// Fuel Shop 1
+		-1, 	// Fuel Shop 2
+		-1, 	// Fuel Shop 3
+		-1, 	// Fuel Shop 4
+		-1, 	// Fuel Shop 5
+		-1, 	// Fuel Shop 6
+		-1, 	// Fuel Shop 7
+		-1, 	// Fuel Shop 8
+		-1, 	// Fuel Shop 9
+		-1, 	// Vending / Out Door Shop
+		-1, 	// Food Shop 1
+		-1, 	// Food Shop 2 
+		-1,		// Food Shop 3
+		-1,		// Food and Gun Locker
+		-1, 	// Pub Shop 1
+		-1,		// Pub Shop 2 
+		-1, 	// Pub Shop 3 
+		-1, 	// Pub Shop 4 
+		[10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10,-1,10], 	// Firearms Dealer (Pistol shop - 31 items)
+		-1, 	// Assassin Shop
+		-1, 	// Government Equipment Shop
+		-1, 	// Equipment & Mining Tools (Two shops total North and South)
+		-1, 	// Texas Go-Carts Shop
+		-1, 	// Car Upgrades
+		[20,20,20,20,20,20,20,20,20,20,20,20,20,20],   	// Used Cars (2 Shops North and South car Shops - 14 items)
+		-1, 	// Farm Equipment
+		-1, 	// Muscle Car Shop
+		-1, 	// Charger and Mazda
+		-1, 	// Low End Sports
+		-1, 	// Mid Level Sports
+		-1, 	// High End Sports
+		-1, 	// Nissan Car Shop
+		-1, 	// 350z Car Shop
+		-1, 	// Ford Car Shop
+		-1, 	// BMW Car Shop
+		-1, 	// Tahoe Shop
+		-1, 	// Pickup Shop
+		-1, 	// Taxi Shop
+		-1, 	// Mikes Bike Shop
+		-1, 	// Quad Bike Shop
+		-1, 	// Sports Bike Shop
+		-1, 	// Truck and Bus Shop
+		-1, 	// Truck Shop
+		-1, 	// Sport Truck Shop
+		-1, 	// Airplane Shop
+		-1, 	// Chopper and Jet Shop
+		-1, 	// Commercial Air Shop
+		-1, 	// Chopper and Jet Shop
+		-1, 	// Jetski Shop
+		-1, 	// Southern Boat Shop
+		-1, 	// Boat Shop 2
+		-1,		// Boat Shop 3 
+		-1, 	// ukpb Boat Shop 
+		-1, 	// Sea Plane Shop
+		-1, 	// SWAT Boat Shop
+		-1,     // Boat Shop 
+		-1, 	// Bryces Pretty Jewelry Shop
+		-1, 	// Insurance
+		-1, 	// Fire Rescue Equipment
+		-1, 	// Sell Resources
+		-1,		// Sell Resources (South)
+		-1, 	// Jackos Cheeseburgers
+		-1, 	// BG Emporium
+		-1, 	// Wigworths
+		-1, 	// ILG Oil Dealer (South)
+		-1, 	// ILG Oil Dealer  (North) 
+		-1, 	// Exports
+		-1, 	// Sell Whale (Two shops total)
+		-1, 	// Terrorist SShop
+		-1, 	// Barely Legal
+		-1, 	// Gang Shop 1 
+		-1, 	// Gang Shop 2 
+		-1, 	// Gang Shop 3 
+		-1, 	// Gang Shop 4 
+		-1, 	// Sell Cocaine
+		-1, 	// Sell marijuana
+		-1, 	// Sell LSD
+		-1, 	// Sell Heroin
+		-1, 	// Sell Meth
+		-1, 	// Pharmacy Shop
+		-1, 	// Police Aircraft
+		-1, 	// Police vehicles
+		-1, 	// Sheriff Vehicles and Rifles Shop
+		-1, 	// Basic Police Gear
+		-1, 	// Patrol Officer Gear
+		-1, 	// Sheriffs Department Gear
+		-1, 	// SWAT Equipment
+		-1, 	// BROKE Trained Cop Equipment
+		-1, 	// SWAT Vehicles
+		-1, 	// Traffic Division Equipment
+		-1, 	// Traffic Division Vehicles
+		-1, 	// Trained Cop Vehicles
+		-1, 	// K9 Unit and APO Vehicles
+		-1, 	// Trained Cop Equipment
+		-1, 	// Tier 1 Donator Shop
+		-1, 	// Tier 2 Donator Shop
+		-1, 	// Tier 3 Donator Shop
+		-1, 	// Piracy Gear - ILG
+		-1, 	// IRA Vehicles - ILG
+		-1, 	// IRA Weapons - ILG
+		-1, 	// Tier-X Weapon Shop (ARs)
+		-1, 	// Tier-X Weapon Shop (SMGs)
+		-1, 	// Tier-X Weapon Shop (Pistols)
+		-1, 	// Tier-X Weapon Shop (Snipers)
+		-1, 	// Tier-X Weapon Shop (LMGs)
+		-1, 	// Tier-X Weapon Shop (WW2)
+		-1, 	// Tier-X Ammo Shop (Ammo)
+		-1, 	// VIP Terrorist Weapons - ILG
+		-1, 	// VIP Terrorist Ammo - ILG
+		-1, 	// VIP Terrorist Vehicles - ILG
+		-1, 	// VICE Shop - ILG
+		-1, 	// VICE Vehicles - ILG
+		-1, 	// Cock Gang Shop - ILG
+		-1,  	// Mafia Shop - ILG
+		-1,		// Pirate Weapon Shop - ILG
+		-1,		// Used Cars (South)
+		-1,		// Equipment & Mining Tools (South) 
+		-1,		// Airplane Shop (South)
+		-1,		// CoastGuard Helicopter Shop - ILG
+		-1,		// CoastGuard Boat Shop - ILG
+		-1,		// CoastGuard Jet Shop - ILG
+		-1,		// PMC Aircraft Shop - ILG
+		-1,		// PMC Helicopter Shop - ILG
+		-1,		// PMC Vehicle Shop - ILG
+		-1,		// PMC Boat Shop - ILG
+		-1,		// PMC Weapon Shop - ILG
+		-1,		// Sell Whale (Rebel)
+		-1,		// Rebel Aircraft - ILG
+		-1		// Area 51 Shop - ILG
 ];
 
 // Shop items
@@ -292,7 +355,7 @@ _pub =
 	"wine2" 		// Red Wine
 ];
 
-//Pistol Shop
+//Pistol Shop (31 items)
 _gss = 
 [
 	"RH_g19t", 				// Glock 19 Tan
@@ -2284,7 +2347,7 @@ INV_ItemShops =
 	[pub2,"Pub",dummyobj,dummyobj,_pub,_pub,true],
 	[pub3,"Pub",dummyobj,dummyobj,_pub,_pub,true],
 	[pub4,"Pub",dummyobj,dummyobj,_pub,_pub,true],
-	[gundealer1,"Firearms Dealer",gunbox2,dummyobj,_gss,_gss,true],
+	[gundealer1,"Firearms Dealer",gundealer1,dummyobj,_gss,_gss,true],
 	[assassinshop,"Assassin Shop",assassinshop,dummyobj,_ass,_ass,true],
 	[mayorguns,"Government Equip Shop",mayorguns,mayorcarspawn,_mgs,_mgs,true],
 	[equipbox,"Equipment & Mining Tools",equipbox,dummyobj,_es,_es,true],
