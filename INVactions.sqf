@@ -3,7 +3,7 @@ _item   = _this select 1;
 _amount = _this select 2;                 
 
 if (!(_amount call ISSE_str_isInteger))   exitWith {player groupChat localize "STRS_inv_no_valid_number";};
-floor _amount = _amount call ISSE_str_StrToInt; 
+_amount = _amount call ISSE_str_StrToInt; 
 if (_amount > (_item call INV_GetItemAmount)) exitWith {};
 _player = _this select 3;
 if ((player call ISSE_IsVictim) or (!INV_CanUseInventory)) exitWith {player groupChat localize "STRS_inv_cannotUseNow";};

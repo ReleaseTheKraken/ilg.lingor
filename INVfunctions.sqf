@@ -45,7 +45,7 @@ INV_AddInvItem = {
 		} else {
 			([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
 		};
-		[player, [["inventory", INV_InventarArray]]] call LinLib_fnc_ClientUpdate;
+		
 	};
 // Add Items to Storage
 INV_AddItemStorage = {
@@ -79,9 +79,11 @@ INV_AddItemStorage = {
 		};
 		if (_Fmenge > 0) then {
 			if (_Farraynum == -1) then {
+				[player, [["inventory", INV_InventarArray]]] call LinLib_fnc_ClientUpdate;
 				call compile format ['%1 = %1 + [ [_Fitem, _Fmenge] ];', _Farrname];
 				true;
 			} else {
+				[player, [["inventory", INV_InventarArray]]] call LinLib_fnc_ClientUpdate;
 				call compile format ['%1 SET [_Farraynum, [_Fitem, (_Fanzahl+_Fmenge)] ];', _Farrname];
 				true;
 			};
@@ -93,6 +95,7 @@ INV_AddItemStorage = {
 					false;
 				} else {
 					call compile format ['%1 SET [_Farraynum, [_Fitem, (_Fanzahl+_Fmenge)] ];', _Farrname];
+					[player, [["inventory", INV_InventarArray]]] call LinLib_fnc_ClientUpdate;
 					true;
 				};
 			};
