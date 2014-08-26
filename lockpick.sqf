@@ -16,8 +16,9 @@ if (_dice > 75) then
 {
 	titleText ["Lockpick successful!","plain down"];
 	player groupchat format ["%1 is now on your keychain",_obj];
-	INV_VehicleArray = INV_VehicleArray + [_obj]; call LinLib_fnc_ClientUpdate;
+	INV_VehicleArray = INV_VehicleArray + [_obj];
 	player groupchat format ["Vehicles on your keychain: %1",INV_VehicleArray];
+	[player, [["keys", INV_VehicleArray]]] call LinLib_fnc_ClientUpdate;
 	_suc = true;
 }
 else

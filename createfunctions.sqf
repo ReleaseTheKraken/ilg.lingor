@@ -81,6 +81,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 			INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
 			"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
 			', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+			[player, [["keys", INV_VehicleArray]]] call LinLib_fnc_ClientUpdate;
 		};
 		if (_classname in _type2) then 
 		{
@@ -101,6 +102,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 			INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
 			"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
 			', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+			[player, [["keys", INV_VehicleArray]]] call LinLib_fnc_ClientUpdate;
 		};
 
 
@@ -124,6 +126,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 		INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
 		"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
 		', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
+		[player, [["keys", INV_VehicleArray]]] call LinLib_fnc_ClientUpdate;
 	};
 	
 	//Coast Guard Helicopter
