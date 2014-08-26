@@ -135,6 +135,11 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 		processInitCommands; 
 	};
 			
+	//SCUD - Mando Missiles (Nuclear warhead - IslandLifeGaming Area 51)
+	if(_classname == "MAZ_543_SCUD_TK_EP1")then{
+		newvehicle setVariable ["mando_scud_type", 2];
+	};
+	
 	//JFH Coastguard Zodiac
 	if(_classname == "JFH_USCG_ZODIAC")then{
 		newvehicle addAction [("<t color=""#33FFFF"">" + ("Attach boat") + "</t>"),"CRRCScript\attachboat.sqf"];

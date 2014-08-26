@@ -1195,6 +1195,11 @@ INV_AlleVehicleeArray = [
 ["SUV_TK_EP1",						["Vehicle", "car"],				["SUV_TK_EP1", "PMC SUV"],											[500000, 25000], 	[2, "pmclicense", "pmclicense", 100], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ILG - Area 51 Technology
+["Gst_VF1S_red",					["Vehicle", "Air"],				["Gst_VF1S_red", "VF-1S"],											[2320000, 50000],  	[5, "", "", 250], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["MAZ_543_SCUD_TK_EP1",				["Vehicle", "truck"],			["MAZ_543_SCUD_TK_EP1", "9P117 SCUD Nuclear Warhead"],				[2320000, 50000], 	[2, "", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Tahoe Pack 
 ["tahoe_pd",						["Vehicle", "car"],				["tahoe_pd", "Police Tahoe"],										[250000, 45000], 	[2, "", "patrol_training", 300], [250, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["tahoe_sh",						["Vehicle", "car"],				["tahoe_sh", "Sheriff Tahoe"],										[250000, 25000], 	[2, "", "", 300], [250, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],

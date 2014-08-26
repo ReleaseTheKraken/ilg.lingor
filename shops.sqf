@@ -101,7 +101,8 @@ if(isServer)then{
 		-1,		// PMC Vehicle Shop - ILG
 		-1,		// PMC Boat Shop - ILG
 		-1,		// PMC Weapon Shop - ILG
-		-1		// Rebel Aircraft - ILG
+		-1,		// Rebel Aircraft - ILG
+		-1		// Area 51 Shop - ILG
 	];
 
 	publicvariable "INV_itemstocks";
@@ -205,7 +206,8 @@ INV_itemmaxstocks =
 	-1,		// PMC Helicopter Shop - ILG
 	-1,		// PMC Vehicle Shop - ILG
 	-1,		// PMC Weapon Shop - ILG
-	-1		// Rebel Aircraft - ILG
+	-1,		// Rebel Aircraft - ILG
+	-1		// Area 51 Shop - ILG
 ];
 
 // Shop items
@@ -2254,6 +2256,12 @@ _ILG_PMC_WeaponShop =
 	"200Rnd_556x45_L110A1",		// L110A2 - M249 Ammo 200 Rounds
 	"AM136"						// AT4 AMMO
 ];
+
+_ILG_Area51 =
+[
+	"MAZ_543_SCUD_TK_EP1",		// SCUD Launcher (Nuclear warhead)
+	"Gst_VF1S_red"
+];
 	
 
 INV_ItemShops = 
@@ -2385,5 +2393,6 @@ INV_ItemShops =
 	[ILG_PMC_BoatShop, "PMC Vehicle Shop",dummyobj,PMC_BoatSpawn,_ILG_PMC_BoatShop,_ILG_PMC_BoatShop,true],
 	[ILG_PMC_WeaponShop, "PMC Weapon Shop",ILG_PMC_WeaponShop,dummyobj,_ILG_PMC_WeaponShop,_ILG_PMC_WeaponShop,true],
 	[ILG_SellWhaleRebel,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],
-	[ILG_RebelAircraft, "Lingor Rebel's Aircraft Dealer",dummyobj,ILG_RebelAircraftSpawn,_ILG_RebelAircraft,_ILG_RebelAircraft,true]
+	[ILG_RebelAircraft, "Lingor Rebel's Aircraft Dealer",dummyobj,ILG_RebelAircraftSpawn,_ILG_RebelAircraft,_ILG_RebelAircraft,true],
+	[ILG_Area51, "Area-51 Technology",ILG_Area51,ILG_Area51Spawn,_ILG_Area51,_ILG_Area51,true]
 ];
