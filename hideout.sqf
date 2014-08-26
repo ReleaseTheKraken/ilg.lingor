@@ -17,7 +17,7 @@ processInitCommands;
 _tent =  createVehicle ["Land_tent_east", _pos, [], 0, "CAN_COLLIDE"];	
 _tent setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];												
 _tent setVehicleInit format["this setVehicleVarName '%1_Tent'; %1_Tent = this; this setDir %2", getPlayerUID player, _roledir]; 		
-_tent addMPEventHandler ["mpkilled", {if ((isServer))then{[_this select 0] call LinLib_fnc_RemoveHideout;}};];										
+_tent addMPEventHandler ["mpkilled", {if ((isServer))then{[_this select 0] call LinLib_fnc_RemoveHideout;}}];										
 processInitCommands;
 
 _box = createVehicle ["TKOrdnanceBox_EP1", (_tent buildingPos 2), [], 0, "CAN_COLLIDE"];
