@@ -14,7 +14,7 @@ _fire allowDamage false;
 _fire setVehicleInit format["this setVehicleVarName '%1_Fire';%1_Fire = this; ", getPlayerUID player];
 processInitCommands;
 
-_tent =  createVehicle ["Land_tent_east", _pos, [], 0, "CAN_COLLIDE"];	
+_tent =  createVehicle ["LinLib_Hideout_Tent", _pos, [], 0, "CAN_COLLIDE"];	
 _tent setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];												
 _tent setVehicleInit format[
 "
@@ -36,5 +36,5 @@ ClearWeaponCargoGlobal _box;
 
 _tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 
-["DB_Hideout", [player, _pos]] call CBA_fnc_globalEvent;
+["DB_Hideout", [player, _pos, _roledir]] call CBA_fnc_globalEvent;
 [_item, -1] call INV_AddInvItem;
