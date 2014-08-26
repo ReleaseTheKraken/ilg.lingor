@@ -21988,10 +21988,10 @@ class Mission
 		class Item1691
 		{
 			position[]={1925.0764,6.0069938,8767.2471};
-			azimut=-221.33708;
+			azimut=320.14456;
 			id=1851;
 			side="EMPTY";
-			vehicle="monaco_white";
+			vehicle="ilg_shop";
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Vehiclefactory3";
@@ -21999,15 +21999,15 @@ class Mission
 		};
 		class Item1692
 		{
-			position[]={2860.4814,33.1674,1481.394};
-			azimut=543.56085;
+			position[]={2860.6409,33.25848,1481.9397};
+			azimut=2.5;
 			id=1853;
 			side="EMPTY";
-			vehicle="challenger_red";
+			vehicle="ilg_shop";
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Vehiclefactory2";
-			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) +1];this disableAI ""move"";";
+			init="this allowdamage false; this disableAI ""move"";";
 		};
 		class Item1693
 		{
@@ -22024,10 +22024,9 @@ class Mission
 		class Item1694
 		{
 			position[]={6634.1826,10.724817,3496.9568};
-			azimut=-539.06598;
 			id=1856;
 			side="EMPTY";
-			vehicle="raptor_blue";
+			vehicle="ilg_shop";
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Vehiclefactory";
@@ -29809,17 +29808,17 @@ class Mission
 		class Item253
 		{
 			position[]={1924.9175,6.0069938,8767.1748};
-			name="Vehiclefactory_1";
-			text="Vehicle Factory 2";
+			name="ILG_NissanFactoryMarker";
+			text="Nissan Vehicle Factory";
 			type="Factory";
 			a=0.60000002;
 			b=0.60000002;
 		};
 		class Item254
 		{
-			position[]={2860.323,33.142105,1481.2426};
-			name="0Vehiclefactory_2";
-			text="Car Factory";
+			position[]={2860.4824,33.233189,1481.7882};
+			name="ILG_MuscleCarMarker";
+			text="Muscle Car Factory";
 			type="Factory";
 			a=0.60000002;
 			b=0.60000002;
@@ -29835,9 +29834,9 @@ class Mission
 		};
 		class Item256
 		{
-			position[]={6634.0225,10.723967,3497.009};
+			position[]={6634.1558,10.729102,3497.5266};
 			name="Vehiclefactory";
-			text="Vehicle Factory 1";
+			text="Vehicle Factory";
 			type="Factory";
 			a=0.60000002;
 			b=0.60000002;
