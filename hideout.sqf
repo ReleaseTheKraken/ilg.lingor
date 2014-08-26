@@ -1,60 +1,36 @@
-_art = _this select 0;
- 
-if (_art == "use") then 
+private ["_item","_rolepos","_roledir","_fire","_tent","_box"];
+_item   = _this select 1;						
+if(!isnull (missionNamespace getVariable [format["%1_Tent", getPlayerUID player], objNull]))exitWith{systemChat "You already have a hideout";};
 
-{
-													
-_item   = _this select 1;		
-_zunah 	= 0;	
-
-{if (player distance (_x select 0) < (_x select 1)) exitWith {_zunah = 1;}} forEach CityLocationArray;
-//{if (player distance (getpos _x) < 10) exitWith {_zunah = 1;}} forEach HideoutLocationArray;						
- 
-if (_zunah == 1) exitWith {player groupChat localize "STRS_inventar_hideout_wrongplace";};
-													
 player groupChat format[localize "STRS_inventar_bought_hideout", rolestring];																			
  
-_rolepos    = position player;			
+_rolepos    = getPosATL player;			
 _roledir    = getdir player;							
 _pos        = [(_rolepos select 0) + ((sin _roledir) * 10), (_rolepos select 1) + ((cos _roledir) * 10),(_rolepos select 2)];	
 
-call compile format ['
+_fire = createVehicle ["Land_Campfire_burning", _pos, [], 0, "CAN_COLLIDE"];
+_fire setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];
+_fire allowDamage false;
+_fire setVehicleInit format["this setVehicleVarName '%1_Fire';%1_Fire = this; ", getPlayerUID player];
+processInitCommands;
 
-hideoutfire%1%2 = "Land_Campfire_burning" createVehicle %3;
-hideoutfire%1%2 setVehicleInit "this setVehicleVarName ""hideoutfire%1%2""; 
-hideoutfire%1%2 = this;";																		
+_tent =  createVehicle ["Land_tent_east", _pos, [], 0, "CAN_COLLIDE"];	
+_tent setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];												
+_tent setVehicleInit format["this setVehicleVarName '%1_Tent'; %1_Tent = this; this setDir %2", getPlayerUID player, _roledir]; 		
+_tent addMPEventHandler ["mpkilled", {if ((isServer)then{[_this select 0] call LinLib_fnc_RemoveHideout;}};];										
+processInitCommands;
 
-hideout%1%2 = "Land_tent_east" CreateVehicle %3; 															
-hideout%1%2 setVehicleInit "this setVehicleVarName ""hideout%1%2""; hideout%1%2 = this; this setDir %4"; 												
+_box = createVehicle ["TKOrdnanceBox_EP1", (_tent buildingPos 2), [], 0, "CAN_COLLIDE"];
+_box setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];
+_box allowDamage false;
+_box setVehicleInit format["this setVehicleVarName '%1_Box'; %1_Box = this; this setDir %3; this setpos (%2 buildingPos 2);", getplayerUID player, _tent, _roledir]; 
+processInitCommands;
+clearMagazineCargoGlobal _box; 
+ClearWeaponCargoGlobal _box;
 
-hideoutbox%1%2 = "TKOrdnanceBox_EP1" createVehicle (hideout%1%2 buildingPos 2);												
-hideoutbox%1%2 setVehicleInit "this setVehicleVarName ""hideoutbox%1%2""; 
-hideoutbox%1%2 = this; this setDir %4; this setpos (hideout%1%2 buildingPos 2);
+_tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 
-HideoutLocationArray = HideoutLocationArray + [hideout%1%2];
+["DB_Hideout", [player, _pos]] call CBA_fnc_globalEvent;
 
-ClearMagazineCargo this; 
-ClearWeaponCargo this;";
-processInitCommands; 
-
-%1remove = player addaction ["Remove your hideout", "noscript.sqf", 
-"
-if(!isnull hideoutfire%1%2)then{deletevehicle hideoutfire%1%2};
-if(!isnull hideout%1%2)then{deletevehicle hideout%1%2};
-if(!isnull hideoutbox%1%2)then{deletevehicle hideoutbox%1%2};
-deletemarker %1%2localhideoutmarker;
-HideoutLocationArray = HideoutLocationArray - [hideout%1%2];																										
-[""hideout"", 1] call INV_AddInvItem;
-",1,false,true,"","player distance hideout%1%2 <= 7"];
-
-%1%2localhideoutmarker = (([hideout%1%2, (localize "STRS_hideout_marker"), "Camp", "ColorWhite", "ICON", [1, 1], "%1%2HideoutMarker"] call ISSE_CreateMarkerArray) select 1);									
-INV_VehicleArray = INV_VehicleArray + [hideoutbox%1%2]; 
-"INV_ServerVclArray = INV_ServerVclArray + [hideoutbox%1%2]" call broadcast;
-"if (local server) then {publichideoutarray = publichideoutarray + [ [""%1"", [hideoutbox%1%2,hideout%1%2,hideoutfire%1%2] ] ]}" call broadcast;
-																											
-',rolestring, round(time), _pos, _roledir];																																			
-																			
+_tent addaction ["Remove this shit","noscript.sqf",'[_this select 0, true] call LinLib_RemoveHideout;',1,true,true,"",''];
 [_item, -1] call INV_AddInvItem;
-publicvariable "HideoutLocationArray";
-
-};
