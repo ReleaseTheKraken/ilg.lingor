@@ -16,7 +16,13 @@ processInitCommands;
 
 _tent =  createVehicle ["Land_tent_east", _pos, [], 0, "CAN_COLLIDE"];	
 _tent setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];												
-_tent setVehicleInit format["this setVehicleVarName '%1_Tent'; %1_Tent = this; this setDir %2", getPlayerUID player, _roledir]; 		
+_tent setVehicleInit format[
+"
+	this setVehicleVarName '%1_Tent'; 
+	%1_Tent = this; 
+	this setDir %2; 
+	this addaction ['Remove this shit','noscript.sqf','[_this select 0] call LinLib_HideoutDelete;',1,true,true,'',''];
+", getPlayerUID player, _roledir]; 		
 _tent addMPEventHandler ["mpkilled", {if ((isServer))then{diag_log format["CALLED EVENTHANDLER: %1", _this]; [_this select 0] call LinLib_fnc_RemoveHideout;}}];										
 processInitCommands;
 
@@ -31,6 +37,4 @@ ClearWeaponCargoGlobal _box;
 _tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 
 ["DB_Hideout", [player, _pos]] call CBA_fnc_globalEvent;
-(format ["%1 addaction ['Remove this shit','noscript.sqf','[_this select 0] call LinLib_HideoutDelete;',1,true,true,'',''];", _tent]) call broadcast;
-_tent 
 [_item, -1] call INV_AddInvItem;
