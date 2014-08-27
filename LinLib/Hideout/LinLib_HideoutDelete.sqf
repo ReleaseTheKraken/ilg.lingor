@@ -10,7 +10,7 @@ if(((_this select 0) getVariable ["LinLib_HideoutOwner", 0]) == getPlayerUID pla
 		['hideout', 1] call INV_AddInvItem;
 	};
 }else{
-	systemChat "Nigga please, you don't own this.";
+	systemChat "You don't own this.";
 };
 /*
 		{
