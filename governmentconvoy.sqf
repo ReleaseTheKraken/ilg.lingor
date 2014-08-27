@@ -14,13 +14,13 @@ while {true} do
 
 
 //waits for respawn
-sleep (convoyrespawntime*50);
+//sleep (convoyrespawntime*50);
 
 
 
 "hint ""The Bank Truck will leave in a few minutes."";" call broadcast;
 
-sleep (convoyrespawntime*5);
+//sleep (convoyrespawntime*5);
 
 //Gets position to spawn
 _array  = [[convspawn1, 10], [convspawn2, 10], [convspawn3, 10], [convspawn4, 10], [convspawn5, 10]];
@@ -41,7 +41,7 @@ _markerobj setMarkerShape "ICON";
 convoy_marker_active = 1;
 convoyhascash=true; publicvariable "convoyhascash";
 
-convoytruck = "tcg_policev" createVehicle getPos _pos;;
+convoytruck = "MTVR" createVehicle getPos _pos;;
 convoyescort = "HMMWV_M1151_M2_DES_EP1" createVehicle getPos _pos;;
 
 convoytruck setVehicleInit "
@@ -191,10 +191,6 @@ gpkguard2 dofollow gpkguard;
 gpkguard3 dofollow gpkguard;
 gpkguard4 dofollow gpkguard;
 
-govconvoygroup setbehaviour "AWARE";
-govconvoygroup setCombatMode "GREEN";
-govconvoygroup setbehaviour "AWARE";
-govconvoygroup setCombatMode "GREEN";
 
 
 //put guards in car with convoysoldier
@@ -220,10 +216,18 @@ gpkguard doFollow convoysoldier;
 
 
 
+
 //start mission loop
 "server globalchat ""The Bank Truck has spawned, civs kill the driver to stop it and steal the banks money! Cops your bonuses are inside make sure it gets to the base!"";" call broadcast;
 while {true} do
-	{
+{
+	
+	
+	
+	
+	
+	
+			
 
 	"if(alive player and isciv and player distance convoytruck <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call broadcast;
 	"Bank Truck" setmarkerpos getpos convoytruck;
@@ -318,6 +322,27 @@ while {true} do
 		"server globalchat ""The Bank Truck has been destroyed the money has burned!"";" call broadcast;
 		_sidewon = "Neither";
 		};
+		
+		
+		_nObject = nearestObject [convoytruck, "man"];
+		_ifs = if ((_nobject distance convoytruck < 60) OR (_nObject distance convoyescort < 60)) then {true} else {false};
+		if (_nObject in civarray && _ifs) then
+		{
+			{
+				_x setCombatMode "RED";
+				_x SetBehaviour "SAFE";
+				_x doWatch _nObject;
+				_x commandTarget _nObject;
+				_x doTarget _nObject;
+				_x commandFire _nObject;
+				_x doFire _nObject;
+				convoyescort fireAtTarget [_nObject,"M2"];
+
+				convoyescort setvehicleAmmo 0.9;
+			} foreach [convoyguard,convoyguard1,convoyguard2,convoyguard3,convoyguard4,gpkguard,gpkguard1,gpkguard2,gpkguard3,gpkguard4,convoytruck,convoyescort];
+		};
+		
+		
 
 	_counter2 = _counter2 + 1;
 
@@ -354,6 +379,9 @@ _counter2 = 0;
 _sidewon = "Neither";
 moneyintruck = true;
 _added = false;
+
+civilian setFriend [west,0.7];
+west setFriend [civilian,0.7];
 
 };
 
