@@ -25,6 +25,7 @@ _tent setVehicleInit format[
 ", getPlayerUID player, _roledir]; 		
 _tent addMPEventHandler ["mpkilled", {if ((isServer))then{diag_log format["CALLED EVENTHANDLER: %1", _this]; [_this select 0] call LinLib_fnc_RemoveHideout;}}];										
 processInitCommands;
+player reveal _tent;
 
 _box = createVehicle ["TKOrdnanceBox_EP1", (_tent buildingPos 2), [], 0, "CAN_COLLIDE"];
 _box setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];
