@@ -41,7 +41,7 @@ _markerobj setMarkerShape "ICON";
 convoy_marker_active = 1;
 convoyhascash=true; publicvariable "convoyhascash";
 
-convoytruck = "MTVR" createVehicle getPos _pos;;
+convoytruck = "MTVR_DES_EP1" createVehicle getPos _pos;;
 convoyescort = "HMMWV_M1151_M2_DES_EP1" createVehicle getPos _pos;;
 
 convoytruck setVehicleInit "
