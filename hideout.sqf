@@ -1,6 +1,7 @@
 private ["_item","_rolepos","_roledir","_fire","_tent","_box"];
-_item   = _this select 1;						
-if(!isnull (missionNamespace getVariable [format["%1_Tent", getPlayerUID player], objNull]))exitWith{systemChat "You already have a hideout";};
+_item   = _this select 1;
+diag_log (server getVariable [getPlayerUID player, false]);			
+if((server getVariable [getPlayerUID player, false]))exitWith{systemChat "You already have a hideout";};
 
 player groupChat format[localize "STRS_inventar_bought_hideout", rolestring];																			
  
@@ -28,3 +29,5 @@ _tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 
 ["DB_Hideout", [player, _pos, _roledir]] call CBA_fnc_globalEvent;
 [_item, -1] call INV_AddInvItem;
+
+server setVariable [(getPlayerUID player), true];
