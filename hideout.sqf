@@ -21,9 +21,8 @@ _tent setVehicleInit format[
 	this setVehicleVarName '%1_Tent'; 
 	%1_Tent = this; 
 	this setDir %2; 
-	this addaction ['Remove this shit','noscript.sqf','[_this select 0] call LinLib_HideoutDelete;',1,true,true,'',''];
 ", getPlayerUID player, _roledir]; 		
-_tent addMPEventHandler ["mpkilled", {if ((isServer))then{diag_log format["CALLED EVENTHANDLER: %1", _this]; [_this select 0] call LinLib_fnc_RemoveHideout;}}];										
+_tent addMPEventHandler ["mpkilled", {if (isServer)then{[(_this select 0), getPlayerUID(_this select 1)] call LinLib_fnc_RemoveHideout;}}];										
 processInitCommands;
 player reveal _tent;
 
