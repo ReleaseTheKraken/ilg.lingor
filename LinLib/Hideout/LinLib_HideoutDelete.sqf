@@ -1,4 +1,4 @@
-if(((_this select 0) getVariable ["LinLib_HideoutOwner", 0]) == getPlayerUID player)then{
+if(((_this select 0) getVariable ["LinLib_HideoutOwner", 0]) == parseNumber(getPlayerUID player))then{
 	diag_log format ["Called HideoutDelete with: %1", (_this select 0) getVariable ["LinLib_HideoutOwner", 0]];
 	private["_array", "_owner"];
 	_array = (_this select 0) getVariable ["LinLib_HideOutArray", []];
