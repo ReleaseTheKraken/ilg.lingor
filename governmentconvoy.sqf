@@ -211,10 +211,12 @@ gpkguard3 assignAsCargo convoyescort;
 gpkguard4 moveInCargo convoyescort;
 gpkguard4 assignAsCargo convoyescort;
 sleep 2;
-convoysoldier commandMove getmarkerpos "policebase";
-gpkguard doFollow convoysoldier;
- 
- 
+
+
+_wp = govconvoygroup addWaypoint [getmarkerpos "policebase", 0];
+_wp setWaypointType "MOVE";
+_wp setWaypointCompletionRadius 40;
+
  
  
 //start mission loop
@@ -223,7 +225,7 @@ while {true} do
 {
        
        
-       
+       //gpkguard doMove (getPos convoytruck);
        
        
        
@@ -275,19 +277,23 @@ while {true} do
                 _added = true;
                 stealgovmoney = convoytruck addAction ["Rob Bank Truck", "stealgovmoney.sqf",[""],1,false,true,"","isciv and (call INV_isArmed)"];
                 "if (iscop) then {server sidechat ""The Bank Truck driver is dead get in his truck and drive it to the base"";};" call broadcast;
-                convoytruck setVehicleLock "unlocked";
-                unassignVehicle convoyguard1;
-                unassignVehicle convoyguard2;
-                unassignVehicle convoyguard3;
-                unassignVehicle convoyguard4;
-                convoyguard1 action ["eject", convoytruck];
-                convoyguard2 action ["eject", convoytruck];
-                convoyguard3 action ["eject", convoytruck];
-                convoyguard4 action ["eject", convoytruck];
-                convoyguard1 dofollow convoytruck;
-                convoyguard2 dofollow convoytruck;
-                convoyguard3 dofollow convoytruck;
-                convoyguard4 dofollow convoytruck;             
+                [] spawn
+                {
+                	waitUntil {speed convoytruck < 10};
+                 	convoytruck setVehicleLock "unlocked";
+              	unassignVehicle convoyguard1;
+               	unassignVehicle convoyguard2;
+              	unassignVehicle convoyguard3;
+              	unassignVehicle convoyguard4;
+                	convoyguard1 action ["eject", convoytruck];
+                	convoyguard2 action ["eject", convoytruck];
+                	convoyguard3 action ["eject", convoytruck];
+                	convoyguard4 action ["eject", convoytruck];
+                	convoyguard1 dofollow convoytruck;
+                	convoyguard2 dofollow convoytruck;
+                	convoyguard3 dofollow convoytruck;
+                	convoyguard4 dofollow convoytruck; 
+                };            
                 };
  
  
@@ -327,12 +333,12 @@ while {true} do
                 {
 	                if (alive _x) then
 	                {
-	                _type = typeOf _x;
+	                	_type = typeOf _x;
 	                _array1 = _array1 + [_type];
 	                };
 	        } foreach civarray;
-	        	_nObject = (nearestObjects [convoytruck, _array1, 60]) select 0;
-                if ((_nobject distance convoytruck < 60) OR (_nObject distance convoyescort < 60)) then
+	        	_nObject = (nearestObjects [convoytruck, _array1, 1000]) select 0;
+                if ((_nobject distance convoytruck < 110) OR (_nObject distance convoyescort < 75)) then
                 {
                         {
                                 _x setCombatMode "RED";
@@ -378,6 +384,8 @@ deletevehicle convoysoldier;
 deletevehicle convoytruck;
 deletevehicle convoyescort;
 deletemarker "Bank Truck";
+deleteWaypoint [govconvoygroup, all];
+ 
  
 _endmissionounter = 0;
 _counter = 0;
