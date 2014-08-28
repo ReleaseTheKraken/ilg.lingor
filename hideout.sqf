@@ -30,4 +30,4 @@ _tent setVariable ["LinLib_HideOutArray", [_tent, _fire, _box],true];
 ["DB_Hideout", [player, _pos, _roledir]] call CBA_fnc_globalEvent;
 [_item, -1] call INV_AddInvItem;
 
-server setVariable [(getPlayerUID player), true];
+server setVariable [(getPlayerUID player), true, true];
