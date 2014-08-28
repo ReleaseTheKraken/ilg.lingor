@@ -8,7 +8,7 @@ if(((_this select 0) getVariable ["LinLib_HideoutOwner", 0]) == parseNumber(getP
 	//diag_log format ["ID IS: %1", _ID];
 	if((count _array) > 0)then{
 		diag_log "Calling Hideout DB REMOVE";
-		["DB_HideoutRemove", [(_this select 0)]] call CBA_fnc_globalEvent;
+		["DB_HideoutRemove", (_this select 0)] call CBA_fnc_globalEvent;
 		['hideout', 1] call INV_AddInvItem;
 	};
 }else{
