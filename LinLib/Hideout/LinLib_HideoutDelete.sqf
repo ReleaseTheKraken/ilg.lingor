@@ -1,4 +1,4 @@
-if((_this getVariable ["LinLib_HideoutOwner", 0]) == parseNumber(getPlayerUID player))then{
+if((_this getVariable ["LinLib_HideoutOwner", 0]) == getPlayerUID player)then{
 	private["_array"];
 	_array = _this getVariable ["LinLib_HideOutArray", []];
 	if((count _array) > 0)then{
