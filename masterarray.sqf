@@ -98,7 +98,7 @@ INV_AlleWaffenObjekte = [
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // OLD ILG TIER-X 
-["TX_RH_aks47g",					["Waffe", "rifle"],				["RH_aks47g", "Gold AKS"],											[100000, 100000], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["RH_aks47g",					["Waffe", "rifle"],				["RH_aks47g", "Gold AKS"],												[100000, 100000], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["TX_RH_SVDg",						["Waffe", "rifle"],				["RH_SVDg", "Gold SVD"],											[200000, 125000], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["TX_RH_M249acog",					["Waffe", "rifle"],				["RH_M249acog", "M249 ACOG"],										[250000, 150000], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 

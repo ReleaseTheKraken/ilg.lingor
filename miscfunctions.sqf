@@ -83,6 +83,35 @@ player Action ["eject", vehicle player];
  player groupChat localize "STRS_verbotene_zone_teleport";
 };
 
+// No addMagazine array in 1.63
+// Give El Presidente a Golden AK-47 and Golden Deagle
+ILG_ElPresidente = 
+{
+	player sideChat "Congratulations on your victory El Presidente! Here is your new Golden AK-47 and Desert Eagle.";
+	removeAllWeapons player;
+	player addWeapon "RH_aks47g";
+	player addWeapon "RH_Deagleg";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "RH_7Rnd_50_AE";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+	player addMagazine "30Rnd_762x39_AK47";
+};
+
 TurnMayorFunc = 
 
 {

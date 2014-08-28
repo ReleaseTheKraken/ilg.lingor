@@ -105,7 +105,6 @@ INV_AddItemStorage = {
 	};
 };
 
-
 // Calculate How Many Items are Stored.
 INV_GetStorageAmount = {
 	private ["_c", "_Result", "_arrname", "_Array", "_Itemname"];
