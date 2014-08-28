@@ -11,17 +11,17 @@ _pos        = [(_rolepos select 0) + ((sin _roledir) * 10), (_rolepos select 1) 
 _fire = createVehicle ["Land_Campfire_burning", _pos, [], 0, "CAN_COLLIDE"];
 _fire setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];
 _fire allowDamage false;
-_fire setVehicleInit format["this setVehicleVarName '%1_Fire';%1_Fire = this; ", getPlayerUID player];
+_fire setVehicleInit format["this setVehicleVarName '%1_Fire';%1_Fire = this; ", parseNumber(getPlayerUID player)];
 processInitCommands;
 
 _tent =  createVehicle ["LinLib_Hideout_Tent", _pos, [], 0, "CAN_COLLIDE"];	
-_tent setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];												
+_tent setVariable ["LinLib_HideoutOwner", parseNumber(getPlayerUID player),true];												
 _tent setVehicleInit format[
 "
 	this setVehicleVarName '%1_Tent'; 
 	%1_Tent = this; 
 	this setDir %2; 
-", getPlayerUID player, _roledir]; 		
+", parseNumber(getPlayerUID player), _roledir]; 		
 _tent addMPEventHandler ["mpkilled", {if (isServer)then{[(_this select 0), getPlayerUID(_this select 1)] call LinLib_fnc_RemoveHideout;}}];										
 processInitCommands;
 player reveal _tent;
@@ -29,7 +29,7 @@ player reveal _tent;
 _box = createVehicle ["TKOrdnanceBox_EP1", (_tent buildingPos 2), [], 0, "CAN_COLLIDE"];
 _box setVariable ["LinLib_HideoutOwner", getPlayerUID player,true];
 _box allowDamage false;
-_box setVehicleInit format["this setVehicleVarName '%1_Box'; %1_Box = this; this setDir %3; this setpos (%2 buildingPos 2);", getplayerUID player, _tent, _roledir]; 
+_box setVehicleInit format["this setVehicleVarName '%1_Box'; %1_Box = this; this setDir %3; this setpos (%2 buildingPos 2);", parseNumber(getPlayerUID player), _tent, _roledir]; 
 processInitCommands;
 clearMagazineCargoGlobal _box; 
 ClearWeaponCargoGlobal _box;
