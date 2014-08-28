@@ -18,7 +18,7 @@ _tent setVehicleInit format["this setDir %2; ", getPlayerUID player, _roledir];
 _tent addMPEventHandler ["mpkilled", {
 	if (isServer)then{
 		[(_this select 0), (_this select 0) getVariable ["LinLib_HideoutOwner", ""]] call LinLib_fnc_RemoveHideout;
-		server setVariable [(getPlayerUID (_this select 1)), false, true];
+		server setVariable [((_this select 0) getVariable ["LinLib_HideoutOwner", ""]), false, true];
 	}
 }];									
 processInitCommands;
