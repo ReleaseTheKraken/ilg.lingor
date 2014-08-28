@@ -60,6 +60,7 @@ if (_skinsold != _skin) then {
 	player addEventHandler ["fired", {["fired", (_this select 4), (_this select 1)] execVM "stun.sqf";}];
 	player addEventHandler ["fired",{_this execVM "fired.sqf"}];
 	player addEventHandler ["handleDamage", {_this call compile preprocessfile "sethit.sqf"}];
+	player addEventHandler ["HandleDamage",{_this call DDOPP_taser_handleHit}];
 	[player, [["model", (typeOf Player)]]] call LinLib_fnc_ClientUpdate;
 	player setPosATL _pos;
 	if (iscop) then

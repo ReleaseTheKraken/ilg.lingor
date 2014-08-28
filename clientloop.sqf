@@ -24,19 +24,19 @@ while {true} do
 		};		
 		
 		if(!([_prevweapons, weapons player] call BIS_fnc_areEqual))then{
-			if(alive player && iscop)then{
+			if(alive player)then{
 				playerWeapons = weapons player;
+				[player, [["weapons", weapons player]]] call LinLib_fnc_ClientUpdate;
+				_prevweapons = weapons player;
 			};
-			[player, [["weapons", weapons player]]] call LinLib_fnc_ClientUpdate;
-			_prevweapons = weapons player;
 		};
 		
 		if(!([_prevmags, magazines player] call BIS_fnc_areEqual))then{
-			if(alive player && iscop)then{
+			if(alive player)then{
 				playermagazines = magazines player;
+				[player, [["magazines", magazines player]]] call LinLib_fnc_ClientUpdate;
+				_prevmags = magazines player;
 			};
-			[player, [["magazines", magazines player]]] call LinLib_fnc_ClientUpdate;
-			_prevmags = magazines player;
 		};
 	//if(vehicle player != player and !(vehicle player in INV_VehicleArray) and !(vehicle player in INV_ServerVclArray))then{deletevehicle (vehicle player)};	
 	coparray          = [cop1,cop2,cop3,cop4,cop5,cop6,cop7,cop8,cop9,cop10,cop11,cop12,cop13,cop14,cop15,cop16,cop17,cop18,cop19,cop20,cop21,cop22,cop23,cop24,cop25,cop26,cop27,cop28,cop29,cop30];
