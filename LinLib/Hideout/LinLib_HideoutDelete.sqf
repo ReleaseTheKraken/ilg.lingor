@@ -2,7 +2,9 @@ if(((_this select 0) getVariable ["LinLib_HideoutOwner", 0]) == getPlayerUID pla
 	diag_log format ["Called HideoutDelete with: %1", (_this select 0) getVariable ["LinLib_HideoutOwner", 0]];
 	private["_array", "_owner"];
 	_array = (_this select 0) getVariable ["LinLib_HideOutArray", []];
+	diag_log _array;
 	_owner = (_this select 0) getVariable ["LinLib_HideoutOwner", 0];
+	diag_log _owner;
 	//diag_log format ["ID IS: %1", _ID];
 	if((count _array) > 0)then{
 
