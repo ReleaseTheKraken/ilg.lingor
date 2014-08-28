@@ -1,6 +1,6 @@
 private ["_item","_rolepos","_roledir","_fire","_tent","_box"];
 _item   = _this select 1;						
-if(!isnull (missionNamespace getVariable [format["%1_Tent", getPlayerUID player], objNull]))exitWith{systemChat "You already have a hideout";};
+if(!isnull (missionNamespace getVariable [format["%1_Tent", parseNumber(getPlayerUID player)], objNull]))exitWith{systemChat "You already have a hideout";};
 
 player groupChat format[localize "STRS_inventar_bought_hideout", rolestring];																			
  
