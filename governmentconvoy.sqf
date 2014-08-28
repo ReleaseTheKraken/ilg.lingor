@@ -216,7 +216,8 @@ sleep 2;
 _wp = govconvoygroup addWaypoint [getmarkerpos "policebase", 0];
 _wp setWaypointType "MOVE";
 _wp setWaypointCompletionRadius 40;
-
+_wp setWaypointFormation "LINE";
+_wp setWaypointSpeed "LIMITED";
  
  
 //start mission loop
@@ -281,11 +282,11 @@ while {true} do
                 {
                 	waitUntil {speed convoytruck < 10};
                  	convoytruck setVehicleLock "unlocked";
-              	unassignVehicle convoyguard1;
+              	//unassignVehicle convoyguard1;
                	unassignVehicle convoyguard2;
               	unassignVehicle convoyguard3;
               	unassignVehicle convoyguard4;
-                	convoyguard1 action ["eject", convoytruck];
+                	//convoyguard1 action ["eject", convoytruck];
                 	convoyguard2 action ["eject", convoytruck];
                 	convoyguard3 action ["eject", convoytruck];
                 	convoyguard4 action ["eject", convoytruck];
@@ -297,12 +298,12 @@ while {true} do
                 };
  
  
-        if (_counter >= 15) then
+        /*if (_counter >= 15) then
                 {
                 convoysoldier commandmove getmarkerpos "policebase";
  
                 _counter = 0;
-                };
+                };*/
  
  
         if (convoytruck distance getmarkerpos "policebase" < 150) exitwith
@@ -333,8 +334,10 @@ while {true} do
                 {
 	                if (alive _x) then
 	                {
-	                	_type = typeOf _x;
+		             
+	                		_type = typeOf vehicle _x;
 	                _array1 = _array1 + [_type];
+	                
 	                };
 	        } foreach civarray;
 	        	_nObject = (nearestObjects [convoytruck, _array1, 1000]) select 0;
@@ -348,10 +351,48 @@ while {true} do
                                 _x doTarget _nObject;
                                 _x commandFire _nObject;
                                 _x doFire _nObject;
-                                convoyescort fireAtTarget [_nObject,"M2"];
- 
-                                convoyescort setvehicleAmmo 0.9;
                         } foreach [convoyguard,convoyguard1,convoyguard2,convoyguard3,convoyguard4,gpkguard,gpkguard1,gpkguard2,gpkguard3,gpkguard4,convoytruck,convoyescort];
+                        
+                        _randy = random 100;
+                        if (_randy < 10) then
+                        {
+	                        [_nobject] spawn
+	                        {
+		                        convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.25;
+		                        convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.25;
+		                        convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.25;
+		                        convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.25;
+		                    };
+		              };
+		              
+		              if (_randy >= 10 && _randy < 30) then
+		              {
+			              [_nobject] spawn
+			              {
+				              convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.33;
+				               convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.33;
+				                convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.33;
+				          };
+				   };
+				   if (_randy >= 30 && _randy < 60) then
+				   {
+					   [_nobject] spawn
+					   {
+					   	convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.5;
+					   	convoyescort fireAtTarget [(_this select 0),"M2"]; sleep 0.5;
+					   };
+				   };
+				   if (_randy >= 60) then
+				   {
+					   [_nobject] spawn
+					   {
+						   convoyescort fireAtTarget [(_this select 0),"M2"];
+					   };
+				   };
+
+				//convoyescort fireAtTarget [_nObject,"M2"];
+ 
+                           convoyescort setvehicleAmmo 0.9;
                 };
                
                
@@ -402,6 +443,6 @@ west setFriend [civilian,0.7];
  
  
  
- 
+ //Put right by Jonny //firing at civs/staying together etc
  
 //written by Gman

@@ -144,7 +144,7 @@ _type2 = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gaze
 	// MMA - SCUD (IslandLifeGaming - Nuclear Warhead / Area-51)
 	if(_classname == "MAZ_543_SCUD_TK_EP1")then{
 	newvehicle setVariable ["mando_scud_type", 2];
-	setDate [1964, 10, 14, 03, 30]; // Cuban Missile crisis - Night time for cool effect on nuke detonation
+	setDate [1964, 10, 14, 18, 20] call broadcast; // Cuban Missile crisis - Night time for cool effect on nuke detonation
 	JustForTesting = true;
 	
 	if (iscop) then {
