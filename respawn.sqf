@@ -97,9 +97,23 @@ if (isciv) then
 	if(call compile format["kopfMishy_%1 > 0", player])then{format["kopfMishy_%1 = 0;", player] call broadcast;};
 	
 	
-	if (ismayor) then
+	if ((ismayor) ILG_ElectionsDisabled) then
 	{
 	ismayor=false;
+	ILG_ElectionsDisabled = false; // ILG - Re enable elections
+	player groupChat "El Presidente is dead!! Elections have been re-enabled.";
+	MayorNumber = -1;
+	PUBLICVARIABLE "MayorNumber";
+	false call TurnMayorFunc;
+	INV_LizenzOwner = INV_LizenzOwner - ["mayorlic"];
+	["Woodlander3"] call clothes; // Remove El Presidente skin
+	format["civ%1_mayor = 0;", player] call broadcast;
+	};
+	
+	if ((ismayor) !ILG_ElectionsDisabled) then
+	{
+	ismayor=false;
+	player groupChat "El Presidente has been killed.";
 	MayorNumber = -1;
 	PUBLICVARIABLE "MayorNumber";
 	false call TurnMayorFunc;

@@ -59,11 +59,13 @@ action101 = _role addaction ["Lower Gates","lgate6.sqf",[],1,false,true,"","isci
 //COCK HQ
 Linnet_Clothes = _role addaction ["Switch to Badass Clothes","noscript.sqf",'["Soldier_Bodyguard_AA12_PMC"] call clothes;',1,true,true,"",'player distance Cock_Mansion_Shop < 5 && isciv && ((getPlayerUID player) in Cock_HQ_UID)'];
 Linnet_Gate = _role addaction ["Open Gate","noscript.sqf",'[Cock_HQ_Gate] spawn LinLib_OpenGate;',1,true,true,"","isciv && ((getPlayerUID player) in Cock_HQ_UID) && player distance Cock_HQ_Gate <= 12"];
-//==================================== MAYOR ELECTION =================================================
-action45 = _role addaction ["Elect a Governor","maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
-//===================================== MAYOR ACTIONS =================================================
+//==================================== IslandLifeGaming.com Lingor Life Mayor =================================================
+action45 = _role addaction ["Elect a El Presidente","maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
 action46 = _role addaction ["Change the Law","maindialogs.sqf",["gesetz"],1,false,true,"","player distance rathaus <= 3 and isMayor"];
 action47 = _role addaction ["Change taxes","maindialogs.sqf",["steuern"],1,false,true,"","player distance rathaus <= 3 and isMayor"];
+ILG_DisableElection = _role addaction ["Disable Elections","noscript.sqf",'["Disable Elections"] call ILG_ElectionsDisabledFunction;',1,false,true,"","player distance rathaus <= 3 and isMayor"];
+ILG_EnableElection = _role addaction ["Enable Elections","noscript.sqf",'["Disable Elections"] call ILG_ElectionsEnabledFunction;',1,false,true,"","player distance rathaus <= 3 and isMayor"];
+
 //===================================== CONVOY CASH ===================================================
 convoy_rob_action = _role addAction ["<t color='#FF0000'>Rob Bank Truck</t>", "stealgovmoney.sqf",[""],1,false,true,"","isciv && player distance convoytruck < 5 && (call INV_isArmed)"];
 //===================================== BUY INSURANCE ===================================================

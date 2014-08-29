@@ -2,45 +2,54 @@ _this = _this select 3;
 _art  = _this select 0;
 _Mishy = 'Mishy' call INV_GetItemAmount;
 
-if (_art == "ClientWahl") then 
+ILG_ElectionsDisabled = false; //Elections are on
 
-{
+Hint "It's working here #1" call broadcast;	
 
-if (isNil("WahlSperre")) then {WahlSperre = false;};															
+
+
+if ((_art == "ClientWahl") && !ILG_ElectionsDisabled) then {
+
+Hint "It's working here #1.25" call broadcast;	
+
+
+if (isNil("WahlSperre")) then {WahlSperre = false; Hint "It's working here #1.50" call broadcast;};															
 	
 if (WahlSperre) exitWith {player groupChat "You just voted.";};				
 _spielernum   = call compile (_this select 1);	format["if (isServer) then {[0,1,2,[""ServerWahl"", %1, %2]] execVM ""mayor.sqf"";};", _spielernum, rolenumber] call broadcast;										
 player groupChat format[localize "STRS_regierung_votedfor", (playerstringarray select _spielernum)];									
-	
+Hint "It's working here #1.75" call broadcast;	
 WahlSperre = true;														
 sleep 30;		
 WahlSperre = false;
 
+
 };
 	
-if (_art == "ServerWahl") then 
-
-{
+if ((_art == "ServerWahl") && !ILG_ElectionsDisabled) then {
 
 _kandidatnum = (_this select 1);     															
 _waehlernum  = ((_this select 2)-1); 													
+	
+Hint "It's working here #2" call broadcast;	
 	
 for [{_i=0}, {_i < count(WahlArray)}, {_i=_i+1}] do 
 
 	{
 																		
 	_arr = (WahlArray select _i);																		
-	if (_waehlernum in _arr) exitWith {_arr = _arr - [_waehlernum];WahlArray SET [_i, _arr];};		
+	if (_waehlernum in _arr) exitWith {_arr = _arr - [_waehlernum];WahlArray SET [_i, _arr]; Hint "It's working here #3";};		
 
 	};													
 	
 WahlArray SET [_kandidatnum, ((WahlArray select _kandidatnum )+ [_waehlernum])];
+Hint "It's working here #3" call broadcast;	
 
 };
 
-if (_art == "serverloop") then 
+if ((_art == "serverloop") && !ILG_ElectionsDisabled) then {	
 
-{	
+Hint "It's working here #4" call broadcast;	
 
 _currentMayor = -1;												
 	
@@ -65,7 +74,9 @@ while {true} do
 		};																																																
 
 	_MaxStimmen = 1;																		
-	_MaxPos     = -1;												
+	_MaxPos     = -1;	
+	Hint "It's working here #5" call broadcast;	
+	
 
 	for [{_i=0}, {_i < count(WahlArray)}, {_i=_i+1}] do 
 
@@ -77,6 +88,7 @@ while {true} do
 																																												
 			_MaxStimmen = (count (WahlArray select _i));																																																				
 			_MaxPos     = _i;		
+			Hint "It's working here #6" call broadcast;	
 
 			};		
 
@@ -87,7 +99,8 @@ while {true} do
 		{
 																																				
 		"hint localize ""STRS_regierung_nomajor"";" call broadcast;																					
-		_currentMayor = -1;																		
+		_currentMayor = -1;		
+		Hint "It's working here #7" call broadcast;	
 		
 		} else {
 																																																																		
@@ -95,7 +108,8 @@ while {true} do
 
 			{
 																																												
-			"hint localize ""STRS_regierung_majorstays"";" call broadcast;																																										
+			"hint localize ""STRS_regierung_majorstays"";" call broadcast;	
+			Hint "It's working here #8" call broadcast;
 
 			} else {																																				
 
@@ -113,10 +127,10 @@ while {true} do
 
 };
 
-if (_art == "clientgesetz") then 
+if ((_art == "clientgesetz") && !ILG_ElectionsDisabled) then 
 
 {
-											
+Hint "It's working here #9" call broadcast;											
 _nummer = _this select 1;							
 _text   = _this select 2;																													
 if (_nummer == -1) exitWith {};						

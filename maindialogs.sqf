@@ -344,11 +344,13 @@ if (_art == "coplog") then
 	
 };
 
-if (_art == "wahlen") then 
+if ((_art == "wahlen") && !ILG_ElectionsDisabled) then 
 {
 	if (!(createDialog "wahldialog")) exitWith {hint "Dialog Error!";};
 	_array = [0, 1, true, false] call DialogSpielerListe;
 	lbSetCurSel [1, _array select 1];
+}else{ 
+player groupChat "El Presidente has disabled fair and free elections.";
 };
 
 if (_art == "chief") then 

@@ -83,8 +83,8 @@ player Action ["eject", vehicle player];
  player groupChat localize "STRS_verbotene_zone_teleport";
 };
 
-// No addMagazine array in 1.63
-// Give El Presidente a Golden AK-47 and Golden Deagle
+// No addMagazines in 1.63 - Give El Presidente a Golden AK-47 and Golden Deagle
+
 ILG_ElPresidente = 
 {
 	player sideChat "Congratulations on your victory El Presidente! Here is your new Golden AK-47 and Desert Eagle.";
@@ -110,6 +110,29 @@ ILG_ElPresidente =
 	player addMagazine "30Rnd_762x39_AK47";
 	player addMagazine "30Rnd_762x39_AK47";
 	player addMagazine "30Rnd_762x39_AK47";
+};
+
+ILG_ElectionsEnabledFunction = {
+	if (_this) then {
+	player groupChat "El Presidente has re-enabled elections! You now have the right to vote again." call broadcast;
+	ILG_ElectionsDisabled = false;
+	};
+};
+
+
+ILG_ElectionsDisabledFunction = {
+if ((_this) && iscop) then {
+
+ILG_ElectionsDisabled = true;
+player groupChat "El Presidente has imposed himself as a dictator and disabled the ability for people to vote." call broadcast;
+player groupChat "El Presidente doesn't support free and fair elections. The police force MUST standby El Presidente." call broadcast;
+
+	}else{ 
+
+player groupChat "El Presidente has imposed himself as a dictator and disabled the ability to vote for a new El Presidente." call broadcast;
+player groupChat "El Presidente doesn't support free and fair elections! Standby him and his new Lingor dictatorship or raise to arms against him!" call broadcast;
+
+	};
 };
 
 TurnMayorFunc = 
