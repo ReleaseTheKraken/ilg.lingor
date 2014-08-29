@@ -42,7 +42,7 @@ INV_Lizenzen =
 ["Donator_licence",[Donatebuy,objnull,objnull],"Tier 3 Donator License",300000],
 ["tierx",[tierxweapons,objnull,objnull],"Tier-X License",2000000],
 ["air_support_training",[copbank,objnull,objnull],localize "STRS_license_copairsupport",5000],
-["pmclicense",[pmcstore,objnull,objnull],"PMC License",800000],
+["pmclicense",[ILG_PMC_WeaponShop,objnull,objnull],"PMC License",800000],
 ["dirtymoneylicense",[dirtymoney1,objnull,objnull],"Dirty Money Processing Training",1],
 ["air",[ILG_AirplaneShop,objnull,objnull],localize "STRS_license_air",35000]
 
