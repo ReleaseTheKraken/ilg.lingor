@@ -101,7 +101,7 @@ if (isciv) then
 	{
 		ismayor=false;
 		ILG_ElectionsDisabled = false; // ILG - Re enable elections
-		player groupChat "El Presidente is dead!! Elections have been re-enabled.";
+		player groupChat "El Presidente is dead!! Elections have been re-enabled." call broadcast;
 		MayorNumber = -1;
 		PUBLICVARIABLE "MayorNumber";
 		false call TurnMayorFunc;
@@ -113,7 +113,7 @@ if (isciv) then
 	if ((ismayor) && !ILG_ElectionsDisabled) then
 	{
 		ismayor=false;
-		player groupChat "El Presidente has been killed.";
+		player groupChat "El Presidente has been killed." call broadcast;
 		MayorNumber = -1;
 		PUBLICVARIABLE "MayorNumber";
 		false call TurnMayorFunc;
