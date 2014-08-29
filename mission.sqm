@@ -27206,13 +27206,13 @@ class Mission
 		class Item2196
 		{
 			position[]={1762.1603,27.075811,626.78015};
-			azimut=302.36295;
+			azimut=302.36301;
 			id=2420;
 			side="EMPTY";
 			vehicle="tcg_atm";
 			leader=1;
 			skill=0.60000002;
-			text="airatm_1";
+			text="ILG_RebelBank";
 			init="this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+0];";
 		};
 		class Item2197

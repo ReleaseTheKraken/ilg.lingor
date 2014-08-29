@@ -2,12 +2,12 @@ INV_Lizenzen =
 
 [
 
-["mayorlic",[dmv,objnull,objnull],"Governors license",1000],
-["boat",[dmv,objnull,objnull],localize "STRS_license_boat",1500],
-["fboat",[dmv,objnull,objnull],"Ferry Captain License",2500],
+["mayorlic",[dmv,airatm,objnull],"Governors license",1000],
+["boat",[dmv,airatm,objnull],localize "STRS_license_boat",1500],
+["fboat",[dmv,airatm,objnull],"Ferry Captain License",2500],
 ["esul",[atm5,objnull,objnull],"Fire Rescue Training",100],
-["bus_license",[dmv,objnull,objnull],"Bus License",1000],
-["truck",[dmv,objnull,objnull],localize "STRS_license_truck",5000],
+["bus_license",[dmv,airatm,objnull],"Bus License",1000],
+["truck",[dmv,airatm,objnull],localize "STRS_license_truck",5000],
 ["taxi",[taxishop,objnull,objnull],"Taxi License",5000],
 ["car",[BuildSUV,objnull,objnull],localize "STRS_license_car",2500],
 ["oilukp",[Oil_1,ILG_OilProcessSouth,objnull],"Processing Training",30000],
@@ -26,7 +26,7 @@ INV_Lizenzen =
 ["comair",[airshop3,objnull,objnull],"Commerical Air License",10000],
 ["IRAlicense",[IRAveh,objnull,objnull],"IRA Training",900000],
 ["icartune",[tuning1,objnull,objnull],"Illegal Car Tuning License",50000],
-["Pistollicense",[gundealer1,dmv,objnull],"Pistol license",30000],
+["Pistollicense",[gundealer1,dmv,airatm],"Pistol license",30000],
 ["riflelicense",[vending2,objnull,objnull],"Hunting License",50000],
 ["assassinlic",[assassinshop,objnull,objnull],"Illegal Assassin Weapons Fee",50000],
 ["terrorvip",[vipterrorbox,objnull,objnull],"Terrorist VIP License",1400000],
