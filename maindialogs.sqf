@@ -82,7 +82,7 @@ if (_art == "spielerliste") then
 		};
 	};
 	lbAdd [1, _trennlinie];
-	lbAdd [1, "I L G Island Governor"];
+	lbAdd [1, "I L G El Presidente"];
 	if (not(MayorNumber == -1)) then 
 	{
 		lbAdd [1, (playerstringarray select MayorNumber)];
@@ -344,13 +344,22 @@ if (_art == "coplog") then
 	
 };
 
+if(isNil "ILG_ElectionsDisabled")then{
+ILG_ElectionsDisabled = false;
+}else{
+diag_log format ["Elections variable is currently: %1", ILG_ElectionsDisabled];
+};
+
 if ((_art == "wahlen") && !ILG_ElectionsDisabled) then 
 {
 	if (!(createDialog "wahldialog")) exitWith {hint "Dialog Error!";};
 	_array = [0, 1, true, false] call DialogSpielerListe;
 	lbSetCurSel [1, _array select 1];
-}else{ 
-player groupChat "El Presidente has disabled fair and free elections.";
+};
+
+if ((_art == "wahlen") && ILG_ElectionsDisabled) then 
+{
+player groupChat "El Presidente has disabled free and fair elections!";
 };
 
 if (_art == "chief") then 
